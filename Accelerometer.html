@@ -54,7 +54,7 @@ if (window.DeviceMotionEvent != undefined) {
 		ax = event.accelerationIncludingGravity.x * 30;
 		ay = event.accelerationIncludingGravity.y * 30;
 		az = event.accelerationIncludingGravity.z * 1;
-		/*document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
+		document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
 		document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
 		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
 
@@ -62,7 +62,9 @@ if (window.DeviceMotionEvent != undefined) {
 			document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
 			document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
 			document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
-		}*/
+		}
+
+		
 	}
 
 	setInterval( function() {
