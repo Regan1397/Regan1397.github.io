@@ -35,8 +35,8 @@ body {
 	<!-- <li>acceleration y: <span id="accelerationY"></span>g</li> -->
 	<li>acceleration z: <span id="accelerationZ"></span>g</li>
 	<li>position x: <span id="positionX"></span> px</li>
-
 	<li>position y: <span id="positionY"></span> px</li>
+	<li>position z: <span id="positionZ"></span> px</li>
 	<!-- <li>rotation alpha: <span id="rotationAlpha"></span>degree</li> -->
 	<!-- <li>rotation beta: <span id="rotationBeta"></span>degree</li> -->
 	<!-- <li>rotation gamma: <span id="rotationGamma"></span>degree</li> -->
@@ -60,8 +60,9 @@ if (window.DeviceMotionEvent != undefined) {
 		// document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
 		// document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
 		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
-				document.getElementById("positionX").innerHTML = x;
-					document.getElementById("positionY").innerHTML = y;
+		document.getElementById("positionX").innerHTML = x;
+		document.getElementById("positionY").innerHTML = y;
+		document.getElementById("positionZ").innerHTML = z;
 
 		// if ( e.rotationRate ) {
 		// 	document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
