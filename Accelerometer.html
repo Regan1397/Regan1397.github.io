@@ -51,9 +51,9 @@ var sphere = document.getElementById("sphere");
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
-		ax = event.accelerationIncludingGravity.x * 15;
-		ay = event.accelerationIncludingGravity.y * 15;
-		az = event.accelerationIncludingGravity.z * 2.5;
+		ax = event.accelerationIncludingGravity.x * 30;
+		ay = event.accelerationIncludingGravity.y * 30;
+		az = event.accelerationIncludingGravity.z * 4.5;
 		/*document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
 		document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
 		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
@@ -76,9 +76,9 @@ if (window.DeviceMotionEvent != undefined) {
 			vx = vx + ax;
 			vz = vz + az;
 		}
-		vx = vx * 0.99;
-		vy = vy * 0.99;
-		vz = vz * 0.99;
+		vx = vx * 0.98;
+		vy = vy * 0.98;
+		vz = vz * 0.98;
 		y = parseInt(y + vy / 50);
 		x = parseInt(x + vx / 50);
 		z = parseInt(z + vz / 50);
