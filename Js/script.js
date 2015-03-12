@@ -37,14 +37,14 @@ $('.webcam-backup').mouseleave(function() {
 
  $('.navbar-brand').click(function() {
         $('body').fadeOut(900).delay(800, function(){
-            window.location.href = 'index.html';
+            window.location.href = 'WSY_Index.html';
         });
 
 
 });
 // $('.featureImg').click(function() {
 //   $('body').fadeTo('slow',0).delay(600, function(){
-//             // window.location.href = 'Index.html';
+//             // window.location.href = 'WSY_Index.html';
 //         });
 
 $('.submitHelp').one("click",function() {
@@ -73,7 +73,7 @@ $('.clickme2').click(function() {
 
 $('#home').click(function() {
   $('body').fadeOut(4000).delay(800, function(){
-            window.location.href = 'index.html';
+            window.location.href = 'WSY_Index.html';
         });
 });
 
