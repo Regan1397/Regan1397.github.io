@@ -35,6 +35,8 @@ body {
 	<!-- <li>acceleration y: <span id="accelerationY"></span>g</li> -->
 	<li>acceleration z: <span id="accelerationZ"></span>g</li>
 	<li>position x: <span id="positionX"></span>g</li>
+
+	<li>position y: <span id="positionY"></span>g</li>
 	<!-- <li>rotation alpha: <span id="rotationAlpha"></span>degree</li> -->
 	<!-- <li>rotation beta: <span id="rotationBeta"></span>degree</li> -->
 	<!-- <li>rotation gamma: <span id="rotationGamma"></span>degree</li> -->
@@ -59,6 +61,7 @@ if (window.DeviceMotionEvent != undefined) {
 		// document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
 		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
 				document.getElementById("positionX").innerHTML = x;
+					document.getElementById("positionY").innerHTML = Y;
 
 		// if ( e.rotationRate ) {
 		// 	document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
@@ -104,7 +107,7 @@ function boundingBoxCheck(){
 	if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
 	if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
 	if (z > 60) {z = 60;}
-	if (z < -60) {z = -30;}
+	if (z < -30) {z = -30;}
 	
 }
 
