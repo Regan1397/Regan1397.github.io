@@ -76,9 +76,9 @@ if (window.DeviceMotionEvent != undefined) {
 			vx = vx + ax;
 			vz = vz + az;
 		}
-		vx = vx * 0.90;
-		vy = vy * 0.90;
-		vz = vz * 0.90;
+		vx = vx * 0.99;
+		vy = vy * 0.99;
+		vz = vz * 0.99;
 		y = parseInt(y + vy / 50);
 		x = parseInt(x + vx / 50);
 		z = parseInt(z + vz / 50);
