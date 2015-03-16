@@ -33,7 +33,7 @@ body {
 <ul> 
 <!-- <li>acceleration x: <span id="accelerationX"></span>g</li> -->
 	<!-- <li>acceleration y: <span id="accelerationY"></span>g</li> -->
-	<li>acceleration z: <span id="accelerationZ"></span>g</li>
+<!-- 	<li>acceleration z: <span id="accelerationZ"></span>g</li> -->
 	<li>position x: <span id="positionX"></span> px</li>
 	<li>position y: <span id="positionY"></span> px</li>
 	<li>position z: <span id="positionZ"></span> px</li>
@@ -59,7 +59,7 @@ if (window.DeviceMotionEvent != undefined) {
 		az = event.accelerationIncludingGravity.z * 2;
 		// document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
 		// document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
-		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
+		// document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
 		document.getElementById("positionX").innerHTML = x;
 		document.getElementById("positionY").innerHTML = y;
 		document.getElementById("positionZ").innerHTML = z;
