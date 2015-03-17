@@ -4,6 +4,7 @@
    
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/style_CAPS.css">
 
@@ -14,6 +15,7 @@
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script> <!-- TEST WHEN I REMEMBER -->
 	<script src="js/myjQuery.js"></script>
+	<script type="text/javascript" src="js/shake.js"></script>
 </head>
 
 
@@ -57,6 +59,29 @@
 
 		<script src="js/foundation.min.js"></script>
 		<script>
+window.onload = function() {
+
+    //create a new instance of shake.js.
+    var myShakeEvent = new Shake({
+        threshold: 15
+    });
+
+    // start listening to device motion
+    myShakeEvent.start();
+
+    // register a shake event
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    //shake event callback
+    function shakeEventDidOccur () {
+
+        //put your own code here etc.
+        alert('Shake!');
+    }
+};
+
+
+		
 		  $(document).foundation();
 		</script>
 </body>
