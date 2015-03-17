@@ -7,64 +7,96 @@
 }
 
 
-ul {
-
- list-style-type: none;
-    /*margin: 0;*/
-    /*padding: 0;*/
-}
 
 li {
 
 	display: inline;
 	color: white;
-	padding: 2%;
-	font-size: 1.2vw;
+	
+font-size: 20px;
 	font-family: Champagne;	
 }
 
-#nav-options {
-	margin-left: 50%;
-	margin-top: 1%;
+.navbar-logo {
+width: 170px;
+/*margin-top: 20px;*/
+/*margin-left: 450px;	*/
+position: fixed;
+}
+
+.current-page {
+text-decoration: underline;
+
 }
 
 
-
-.nav-black {
-width: 102%;
+.navbar-black {
+width: 100%;
+margin: 0;
+height: 60px;
 /*margin-left: -1%;*/
-height: 3.5vw;
-margin-top: -1%;
+/*height: 4.5vw;*/
+/*margin-top: -1%;*/
 background-color: black;
 opacity: 0.9;
-/*position: fixed;*/
+position: fixed;
+
 
 }
 
-/*.placeholder {
-	background-color: white;
-	position: absolute;
-}*/
-
-#nav-logo {
-width: 9%;
-float: left;
-margin-left: 24%;
+.navbar-right {
+/*float: right;*/
+margin-top: 20px;
+width: 600px;
+/*margin-right: 20%;	*/
+margin-left:  450px;
+position: fixed;
 }
 
-#work-area {
+.navbar-right > li {
+padding-right: 40px;
+
+}
+
+
+#wrapper {
 border: 1px dotted red;
-margin-left: 20%;
-margin-top: 3.5%;
-width: 60%;
-/*height: 2000%;*/
-position: absolute;
+
+width: 1000px;
+padding: 0;
+height: 2000px;
+margin: 0 auto;
 }
 
-#article-1 {
-	/*margin-top: 3.5%;*/
-	width: 100%;
-	height: 10vw;
-background-color: grey;
+
+
+
+
+/*IPHONE*/
+@media only screen and (max-width:40em) { /* Max Width 640, Made for iphone.*/
+
+/*End of*/
+}
+
+
+/*IPAD*/
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {  /* min-width 641px and max-width 1024px, ^^ IPad ^^ */
+#wrapper {
+	width: 600px;
+	}
+.navbar-right {
+width: 600px;
+margin-left:  230px;
+position: fixed;
+}
+
+li {
+font-size: 14px;
+padding-right: 
 
 }
+	
+
+/*End of*/
+}
+
