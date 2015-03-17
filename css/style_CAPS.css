@@ -1,0 +1,70 @@
+
+
+
+@font-face {
+    font-family: Champagne;
+    src: url(../fonts/Champagne.TTF);
+}
+
+
+ul {
+
+ list-style-type: none;
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
+
+li {
+
+	display: inline;
+	color: white;
+	padding: 2%;
+	font-size: 1.2vw;
+	font-family: Champagne;	
+}
+
+#nav-options {
+	margin-left: 50%;
+	margin-top: 1%;
+}
+
+
+
+.nav-black {
+width: 102%;
+/*margin-left: -1%;*/
+height: 3.5vw;
+margin-top: -1%;
+background-color: black;
+opacity: 0.9;
+/*position: fixed;*/
+
+}
+
+/*.placeholder {
+	background-color: white;
+	position: absolute;
+}*/
+
+#nav-logo {
+width: 9%;
+float: left;
+margin-left: 24%;
+}
+
+#work-area {
+border: 1px dotted red;
+margin-left: 20%;
+margin-top: 3.5%;
+width: 60%;
+/*height: 2000%;*/
+position: absolute;
+}
+
+#article-1 {
+	/*margin-top: 3.5%;*/
+	width: 100%;
+	height: 10vw;
+background-color: grey;
+
+}
