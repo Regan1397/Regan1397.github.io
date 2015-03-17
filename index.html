@@ -49,9 +49,12 @@
 		</div>
 	</div>
 
+<div class="test-button">
+</div>
 
 
 </div>
+
 
 
 		
@@ -75,13 +78,16 @@ window.onload = function() {
     //shake event callback
     function shakeEventDidOccur () {
 
-        //put your own code here etc.
-        alert('Shake!');
+		$('.test-button').click(function(){
+		$('html, body').animate({scrollTop:0},800);
+		return false;
+		});
+
     }
 };
 
 
-		
+
 		  $(document).foundation();
 		</script>
 </body>

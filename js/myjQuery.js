@@ -19,8 +19,17 @@ $(".logo01").hover(function(){
 });
 
 
+$(window).scroll(function() {
+if ($(this).scrollTop() > 100) {
+		$('.test-button').fadeIn();	
+	} else {
+		$('.test-button').fadeOut()
+	}
+});
 
-
+$('.test-button').click(function(){
+$('html, body').animate({scrollTop:0},800);
+return false;
 });
 
 
@@ -28,8 +37,7 @@ $(".logo01").hover(function(){
 
 
 
-
-
+});
 // $("ul > li ").hover(function(){
 // 	$(this).removeClass("navOp01");
 //       $(this).animate({ color: "#FF0000" }, 100);
