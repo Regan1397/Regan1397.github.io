@@ -21,20 +21,18 @@ $(".logo01").hover(function(){
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 100) {
-		$('.test-button').fadeIn();	
+		$('.page-up-button').fadeIn();	
 	} else {
-		$('.test-button').fadeOut()
+		$('.page-up-button').fadeOut()
 	}
 });
 
-$('.test-button').click(function(){
+$('.page-up-button').click(function(){
 $('html, body').animate({scrollTop:0},800);
 return false;
 });
 
-
-
-
+$(".move-me").draggable();
 
 
 });
