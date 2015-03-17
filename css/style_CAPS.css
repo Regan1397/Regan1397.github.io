@@ -53,6 +53,10 @@ margin-left:  450px;
 position: fixed;
 }
 
+.section-1 {
+
+}
+
 .navbar-right > li {
 padding-right: 40px;
 
@@ -69,15 +73,49 @@ margin: 0 auto;
 }
 
 
+.placeholder01 {
+/*background-color:  red;*/
+width: 100%;
+height: 100px;	
+}
 
+
+/*********** End of   *************/
 
 
 /*IPHONE*/
 @media only screen and (max-width:40em) { /* Max Width 640, Made for iphone.*/
 
-/*End of*/
+#wrapper {
+	width: 300px;
+	}
+.navbar-right {
+display: none;
 }
 
+.navbar-logo {
+width: 100px;
+}
+
+li {
+font-size: 14px;
+padding-right: 
+}
+
+.navbar-black {
+width: 100%;
+margin: 0;
+height: 40px;
+
+
+
+}
+
+
+
+
+}
+/*********** End of   *************/
 
 /*IPAD*/
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {  /* min-width 641px and max-width 1024px, ^^ IPad ^^ */
@@ -97,6 +135,7 @@ padding-right:
 }
 	
 
-/*End of*/
+
 }
 
+/*********** End of   *************/
