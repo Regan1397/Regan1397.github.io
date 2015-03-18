@@ -249,7 +249,30 @@ margin-left:  230px;
 #wrapper-02 {
 	width: 600px;
 	}
+	
+#tilt-scroll {
+	margin-top: 270px;
+	margin-left: 200px;
+	width:90px;
+	position: absolute;
+	opacity: 0.7;
+}
 
+#close-tab-01 {
+	margin-top: 305px;
+	margin-left: 140px;
+	width:25px;
+	opacity: 0.7;
+	position: absolute;
+}
+
+#go-to-top-scroll {
+	margin-top: 260px;
+	margin-left: 20px;
+	width:90px;
+	opacity: 0.7;
+	position: absolute;
+}
 
 
  p {
