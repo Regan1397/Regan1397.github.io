@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/style_CAPS.css">
 
+    <script src="js/sense.js"></script>
 	<script src="js/vendor/fastclick.js"></script>
 	<script src="js/vendor/modernizr.js"></script>
 	<script src="js/jquery-ui.js"></script>
@@ -16,19 +17,73 @@
 	<script src="js/jquery.ui.touch-punch.min.js"></script> <!-- TEST WHEN I REMEMBER -->
 	<script src="js/myjQuery.js"></script>
 	<script type="text/javascript" src="js/shake.js"></script>
+
+	  <script>
+    var sense = sense.init({
+      debug: true
+    });
+    sense.tiltScroll(function(data){
+    })
+  </script>
 </head>
 
 
 
 <body>
+
+<div id="menu-cover">
+</div>
+
+
+
+	<div class="placeholder01"> </div> <!-- iphone only -->
+
+	<!--inv fixed bar */ -->
+	<div class="navbar-black-fixed">	
+	</div>
+
+
+<div id="centre">		
+	<img class="navbar-logo" src="images/brand_logo.png">
+		<ul class="navbar-right">
+			<li>Shop</li>
+			<li>Art & Design</li>
+			<li>Editorial</li>
+
+			<li>Trends</li>
+			<li>Help</li>
+		</ul>
+	
+</div>
+
+
+
+
+
+
+
+<div id="wrapper-01">
+	<img class='main-image-01' src="images/thug_hoodie.jpg">
+</div>
+
 <div class="navbar-black">
 
 </div>
 
 
 
-<div id='wrapper'> <!-- Wraps whole document  -->
-	<img class="navbar-logo" src="images/brand_logo.png">
+<div id='wrapper-02'>
+ <!-- Wraps whole document  -->
+
+			<!--inv fixed bar finished*/ -->
+
+
+
+
+
+
+	<div class="nav-wrapper">
+		<img class="navbar-logo" src="images/brand_logo.png">
 
 
 		<ul class="navbar-right">
@@ -39,44 +94,44 @@
 			<li>Movement</li>
 			<li>Help</li>
 		</ul>
-
-		<div class='placeholder01'></div>
-
-	<div class='row'>
-		<div class='large-12'>
-			<div class="section-1"> 
-				<img class='main-image-01' src="images/thug_hoodie.jpg">
-			</div>
-		</div>
 	</div>
 
-	<div class='row'>
+
+
+
+	<div class='row '>
 		<div class='large-6 small-12 columns'>	
-			<img class='section-2 image-03' src='images/Champion_02.jpg'>
-			<img class='section-2 image-02' src='images/Champion_01.jpg'>
+			<img class='section-2 image-02' src='images/Champion_02.jpg'>
+			<img class='section-2 image-03' src='images/Champion_01.jpg'>
 		</div>	
 		<div class='large-6 small-12 columns'>
 			<div class="text-01 section-3">
-				<h3>1920's:Creation </h3>
+				<img class="help01-touch" src="images/touch_02.png">
+				<h3>Introduction</h3>
 				<p>
-					 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et arcu et magna tempus scelerisque ut in velit. Mauris vitae enim nunc. Nulla quis mauris vitae nunc imperdiet accumsan a nec erat. Suspendisse sed nulla diam. Ut sit amet dignissim tellus. Proin vestibulum quam at fringilla dignissim. Aenean sit amet nibh et risus semper ornare ut ac ipsum. Ut vehicula ipsum et turpis ultricies, id maximus tellus viverra. 
-					 <br><br>
-					Duis sit amet tincidunt risus, tempus iaculis lacus. Vestibulum condimentum molestie mattis. Phasellus in lectus in tellus finibus pellentesque. Aliquam a eleifend tellus. Donec justo nisl, tempus tristique orci at, finibus rhoncus nunc. Duis consectetur leo non est tincidunt. 
+					The hoodie has had a large influence on modern society and is a significant part of fashion history. This webpage is an interactive article showing the key events within the hoodies history. The history of the hoodie has been a very significant influence towards the design and crafting of CAPS Clothing’s newly released winter range of hoodies and jumpers. 
+					<br><br>
+					For best viewing pleasure, this website is best viewed on a mobile device – particularly IOS Devices. I hope you enjoy.
+					<br><br>
+					Caps Clothing.
 				</p>
 			</div>
-
+		</div>
+		<div class='large-6 small-12 columns'>
 			<div class="text-02 section-3">
-				<h3> Champion </h3>
-				<p>
-					Integer mi libero, faucibus non porta et, pulvinar vitae velit. In diam nulla, imperdiet sed purus quis, posuere viverra leo. Nulla facilisi. Proin efficitur ligula at suscipit tristique. Integer viverra ac lorem sit amet sodales. In erat ex, aliquam et dictum vitae, fringilla in erat. Nunc nulla dolor, tristique quis sem ultricies. 
-					<br><br>
-					Nulla facilisi. Praesent enim nisi, tempor ut fringilla ut, imperdiet nec turpis. Mauris tincidunt placerat velit id sollicitudin. Morbi id lorem euismod, mattis ex nec, malesuada ante. Nullam felis ipsum, dapibus in odio quis, egestas posuere nisi. Cras ultricies hendrerit erat. Proin imperdiet, eros convallis tincidunt efficitur, tortor eros luctus dolor, id rhoncus massa ante at nunc.
+				<h3> 1920s: Champion Clothing </h3>
+				<p> The first hooded sweatshirt was created by Champion in the early 1920’s – it was designed for sports players to keep them warm while they were on the side-line waiting to be played by their coach during sports games. It also was used by labourers in harsh environments. 
+<br><br>
+The accompanying imagery shows how the revolutionary hooded pull over was advertised during its early stages of adoption. The advertisement describes the hoodies warm, comfort and adjustable hood.  
+ </p>
+			
 			</div>
 		</div>
 	</div>
 
 		<div class="page-up-button">
 		</div>
+ 
 
 </div>
 
@@ -86,7 +141,7 @@
 
 
 		<script src="js/foundation.min.js"></script>
-		<script>
+				<script>
 window.onload = function() {
 
     //create a new instance of shake.js.
@@ -103,8 +158,10 @@ window.onload = function() {
     //shake event callback
     function shakeEventDidOccur () {
 
-		$('html, body').animate({scrollTop:0},800);
-		return false;
+    	$('#menu-cover').animate({opacity: "0.9"}, 500);
+
+		// $('html, body').animate({scrollTop:0},800);
+		// return false;
 		
 
     }
@@ -112,8 +169,9 @@ window.onload = function() {
 
 
 
+
 		  $(document).foundation();
-		</script>
+	
 </body>
 
 
