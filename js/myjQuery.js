@@ -86,6 +86,7 @@ $('#close-tab-01').click(function() {
 });
 
 $('#go-to-top-scroll').click(function() {
+		$('#menu-cover').hide();
 		$('html, body').animate({scrollTop:0},800);
 		return false;
  });
