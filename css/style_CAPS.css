@@ -58,8 +58,8 @@ height: 100%;
 #menu-cover {
 background-color: black;
 position: fixed;
-opacity: 1;
-/*display: none;*/
+opacity: 0;
+display: none;
 
 width: 100%;
 height: 120%;
@@ -122,17 +122,6 @@ p {
 	font-family: sans-serif;
 }
 
-.page-up-button {
-width: 60px;
-height: 60px;
-background-color: pink;
-margin-left: 940px;
-position: fixed;
-display: none;
-}
-
-
-
 .image-02 {
 	/*width:100%;*/
 }
@@ -141,6 +130,24 @@ display: none;
 	display:none;
 /*position: relative;*/
 /*margin-top: -324px;*/
+}
+
+.shake-ref {
+	position: fixed;
+	width: 90px;
+	opacity: 0.9;
+	display: none;
+	margin-top: 850px;
+	margin-left: 1500px;
+}
+
+.page-up-button {
+	position: fixed;
+	width: 90px;
+	opacity: 0.9;
+	display: none;
+	margin-top: 850px;
+	margin-left: 1500px;
 }
 
 

@@ -21,11 +21,21 @@ $(".logo01").hover(function(){
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 100) {
+		$('.shake-ref').fadeIn();	
+	} else {
+		$('.shake-ref').fadeOut()
+	}
+});
+
+
+$(window).scroll(function() {
+if ($(this).scrollTop() > 200) {
 		$('.page-up-button').fadeIn();	
 	} else {
 		$('.page-up-button').fadeOut()
 	}
 });
+
 
 $('.page-up-button').click(function(){
 	$('html, body').animate({scrollTop:0},800);
@@ -92,6 +102,13 @@ $('#go-to-top-scroll').click(function() {
 		$('html, body').animate({scrollTop:0},800);
 		return false;
  });
+
+$(".shake-ref").click(function() {
+    	$('#menu-cover').show();
+    	$('#menu-cover').animate({opacity: "0.9"}, 1000);
+});
+
+
 
 
 });
