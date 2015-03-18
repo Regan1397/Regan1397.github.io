@@ -85,6 +85,8 @@ $('#close-tab-01').click(function() {
 	$('#menu-cover').hide();
 });
 
+
+
 $('#go-to-top-scroll').click(function() {
 		$('#menu-cover').hide();
 		$('html, body').animate({scrollTop:0},800);

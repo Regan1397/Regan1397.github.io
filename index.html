@@ -134,10 +134,27 @@ The accompanying imagery shows how the revolutionary hooded pull over was advert
 </div>
 
   <script>
+  	var x = 0;
+console.log ("hi");
     var sense = sense.init({
       debug: true
     });
-     // sense.addTiltScroll();
+
+$('#tilt-scroll').click(function() {
+	x = 2;
+	console.log ("tilt activated");
+	$('#menu-cover').hide();
+	  sense.addTiltScroll();
+});
+
+// if (x >1){
+   
+//      console.log ("worked");
+//   } else {}
+
+
+
+
   </script>
 
 		
