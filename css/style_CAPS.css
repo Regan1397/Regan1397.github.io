@@ -26,6 +26,14 @@ padding-right: 0;
 	text-decoration: underline;
 }
 
+#help01-touch {
+width: 35px;
+pointer-events:none;
+position: absolute;
+margin-top: -45px;
+margin-left: 240px;
+}
+
 li {
 	display: inline;
 	color: white;
