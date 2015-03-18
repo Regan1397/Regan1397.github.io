@@ -83,8 +83,12 @@ if($(window).width() < 1025 && $(window).width() > 400) {
 
 $('#close-tab-01').click(function() {
 	$('#menu-cover').hide();
-
 });
+
+$('#go-to-top-scroll').click(function() {
+		$('html, body').animate({scrollTop:0},800);
+		return false;
+ });
 
 
 });
