@@ -81,6 +81,11 @@ if($(window).width() < 1025 && $(window).width() > 400) {
 
 };
 
+$('#close-tab-01').click(function() {
+	$('#menu-cover').hide();
+
+});
+
 
 });
 // $("ul > li ").hover(function(){
