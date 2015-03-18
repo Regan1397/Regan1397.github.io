@@ -63,7 +63,7 @@ if($(window).width() > 1024) {
 
 };
 
-if($(window).width() < 1025 && $(window).width() > 200) {
+if($(window).width() < 1025 && $(window).width() > 400) {
 
 	$(window).scroll(function() {
 	if ($(this).scrollTop() <= 515) {

@@ -170,6 +170,16 @@ height: 2000px;
 margin: 0 auto;
 }
 
+#menu-cover {
+background-color: black;
+position: fixed;
+opacity: 0;
+pointer-events: none;
+width: 100%;
+height: 120%;
+z-index: 4;
+}
+
 
 /*********** End of   *************/
 
@@ -186,7 +196,7 @@ font-size: 14px;
 width: 600px;
 position: fixed;
 left: 50%;
-margin: 0 0 0 -360px;
+margin: 0 0 0 -380px;
 
 /*opacity: 0;*/
 
@@ -201,6 +211,7 @@ z-index: 2;
 }
 
 .image-03 {
+	width:100%;
 	display:none;
 /*position: relative;*/
 /*margin-top: -324px;*/
@@ -221,14 +232,19 @@ margin-left:  230px;
 	width: 600px;
 	}
 
-.section-3 > p {
+
+
+ p {
 font-size: 12px;	
 }
 
 .section-3 {
 padding-left: 0px;
 position: absolute;
-display: none;
+}
+
+.text-02 {
+	display: none;
 }
 
 #wrapper-01 {
@@ -248,23 +264,54 @@ margin: 0 auto;
 /*IPHONE*/
 @media only screen and (max-width:40em) { /* Max Width 640, Made for iphone.*/
 
+	#centre {
+width: 320px;
+position: fixed;
+left: 50%;
+margin: 0 0 0 -160px;
+opacity: 1;
+}
+
+
 li {
 font-size: 14px;
 padding-right: 
 }
 
-.navbar-logo {
-width: 100px;
+ p {
+font-size: 12px;	
+}
+
+.nav-wrapper {
+display: none;	
+}
+
+.navbar-black {
+display: none;
 }
 
 .navbar-right {
 display: none;
 }
 
-.navbar-black {
-width: 100%;
-margin: 0;
+.navbar-logo {
+width: 100px;
+margin-top: -40px;
+}
+
+.navbar-black-fixed {
+display: block;
+opacity: 1;
+margin-top: -40px;
+position: fixed;
 height: 40px;
+}
+
+#wrapper-01 {
+width: 100%;
+padding-bottom: 30px;
+height: 250px;
+margin: 0 auto;
 }
 
 #wrapper-02 {
