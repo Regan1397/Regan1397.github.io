@@ -87,6 +87,12 @@ margin-top: -311px;
 position: absolute;
 display: none;
 }
+.image-06 {
+/*margin-top: -311px;*/
+position: absolute;
+/*display: none;*/
+}
+
 
 li {
 	display: inline;
@@ -194,6 +200,15 @@ p {
 	display: none;
 	margin-top: 850px;
 	margin-left: 1500px;
+}
+
+.pos3 {
+margin-top:-170px;
+position: absolute;
+}
+
+.padding-top-03 {
+	padding-top: 150px;
 }
 
 
@@ -359,6 +374,9 @@ font-size: 12px;
 .pos1 {
 margin-top:160px;
 }
+.pos2 {
+margin-top:160px;
+}
 
 
 
@@ -411,7 +429,7 @@ margin-top: -202px;
 }
 
 .placeholder01 {
-/*background-color:  red;*/
+background-color:  black;
 width: 100%;
 height: 100px;	
 margin-top: -60px;
@@ -426,6 +444,15 @@ position: absolute;
 display: block;
 margin-top: -45px;
 margin-left: -15px;
+}
+
+.help02-touch {
+width: 40px;
+pointer-events:none;
+position: absolute;
+display: block;
+margin-top: -45px;
+margin-left: 240px;
 }
 
 #tilt-scroll {
@@ -468,6 +495,9 @@ font-size: 12px;
 .pos1 {
 margin-top:200px;
 }
+.pos2 {
+margin-top:200px;
+}
 
 
 .nav-wrapper {
@@ -484,13 +514,13 @@ display: none;
 
 .navbar-logo {
 width: 100px;
-margin-left: -60px;
+margin-left: 100px;
 margin-top: -40px;
 }
 
 .navbar-black-fixed {
 display: block;
-opacity: 1;
+opacity: 0.9;
 margin-top: -40px;
 position: fixed;
 height: 40px;
