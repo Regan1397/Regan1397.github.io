@@ -31,17 +31,6 @@ position: fixed;
 
 }
 
-.padding-top-01 {
-padding-top: 50px;	
-}
-.padding-left-01 {
-padding-left: 30px;
-}
-
-.padding-right-01 {
-padding-right: 30px;	
-}
-
 .help01-touch {
 width: 60px;
 pointer-events:none;
@@ -162,15 +151,21 @@ p {
 }
 
 
+.section-2 {
 
+padding-top: 30px;
 
-
-
-.section-img {
-position: relative;
 }
-.section-text {
+
+.section-2-text-area {
+padding-left: 20px;
+}
+
+.section-3 {
+padding-top: 30px;
+padding-left: 20px;
 position: absolute;
+
 }
 
 .text-01 {
@@ -291,11 +286,14 @@ margin-left:  230px;
 font-size: 12px;	
 }
 
+.section-2 {
+	/*padding-top:  20px;*/
+}
 
-
-.section {
+.section-3 {
+	/*padding-top:  20px;*/
+padding-left: 0px;
 position: absolute;
-display: block;
 }
 
 .text-02 {

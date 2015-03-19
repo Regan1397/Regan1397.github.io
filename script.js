@@ -1,13 +1,29 @@
-$(document.ready(function() {
+(function(){
+  var ua = navigator.userAgent,
+    isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
 
-$(window).bind('scroll',function(e){
-parallaxScroll();
-});
+  if (isMobileWebkit) {
+    $('html').addClass('mobile');
+  }
 
-function parallaxScroll () {
-var scrolledY = $(window).scrollTop();
-  $('.para01').css('left',(scrolledY*0.8)+"1px"));
+  $(function(){
+    var iScrollInstance;
 
-}
+    if (isMobileWebkit) {
+      iScrollInstance = new iScroll('wrapper');
 
-});
+      $('#scroller').stellar({
+        scrollProperty: 'transform',
+        positionProperty: 'transform',
+        horizontalScrolling: false,
+        verticalOffset: 150
+      });
+    } else {
+      $.stellar({
+        horizontalScrolling: false,
+        verticalOffset: 150
+      });
+    }
+  });
+
+})();
