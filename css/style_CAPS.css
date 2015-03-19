@@ -34,6 +34,9 @@ position: fixed;
 .padding-top-01 {
 padding-top: 50px;	
 }
+.padding-top-02 {
+padding-top: 100px;	
+}
 .padding-left-01 {
 padding-left: 30px;
 }
@@ -49,7 +52,15 @@ position: absolute;
 display: block;
 margin-top: 250px;
 margin-left: -80px;
+}
 
+.help01-touch {
+width: 60px;
+pointer-events:none;
+position: absolute;
+display: block;
+/*margin-top: 250px;*/
+/*margin-left: -80px;*/
 }
 
 
@@ -291,6 +302,15 @@ margin-left:  230px;
 font-size: 12px;	
 }
 
+.padding-left-01 {
+	padding-left: 0;
+}
+
+.pos1 {
+margin-top:190px;
+}
+
+
 
 
 .section {
@@ -300,6 +320,10 @@ display: block;
 
 .text-02 {
 	display: none;
+}
+
+.text-03 {
+	margin-top: 420px;
 }
 
 #wrapper-01 {
@@ -378,6 +402,14 @@ padding-right:
  p {
 font-size: 12px;	
 }
+.padding-left-01 {
+	padding-left: 0;
+}
+
+.pos1 {
+margin-top:200px;
+}
+
 
 .nav-wrapper {
 display: none;	
@@ -404,9 +436,13 @@ position: fixed;
 height: 40px;
 }
 
+.text-03 {
+	margin-top: 230px;
+}
+
 #wrapper-01 {
 width: 100%;
-padding-bottom: 30px;
+padding-bottom: 0px;
 height: 250px;
 margin: 0 auto;
 }
