@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Mobile Parallax with Stellar.js - Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+<div class="para01"> </div>
+<div class="para02"> <img src="images/pants.png"> </div>
+<div class="para03"> <img src="images/blackT.png">  </div>
+
+
+<script type="text/javascript">
+$(document.ready(function() {
+$(window).bind('scroll',function(e){
+parallaxScroll();
+});
+
+function parallaxScroll () {
+var scrolledY = $(window).scrollTop();
+  $('.para01').css('left',((scrolledY*0.8))+'px');
+}
+
+});
+</script>
+
+  </body>
+</html>

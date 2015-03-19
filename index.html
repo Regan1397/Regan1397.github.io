@@ -1,0 +1,211 @@
+<html class="no-js" lang="en">
+<head>
+<title>Caps Clothing</title>
+   
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/style_CAPS.css">
+
+    <script src="js/sense.js"></script>
+	<script src="js/vendor/fastclick.js"></script>
+	<script src="js/vendor/modernizr.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script> <!-- TEST WHEN I REMEMBER -->
+	<script src="js/myjQuery.js"></script>
+	<script type="text/javascript" src="js/shake.js"></script>
+
+	
+</head>
+
+
+
+<body>
+
+<div id="menu-cover">
+	<img id="tilt-scroll" src="images/tilt_scroll.png">
+	<img id="go-to-top-scroll" src="images/go_top01.png">
+	<img id="close-tab-01" src="images/close01.png">
+</div>
+<!-- <img class="shake-ref" src="images/shake_01.png"> -->
+<img class="page-up-button" src="images/go_top_alt.png">
+
+
+
+
+	<div class="placeholder01"> </div> <!-- iphone only -->
+
+	<!--inv fixed bar */ -->
+	<div class="navbar-black-fixed">	
+	</div>
+
+
+<div id="centre">		
+	<img class="navbar-logo" src="images/brand_logo.png">
+		<ul class="navbar-right">
+			<li>Shop</li>
+			<li>Art & Design</li>
+			<li>Editorial</li>
+
+			<li>Trends</li>
+			<li>Help</li>
+		</ul>
+	
+</div>
+
+
+
+
+
+
+
+<div id="wrapper-01">
+	<img class='main-image-01' src="images/thug_hoodie.jpg">
+</div>
+
+<div class="navbar-black">
+
+</div>
+
+
+
+<div id='wrapper-02'>
+ <!-- Wraps whole document  -->
+
+			<!--inv fixed bar finished*/ -->
+
+
+
+
+
+
+	<div class="nav-wrapper">
+		<img class="navbar-logo" src="images/brand_logo.png">
+
+
+		<ul class="navbar-right">
+			<li>Shop</li>
+			<li>Art & Design</li>
+			<li>Editorial</li>
+
+			<li>Movement</li>
+			<li>Help</li>
+		</ul>
+	</div>
+
+
+
+
+	<div class='row padding-top-01'>
+		<div class='large-6 small-12 columns '>	
+			<img class='section-img image-02' src='images/Champion_02.jpg'>
+			<img class='section-img image-03' src='images/Champion_01.jpg'>
+		</div>	
+		<div class='large-6 small-12 columns'>
+			<div class="text-01 section-text padding-left-01">
+				<img class="help01-touch" src="images/touch_02.png">
+				<h3>Introduction</h3>
+				<p>
+					The hoodie has had a large influence on modern society and is a significant part of fashion history. This webpage is an interactive article showing the key events within the hoodies history. The history of the hoodie has been a very significant influence towards the design and crafting of CAPS Clothing’s newly released winter range of hoodies and jumpers. 
+					<br><br>
+					For best viewing pleasure, view this website on a mobile device – best on IOS Devices. I hope you enjoy this interactive experience.
+					<br><br>
+					Caps Clothing.
+				</p>
+			</div>
+		</div>
+		<div class='large-6 small-12 columns'>
+			<div class="text-02 section-text padding-left-01">
+				<h3> 1920s: Champion Clothing </h3>
+				<p> The first hooded sweatshirt was created by Champion in the early 1920’s – it was designed for sports players to keep them warm while they were on the side-line waiting to be played by their coach during sports games. It also was used by labourers in harsh environments. 
+				<br><br>
+				The accompanying imagery shows how the revolutionary hooded pull over was advertised during its early stages of adoption. The advertisement describes the hoodies warm, comfort and adjustable hood.  
+				 </p>
+			
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+		<div class="page-up-button">
+		</div>
+ 
+
+</div>
+
+  <script>
+  	var x = 0;
+console.log ("hi");
+    var sense = sense.init({
+      debug: true
+    });
+
+$('#tilt-scroll').click(function() {
+	x = 2;
+	console.log ("tilt activated");
+	$('#menu-cover').hide();
+	  sense.addTiltScroll();
+});
+
+// if (x >1){
+   
+//      console.log ("worked");
+//   } else {}
+
+
+
+
+  </script>
+
+		
+
+
+		<script src="js/foundation.min.js"></script>
+				<script>
+window.onload = function() {
+
+    //create a new instance of shake.js.
+    var myShakeEvent = new Shake({
+        threshold: 10
+    });
+
+    // start listening to device motion
+    myShakeEvent.start();
+
+    // register a shake event
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    //shake event callback
+    function shakeEventDidOccur () {
+    	$('#menu-cover').show();
+    	$('#menu-cover').animate({opacity: "0.9"}, 1000);
+
+	
+		
+
+    }
+};
+
+
+
+
+		  $(document).foundation();
+	</script>
+</body>
+
+
+</html>
+
+
+
+
+
