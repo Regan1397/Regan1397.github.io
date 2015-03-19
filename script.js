@@ -1,29 +1,13 @@
-(function(){
-  var ua = navigator.userAgent,
-    isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+$(document.ready(function() {
 
-  if (isMobileWebkit) {
-    $('html').addClass('mobile');
-  }
+$(window).bind('scroll',function(e){
+parallaxScroll();
+});
 
-  $(function(){
-    var iScrollInstance;
+function parallaxScroll () {
+var scrolledY = $(window).scrollTop();
+  $('.para01').css('left',(scrolledY*0.8)+"1px"));
 
-    if (isMobileWebkit) {
-      iScrollInstance = new iScroll('wrapper');
+}
 
-      $('#scroller').stellar({
-        scrollProperty: 'transform',
-        positionProperty: 'transform',
-        horizontalScrolling: false,
-        verticalOffset: 150
-      });
-    } else {
-      $.stellar({
-        horizontalScrolling: false,
-        verticalOffset: 150
-      });
-    }
-  });
-
-})();
+});
