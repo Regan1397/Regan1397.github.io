@@ -263,6 +263,14 @@ margin-top: -105px;
 margin-left: -5px;
 }
 
+
+.help02-touch {
+/*margin-top: -105px;*/
+display: block;
+position: absolute;
+margin-left: 500px;
+}
+
 .image-02 {
 	width:100%;
 }
@@ -272,8 +280,13 @@ margin-left: -5px;
 	display:none;
 }
 
+.image-04 {
+width: 100%;
+}
+
 .image-05 {
-margin-top: -332px;
+	width: 100%;
+margin-top: -400px;
 }
 
 
@@ -341,7 +354,7 @@ display: block;
 }
 
 .text-03 {
-	margin-top: 350px;
+	margin-top: 420px;
 }
 
 #wrapper-01 {
