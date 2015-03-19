@@ -110,6 +110,19 @@ $(".shake-ref").click(function() {
 
 
 
+$(".image-04").click(function(){
+	$(".image-04").fadeTo(1500,0., function () {
+		$(".image-05").fadeTo(1500,1);
+	});
+});
+
+
+$(".image-05").click(function(){
+	$(".image-05").fadeTo(1500,0., function () {
+		$(".image-04").fadeTo(1500,1);
+	});
+});
+
 
 });
 // $("ul > li ").hover(function(){
