@@ -238,7 +238,7 @@ p {
 .page-up-button {
 	position: fixed;
 	width: 90px;
-	z-index: 4;
+	z-index: 2;
 	opacity: 0.9;
 	display: none;
 	margin-top: 850px;
@@ -454,15 +454,15 @@ margin-left:  230px;
 
 #tilt-scroll {
 	margin-top: 290px;
-	margin-left: 650px;
-	width:220px;
+	margin-left: 500px;
+	width:180px;
 	position: absolute;
 	opacity: 0.7;
 }
 
 #close-tab-01 {
 	margin-top: 345px;
-	margin-left: 500px;
+	margin-left: 370px;
 	width:40px;
 	opacity: 0.7;
 	position: absolute;
@@ -471,7 +471,7 @@ margin-left:  230px;
 #go-to-top-scroll {
 	margin-top: 260px;
 	margin-left: 120px;
-	width:220px;
+	width:180px;
 	opacity: 0.7;
 	position: absolute;
 }
