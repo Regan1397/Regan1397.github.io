@@ -38,8 +38,8 @@ if ($(this).scrollTop() > 200) {
 
 
 $('.page-up-button').click(function(){
-	$('html, body').animate({scrollTop:0},800);
-	return false;
+	 	$('#menu-cover').show();
+    	$('#menu-cover').animate({opacity: "0.9"}, 1000);
 });
 
 $(".move-me").draggable();

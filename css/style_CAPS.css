@@ -210,6 +210,31 @@ p {
 	margin-left: 1500px;
 }
 
+#tilt-scroll {
+	margin-top: 290px;
+	margin-left: 1000px;
+	width:220px;
+	position: absolute;
+	opacity: 0.7;
+}
+
+#close-tab-01 {
+	margin-top: 345px;
+	margin-left: 900px;
+	width:40px;
+	opacity: 0.7;
+	position: absolute;
+}
+
+#go-to-top-scroll {
+	margin-top: 260px;
+	margin-left: 620px;
+	width:220px;
+	opacity: 0.7;
+	position: absolute;
+}
+
+
 .page-up-button {
 	position: fixed;
 	width: 90px;
@@ -256,6 +281,16 @@ height:50px;
 	width: 40px;
 	left: 40%;
 }
+
+.on-button2 {
+	width: 40px;
+	left: 30%;
+}
+
+.stop-button2 {
+	width: 40px;
+	left: 40%;
+}2
 
 
 
@@ -457,6 +492,39 @@ margin-top: -180px;
 }
 
 
+.player-01 {
+/*border: black solid 1px;*/
+width: 50%;
+/*display: inline;*/
+height:50px;
+}
+.player-02 {
+/*border: black solid 1px;*/
+width: 50%;
+margin-top: 0px;
+margin-left: 0px;
+/*display: inline;*/
+height:50px;
+}
+
+.on-button {
+
+}
+
+.stop-button {
+	width: 40px;
+	left: 40%;
+}
+
+.on-button2 {
+	width: 40px;
+	left: 30%;
+}
+
+.stop-button2 {
+	width: 40px;
+	left: 40%;
+}2
 
 
 
