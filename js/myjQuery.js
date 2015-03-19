@@ -19,13 +19,13 @@ $(".logo01").hover(function(){
 });
 
 
-$(window).scroll(function() {
-if ($(this).scrollTop() > 100) {
-		$('.shake-ref').fadeIn();	
-	} else {
-		$('.shake-ref').fadeOut()
-	}
-});
+// $(window).scroll(function() {
+// if ($(this).scrollTop() > 100) {
+// 		$('.shake-ref').fadeIn();	
+// 	} else {
+// 		$('.shake-ref').fadeOut()
+// 	}
+// });
 
 
 $(window).scroll(function() {

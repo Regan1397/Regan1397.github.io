@@ -238,6 +238,7 @@ p {
 .page-up-button {
 	position: fixed;
 	width: 90px;
+	z-index: 4;
 	opacity: 0.9;
 	display: none;
 	margin-top: 850px;
@@ -376,6 +377,14 @@ height:60px;
 z-index: 2;
 }
 
+.page-up-button {
+	position: fixed;
+	width: 90px;
+	opacity: 0.9;
+	/*display: none;*/
+	margin-top: 800px;
+	margin-left: 650px;
+}
 
 
 .help01-touch {
@@ -638,6 +647,15 @@ margin-left: 240px;
 	width:90px;
 	opacity: 0.7;
 	position: absolute;
+}
+
+.page-up-button {
+	position: fixed;
+	width: 70px;
+	opacity: 0.9;
+	/*display: none;*/
+	margin-top: 450px;
+	margin-left: 250px;
 }
 
 
