@@ -460,6 +460,8 @@ margin-top: -180px;
 
 
 
+
+
 .section {
 position: absolute;
 display: block;
@@ -611,25 +613,25 @@ height:50px;
 }
 
 .on-button {
-	width: 40px;
+	width: 30px;
 	margin-left:-100px;
-	left: 30%;
+	left: 25%;
 }
 
 .stop-button {
-	width: 40px;
-	left: 40%;
+	width: 30px;
+	left: 50%;
 }
 
 .on-button2 {
-	width: 40px;
+	width: 30px;
 	margin-left:-100px;
-	left: 30%;
+	left: 25%;
 }
 
 .stop-button2 {
-	width: 40px;
-	left: 40%;
+	width: 30px;
+	left: 50%;
 }
 
 
@@ -663,6 +665,10 @@ height: 40px;
 
 .padding-top-03  {
 padding-top: 140px;
+}
+
+.pos4 {
+	margin-top: 250px;
 }
 
 .text-03 {
