@@ -327,7 +327,7 @@ margin: 0 auto;
 /*border: 1px dotted red;*/
 width: 1000px;
 padding: 0;
-height: 4000px;
+
 margin: 0 auto;
 }
 
@@ -377,8 +377,8 @@ z-index: 2;
 	width: 90px;
 	opacity: 0.9;
 
-	margin-top: 800px;
-	margin-left: 650px;
+	margin-top: 400px;
+	margin-left: 450px;
 }
 
 
