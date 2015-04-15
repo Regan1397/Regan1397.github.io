@@ -84,10 +84,6 @@ if (window.DeviceMotionEvent != undefined) {
 		sphere.style.height = 20 + "px";
 		
 	}, 25);
-	if ( (($('#in-zone').offset().top)-($('#sphere').offset().top)) < 100)  {
-	console.log ("Worked");
-	$('#in-zone').css("background-color", "green");
-}
 } 
 
 
@@ -100,7 +96,12 @@ function boundingBoxCheck(){
 	if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
 	if (z > 40) {z = 40;}
 	if (z < -40) {z = -40;}
+
 	
+	if ( (($('#in-zone').offset().top)-($('#sphere').offset().top)) < 100)  {
+	console.log ("Worked");
+	$('#in-zone').css("background-color", "green");
+}
 }
 
 </script>
