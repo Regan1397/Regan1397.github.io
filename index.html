@@ -97,11 +97,15 @@ function boundingBoxCheck(){
 	if (z > 40) {z = 40;}
 	if (z < -40) {z = -40;}
 
-	
-	if ( (($('#in-zone').offset().top)-($('#sphere').offset().top)) < 100)  {
+
+	if ( (($('#in-zone').offset().top)-($('#sphere').offset().top)) < 20)  {
 	console.log ("Worked");
-	$('#in-zone').css("background-color", "green");
-}
+	$('#in-zone').css("background-color", "yellow");
+	}
+	else {
+		$('#in-zone').css("background-color", "black");
+	}
+
 }
 
 </script>
