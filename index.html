@@ -25,7 +25,7 @@ body {
 	background-color: black;
 	position: absolute;
 	/*margin-top: -100px;*/
-	margin-top: 400px;
+	margin-top: 300px;
 }
 
 
@@ -49,9 +49,9 @@ var x = 40, y = 40, z = 0,
 	
 var sphere = document.getElementById("sphere");
 
-console.log (($('#sphere').offset().left));
-console.log (($('#in-zone').offset().left));
-console.log ((($('#in-zone').offset().left)-($('#sphere').offset().left)));
+console.log (($('#sphere').offset().top));
+console.log (($('#in-zone').offset().top));
+console.log ((($('#in-zone').offset().top)-($('#sphere').offset().top)));
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
@@ -85,7 +85,7 @@ if (window.DeviceMotionEvent != undefined) {
 		
 	}, 25);
 } 
-if ( (($('#in-zone').offset().left)-($('#sphere').offset().left)) < 5)  {
+if ( (($('#in-zone').offset().top)-($('#sphere').offset().top)) < 5)  {
 	console.log ("Worked");
 	$('#in-zone').css("background-color", "green");
 }
