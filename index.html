@@ -30,11 +30,7 @@ body {
     <div id="sphere" style="top: 0px; left: 0px;"></div>
 <ul> 
 <li>acceleration x: <span id="accelerationX"></span>g</li>
-	<li>acceleration y: <span id="accelerationY"></span>g</li>
-	<li>acceleration z: <span id="accelerationZ"></span>g</li>
-	<li>rotation alpha: <span id="rotationAlpha"></span>degree</li>
-	<li>rotation beta: <span id="rotationBeta"></span>degree</li>
-	<li>rotation gamma: <span id="rotationGamma"></span>degree</li>
+
 </ul>
 
 test: <span id="test"></span>
@@ -50,17 +46,6 @@ var sphere = document.getElementById("sphere");
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
 		ax = event.accelerationIncludingGravity.x * 5;
-		// ay = event.accelerationIncludingGravity.y * 5;
-		// az = event.accelerationIncludingGravity.z * 0.5;
-		/*document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
-		document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
-		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
-
-		if ( e.rotationRate ) {
-			document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
-			document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
-			document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
-		}*/
 	}
 
 	setInterval( function() {
@@ -85,8 +70,8 @@ if (window.DeviceMotionEvent != undefined) {
 		
 		sphere.style.top = y + "px";
 		sphere.style.left = x + "px";
-		sphere.style.width = 50 + z + "px";
-		sphere.style.height = 50 + z + "px";
+		sphere.style.width = 20  + "px";
+		sphere.style.height = 20 + "px";
 		
 	}, 25);
 } 
