@@ -62,9 +62,9 @@ if (window.DeviceMotionEvent != undefined) {
 		vx = vx * 0.98;
 		vy = vy * 0.98;
 		vz = vz * 0.98;
-		// y = parseInt(y + vy / 50);
-		// x = parseInt(x + vx / 50);
-		// z = parseInt(z + vz / 50);
+		y = parseInt(y + vy / 50);
+		x = parseInt(x + vx / 50);
+		z = parseInt(z + vz / 50);
 		
 		boundingBoxCheck();
 		
@@ -82,7 +82,8 @@ function boundingBoxCheck(){
 	if (y<0) { y = 0; vy = -vy; }
 	if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
 	if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
-
+	if (z > 40) {z = 40;}
+	if (z < -40) {z = -40;}
 	
 }
 
