@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <title>The King</title>
 <meta name="viewport" content="width=device-width,user-scalable=yes">
+  <script type="text/javascript" src="jquery.js"></script>
 <style>
 body {
 	font-family: helvetica, arial, sans serif;
@@ -13,9 +14,18 @@ body {
 	position: absolute;	
 	width: 50px;
 	height: 50px;
-	border-radius: 50px;
-	-webkit-radius: 50px;
+	/*border-radius: 50px;*/
+	/*-webkit-radius: 50px;*/
 	background-color: red;
+}
+
+#in-zone {
+	width: 100px;
+	height:100px;
+	background-color: black;
+	position: absolute;
+	/*margin-top: -100px;*/
+	margin-top: 400px;
 }
 
 
@@ -28,13 +38,9 @@ body {
 <div id="content">
     <h1>The King</h1>
     <div id="sphere" style="top: 0px; left: 0px;"></div>
-<ul> 
-<li>acceleration x: <span id="accelerationX"></span>g</li>
+    <div id="in-zone"> </div>
 
-</ul>
 
-test: <span id="test"></span>
-</div>
 <script type="text/javascript">
 
 var x = 40, y = 40, z = 0,
@@ -42,6 +48,10 @@ var x = 40, y = 40, z = 0,
 	ax = 0, ay = 0, az = 0;
 	
 var sphere = document.getElementById("sphere");
+
+console.log (($('#sphere').offset().left));
+console.log (($('#in-zone').offset().left));
+console.log ((($('#in-zone').offset().left)-($('#sphere').offset().left)));
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
@@ -75,6 +85,11 @@ if (window.DeviceMotionEvent != undefined) {
 		
 	}, 25);
 } 
+if ( (($('#in-zone').offset().left)-($('#sphere').offset().left)) < 5)  {
+	console.log ("Worked");
+	$('#in-zone').css("background-color", "green");
+}
+
 
 
 function boundingBoxCheck(){
