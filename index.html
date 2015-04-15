@@ -45,7 +45,7 @@ var sphere = document.getElementById("sphere");
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
-		ax = event.accelerationIncludingGravity.y * 2;
+		ax = event.accelerationIncludingGravity.x * 2;
 	}
 
 	setInterval( function() {
