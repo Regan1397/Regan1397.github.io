@@ -4,10 +4,10 @@ var x = 40, y = 40, z = 0,
 	ax = 0, ay = 0, az = 0;
 	
 var sphere = document.getElementById("sphere");
-
-console.log (($('#sphere').offset().top));
-console.log (($('#in-zone').offset().top));
-console.log ((($('#in-zone').offset().top)-($('#sphere').offset().top)));
+var distAB =  (($('#in-zone').offset().left)-($('#sphere').offset().left))
+console.log (($('#sphere').offset().left));
+console.log (($('#in-zone').offset().left));
+console.log (distAB);
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
