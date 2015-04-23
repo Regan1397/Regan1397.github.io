@@ -12,6 +12,7 @@ console.log (distAB);
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
 		ay = event.accelerationIncludingGravity.x * 2;
+		ax = event.accelerationIncludingGravity.y * 2;
 	}
 
 	setInterval( function() {
@@ -21,9 +22,9 @@ if (window.DeviceMotionEvent != undefined) {
 			// vy = vy + ax;
 			// vz = vz + az;
 		} else {
-			vy = vy - ay;
-			// vx = vx + ax;
-			// vz = vz + az;
+			// vy = vy - ay;
+			vx = vx - ax;
+		
 		}
 		vx = vx * 0.98;
 		vy = vy * 0.98;
