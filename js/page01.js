@@ -11,7 +11,7 @@ console.log ((($('#in-zone').offset().top)-($('#sphere').offset().top)));
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
-		ay = event.accelerationIncludingGravity.y * 2;
+		ay = event.accelerationIncludingGravity.x * 2;
 	}
 
 	setInterval( function() {
@@ -21,7 +21,7 @@ if (window.DeviceMotionEvent != undefined) {
 			// vy = vy + ax;
 			// vz = vz + az;
 		} else {
-			vy = vy - ax;
+			vy = vy - ay;
 			// vx = vx + ax;
 			// vz = vz + az;
 		}
