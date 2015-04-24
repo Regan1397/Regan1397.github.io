@@ -15,7 +15,7 @@ if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
 		ay = event.accelerationIncludingGravity.x * 2;
 		ax = event.accelerationIncludingGravity.y * 2;
-		document.getElementById("accelerationY").innerHTML = d($('#in-zone').offset().top)
+		document.getElementById("accelerationY").innerHTML = document.getElementById("sphere").x;
 
 	}
 
@@ -59,7 +59,7 @@ function boundingBoxCheck(){
 	if (z < -40) {z = -40;}
 
 
-	if ( (($('#in-zone').offset().top)-($('#sphere').offset().top)) < 20)  {
+	if ( (distAB) < 20)  {
 	console.log ("Worked");
 	$('#in-zone').css("background-color", "yellow");
 	}
