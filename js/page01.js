@@ -2,6 +2,8 @@
 var x = 40, y = 40, z = 0,
     vx = 0, vy = 0, vz = 0,
 	ax = 0, ay = 0, az = 0;
+
+
 	
 var sphere = document.getElementById("sphere");
 var distAB =  (($('#in-zone').offset().left)-($('#sphere').offset().left))
@@ -13,6 +15,8 @@ if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
 		ay = event.accelerationIncludingGravity.x * 2;
 		ax = event.accelerationIncludingGravity.y * 2;
+		document.getElementById("accelerationY").innerHTML = document.getElementById("sphere").x;
+
 	}
 
 	setInterval( function() {
