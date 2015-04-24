@@ -15,7 +15,7 @@ if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
 		ay = event.accelerationIncludingGravity.x * 2;
 		ax = event.accelerationIncludingGravity.y * 2;
-		document.getElementById("accelerationY").innerHTML = document.getElementById("sphere").x;
+		document.getElementById("accelerationY").innerHTML = d($('#in-zone').offset().top)
 
 	}
 
