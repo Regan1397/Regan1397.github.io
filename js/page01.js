@@ -1,5 +1,5 @@
 
-var x = 40, y = 40, z = 0,
+var x = 0, y = 40, z = 0,
     vx = 0, vy = 0, vz = 0,
 	ax = 0, ay = 0, az = 0;
 
@@ -15,7 +15,7 @@ if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
 		ay = event.accelerationIncludingGravity.x * 2;
 		ax = event.accelerationIncludingGravity.y * 2;
-		document.getElementById("accelerationY").innerHTML = document.getElementById("sphere").x;
+		// document.getElementById("accelerationY").innerHTML = document.getElementById("sphere").x;
 
 	}
 
@@ -23,6 +23,7 @@ if (window.DeviceMotionEvent != undefined) {
 		var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
 		if ( landscapeOrientation) {
 			// vx = vx + ax;
+			vx = vx - ax;
 			// vy = vy + ax;
 			// vz = vz + az;
 		} else {
@@ -59,12 +60,14 @@ function boundingBoxCheck(){
 	if (z < -40) {z = -40;}
 
 
-	if ( (distAB) < 20)  {
+	if ( (distAB) <= 0)  {
 	console.log ("Worked");
-	$('#in-zone').css("background-color", "yellow");
+	// $('#in-zone').css("background-color", "yellow");
+	$('#troll').show('slow');
+	$()
 	}
 	else {
-		$('#in-zone').css("background-color", "black");
+		$('#troll').css("display", "none");
 	}
 
 }

@@ -1,5 +1,6 @@
 body {
   font-family: helvetica, arial, sans serif;
+
 }
 
 h1 {
@@ -7,28 +8,47 @@ color: red;
 
 }
 
+#content {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+
+
 #sphere {
   position: absolute; 
   width: 50px;
   height: 50px;
+margin-left: 0px;
   /*border-radius: 50px;*/
   /*-webkit-radius: 50px;*/
   background-color: red;
 }
 
 #in-zone {
-  width: 70px;
-  height:70px;
+  width: 150px;
+  height:300px;
   background-color: black;
   position: absolute;
   /*margin-top: -100px;*/
-  margin-top: -20px;
-  left: 340px;
+  margin-top: -65px;
+  left: 860px;
+}
+#troll {
+  width: 250px;
+  display: none;
+  /*height:300px;*/
+  /*background-color: black;*/
+  position: absolute;
+  /*margin-top: -100px;*/
+  margin-top: -35px;
+  left: 780px;
 }
 
 
 
-#content { display:block; }
+/*#content { display:block; }
 @media only screen and (orientation:portrait){
   #content {  
     height: 100vw;
@@ -46,5 +66,5 @@ color: red;
      -o-transform: rotate(0deg);
      -ms-transform: rotate(0deg);
      transform: rotate(0deg);
-  }
+  }*/
 }
