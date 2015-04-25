@@ -1,5 +1,5 @@
 
-var x = 0, y = 40, z = 0,
+var x = 0, y = 60, z = 0,
     vx = 0, vy = 0, vz = 0,
 	ax = 0, ay = 0, az = 0;
 
@@ -41,9 +41,9 @@ if (window.DeviceMotionEvent != undefined) {
 		boundingBoxCheck();
 		
 		sphere.style.top = y + "px";
-		sphere.style.left = x + "px";
-		sphere.style.width = 20  + "px";
-		sphere.style.height = 20 + "px";
+		// sphere.style.left = x + "px";
+		// sphere.style.width = 20  + "px";
+		// sphere.style.height = 20 + "px";
 		
 	}, 25);
 } 
@@ -63,6 +63,7 @@ function boundingBoxCheck(){
 	if ( (distAB) <= 0)  {
 	console.log ("Worked");
 	// $('#in-zone').css("background-color", "yellow");
+	$('#in-zone').css("display", "none");
 	$('#troll').show('slow');
 	$()
 	}
