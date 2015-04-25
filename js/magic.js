@@ -3,31 +3,35 @@
 
 $(document).ready(function() {
 
+var maxRot = 20;
+var starDragable = 1;
+ 	
+	if (starDragable =1) {
 
-
-	
-  // $('.pep.x').pep({ axis: 'x', debug: true,  useCSSTranslation: false });
-
-
-
-
-       $('.pep').pep({
-       	axis: 'x',
+        $('.pep').pep({
+        	axis: "x",
           droppable: '.droppable',
           overlapFunction: false,
           useCSSTranslation: false,
+          shouldEase: false,
           start: function(ev, obj){
             obj.noCenter = false;
           },
           drag: function(ev, obj){
             var vel = obj.velocity();
-            var rot = (vel.x)/5;
+            // document.getElementById("pep").style.width = '50px';
+            var rot = (vel.x)/2;
+            if (rot >maxRot) {rot =maxRot};
+            if (rot <-maxRot) {rot =-maxRot};
             rotate(obj.$el, rot);
+ positionCheck ();
+
           },
           stop: function(ev, obj){
             rotate(obj.$el, 0);
           },
           rest: handleCentering
+
         });
 
         function handleCentering(ev, obj){
@@ -79,6 +83,45 @@ $(document).ready(function() {
                       "transform": "rotate("+ deg +"deg)"
             });
         }
+    };
+
+
+
+	
+  // $('.pep.x').pep({ axis: 'x', debug: true,  useCSSTranslation: false });
+
+	
+var sphere = document.getElementById("sphere");
+var distAB =  0;
+
+
+function positionCheck(){
+
+distAB = (($('#in-zone').offset().left)-($('#starStar_01').offset().left));
+
+console.log (($('#starStar_01').offset().left));
+console.log (($('#in-zone').offset().left));
+console.log (distAB);
+
+
+
+	if ( (distAB) <= 50)  {
+	console.log ("In");
+	// $('#in-zone').css("background-color", "yellow");
+	// $('#in-zone').css("display", "none");
+	// $('#troll').show('slow');
+	$('#starStar_01').css("left", '656px');
+	starDragable = 0;
+	} 
+	else {
+			// console.log ("Out");
+	// $('#in-zone').css("background-color", "black");
+		$('#troll').css("display", "none");
+	}
+
+}
+
+
 
       });
 
