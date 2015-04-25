@@ -36,7 +36,7 @@ if (window.DeviceMotionEvent != undefined) {
 		z = parseInt(z + vz / 50);
 		
 		positionCheck();
-		rotate (sphere, vx*2);
+	
 		
 	// 	 if (window.innerWidth > 0)) {
 	// 	sphere.style.top = y + "px";
@@ -83,13 +83,3 @@ distAB = (($('#in-zone').offset().left)-($('#sphere').offset().left));
 }
 
 
-
-function rotate(objectID, deg){
-  $(objectID).css({ 
-      "-webkit-transform": "rotate("+ deg +"deg)",
-         "-moz-transform": "rotate("+ deg +"deg)",
-          "-ms-transform": "rotate("+ deg +"deg)",
-           "-o-transform": "rotate("+ deg +"deg)",
-              "transform": "rotate("+ deg +"deg)" 
-    }); 
-}
