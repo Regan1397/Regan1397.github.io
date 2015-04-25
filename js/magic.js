@@ -2,6 +2,11 @@
 
 
 $(document).ready(function() {
+ 
+ document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+}, false); 
+
 
 var maxRot = 20;
 var starDragable = 1;
@@ -99,9 +104,9 @@ function positionCheck(){
 
 distAB = (($('#in-zone').offset().left)-($('#starStar_01').offset().left));
 
-console.log (($('#starStar_01').offset().left));
-console.log (($('#in-zone').offset().left));
-console.log (distAB);
+// console.log (($('#starStar_01').offset().left));
+// console.log (($('#in-zone').offset().left));
+// console.log (distAB);
 
 
 
@@ -112,6 +117,8 @@ console.log (distAB);
 	// $('#troll').show('slow');
 	$('#starStar_01').css("left", '656px');
 	starDragable = 0;
+	$('#starText_01 > li:nth-child(2)').fadeTo(2000, 1);
+	$('#starText_01 > li:nth-child(1)').fadeTo(3000, 0.5);
 	} 
 	else {
 			// console.log ("Out");
@@ -120,6 +127,13 @@ console.log (distAB);
 	}
 
 }
+
+
+
+
+
+
+
 
 
 

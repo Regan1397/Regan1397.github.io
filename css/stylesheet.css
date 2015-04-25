@@ -8,12 +8,36 @@ color: red;
 
 }
 
+ul {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 10px;
+  list-style-type:  none;
+  padding-left: 0px;
+  left: 40px;
+}
+
+li {
+  opacity: 0;
+}
+
 #content {
   overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
+
+
+#starText_01 {
+  position: absolute;
+  top: 270px;
+}
+
+#starText_01 > li:nth-child(1) {
+  /*color: red;*/
+  opacity: 1;
+}
 
 
 #sphere {
