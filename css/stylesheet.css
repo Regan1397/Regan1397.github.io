@@ -48,6 +48,25 @@ color: red;
 }
 
 
+      body{ padding: 0; margin: 0; }
+
+      .pep      { 
+        width: 100px; 
+        height: 100px; 
+        background: rgb(243, 200, 200); 
+        color: white; 
+        opacity: 0.8;
+      }
+
+      .x        { 
+        position: absolute; 
+        top: 40px; 
+        left: 10px; 
+        background: rgb(120, 200, 200); 
+        opacity: 0.8;
+                }
+
+
 
 /*#content { display:block; }
 @media only screen and (orientation:portrait){

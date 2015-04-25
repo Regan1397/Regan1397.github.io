@@ -6,10 +6,7 @@ var x = 0, y = 40, z = 0,
 
 	
 var sphere = document.getElementById("sphere");
-var distAB =  (($('#in-zone').offset().left)-($('#sphere').offset().left))
-console.log (($('#sphere').offset().left));
-console.log (($('#in-zone').offset().left));
-console.log (distAB);
+var distAB =  0
 
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
@@ -38,12 +35,15 @@ if (window.DeviceMotionEvent != undefined) {
 		x = parseInt(x + vx / 50);
 		z = parseInt(z + vz / 50);
 		
-		boundingBoxCheck();
+		positionCheck();
+		rotate (sphere, vx*2);
 		
-		sphere.style.top = y + "px";
-		sphere.style.left = x + "px";
-		sphere.style.width = 20  + "px";
-		sphere.style.height = 20 + "px";
+	// 	 if (window.innerWidth > 0)) {
+	// 	sphere.style.top = y + "px";
+	// 	sphere.style.left = x + "px";
+	// 	sphere.style.width = 20  + "px";
+	// 	sphere.style.height = 20 + "px";
+	// }
 		
 	}, 25);
 } 
@@ -51,7 +51,7 @@ if (window.DeviceMotionEvent != undefined) {
 
 
 
-function boundingBoxCheck(){
+function positionCheck(){
 	if (x<0) { x = 0; vx = -vx; }
 	if (y<0) { y = 0; vy = -vy; }
 	// if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
@@ -59,16 +59,37 @@ function boundingBoxCheck(){
 	if (z > 40) {z = 40;}
 	if (z < -40) {z = -40;}
 
+distAB = (($('#in-zone').offset().left)-($('#sphere').offset().left));
+
+// console.log (($('#sphere').offset().left));
+// console.log (($('#in-zone').offset().left));
+// console.log (distAB);
+
+
 
 	if ( (distAB) <= 0)  {
-	console.log ("Worked");
-	// $('#in-zone').css("background-color", "yellow");
-	$('#in-zone').css("display", "none");
+	// console.log ("In");
+	$('#in-zone').css("background-color", "yellow");
+	// $('#in-zone').css("display", "none");
 	$('#troll').show('slow');
-	$()
-	}
+	
+	} 
 	else {
+			// console.log ("Out");
+	$('#in-zone').css("background-color", "black");
 		$('#troll').css("display", "none");
 	}
 
+}
+
+
+
+function rotate(objectID, deg){
+  $(objectID).css({ 
+      "-webkit-transform": "rotate("+ deg +"deg)",
+         "-moz-transform": "rotate("+ deg +"deg)",
+          "-ms-transform": "rotate("+ deg +"deg)",
+           "-o-transform": "rotate("+ deg +"deg)",
+              "transform": "rotate("+ deg +"deg)" 
+    }); 
 }
