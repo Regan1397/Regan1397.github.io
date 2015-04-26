@@ -63,7 +63,7 @@ li {
   display: inline-block;
 }
 
-#marker_01 {
+# {
   width: 400px;
   height:100px;
   background-color: transparent;
@@ -121,7 +121,7 @@ li {
 #starKing_01 {
 position: absolute;
 left: 796px;
-top:502px;
+top:402px;
 }
 
 
@@ -133,7 +133,7 @@ top:502px;
 #starGround {
   position: absolute;
   left: 154px;
-  top:706px;
+  top:606px;
 }
 
 
