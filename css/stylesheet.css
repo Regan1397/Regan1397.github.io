@@ -44,14 +44,6 @@ li {
   opacity: 1;
 }
 
-#starSky_01 {
-width: 100%
-}
-
-#starSky_02 {
-display:none;
-width: 100%;
-}
 
 
 #sphere {
@@ -116,9 +108,16 @@ width: 100%;
 
 /** king and the star **/
 #starSky_01 {
+  width: 100%;
   position: absolute;
   display:  inline;
 }
+
+#starSky_02 {
+  position: absolute;
+  display:  none;
+}
+
 
 #starStar_01 {
   position: absolute;
@@ -134,10 +133,6 @@ top:402px;
 }
 
 
-#starSky_02 {
-  position: absolute;
-  display:  inline;
-}
 
 #starGround {
   position: absolute;
