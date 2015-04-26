@@ -14,6 +14,8 @@ var maxRot = 20;
 var starDragable = 1;
 
 positionCheck();
+
+if (starDragable = 0) { clearInterval();}
  
 	if (starDragable =1) {
 
@@ -113,7 +115,7 @@ console.log (distAB);
     // $('#in-zone').css("display", "none");
     // $('#troll').show('slow');
      starDragable = 0;
-     clearInterval()
+
     $('.starStar_01').css("left", '656px');
     $('.starText_01 > li:nth-child(2)').fadeTo(3000, 1);
     $('.starText_01 > li:nth-child(1)').fadeTo(4000, 0.3);
