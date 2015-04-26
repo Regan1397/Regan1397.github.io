@@ -1,3 +1,5 @@
+
+
 body {
   /*font-family: helvetica, arial, sans serif;*/
   font-family: "Times New Roman", Times, serif;
@@ -24,10 +26,19 @@ li {
 }
 
 #content {
+  /*padding:5px;*/
+  /*background-color: black;*/
+  overflow: hidden;
+  height: 100px;
+  width: 700;
+}
+
+/*#background {
+  background-color: white;
   overflow: hidden;
   height: 100%;
   width: 100%;
-}
+}*/
 
 #starTitle {
   top: 240px;
@@ -65,7 +76,7 @@ li {
 }
 
 #marker_01 {
-  width: 400px;
+  width: 200px;
   height:100px;
   background-color: transparent;
   position: absolute;
@@ -108,7 +119,7 @@ li {
 
 /** king and the star **/
 #starSky_01 {
-  width: 1024px;
+  width: 1020px;
   height: 120px;
   position: absolute;
   display:  inline;
@@ -137,7 +148,7 @@ top:502px;
 
 #starGround {
   position: absolute;
-  left: 154px;
+  left: 150px;
   top:706px;
 }
 
