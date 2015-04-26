@@ -112,9 +112,10 @@ console.log (distAB);
     // $('#in-zone').css("background-color", "yellow");
     // $('#in-zone').css("display", "none");
     // $('#troll').show('slow');
+      $('.starStar_01').css("left", '656px');
      starDragable = 0;
-    $('.starStar_01').css("left", '656px');
-    $('.starText_01 > li:nth-child(2)').fadeTo(3000, 1);
+     stopAnimStar();
+      $('.starText_01 > li:nth-child(2)').fadeTo(3000, 1);
     $('.starText_01 > li:nth-child(1)').fadeTo(4000, 0.3);
     }
 
