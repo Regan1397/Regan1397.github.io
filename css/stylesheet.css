@@ -1,16 +1,18 @@
 body {
-  font-family: helvetica, arial, sans serif;
-
+  /*font-family: helvetica, arial, sans serif;*/
+  font-family: "Times New Roman", Times, serif;
 }
 
 h1 {
-color: red;
+color: black;
+font-size: 24px;
+font-weight: normal; 
 
 }
 
 ul {
   font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
+
   padding-top: 10px;
   list-style-type:  none;
   padding-left: 0px;
@@ -27,14 +29,17 @@ li {
   width: 100%;
 }
 
+#starTitle {
+  top: 240px;
+  left: 40px;
+}
 
-
-#starText_01 {
+.starText_01 {
   position: absolute;
   top: 270px;
 }
 
-#starText_01 > li:nth-child(1) {
+.starText_01 > li:nth-child(1) {
   /*color: red;*/
   opacity: 1;
 }
@@ -58,8 +63,8 @@ li {
   display: inline-block;
 }
 
-#in-zone {
-  width: 150px;
+#marker_01 {
+  width: 400px;
   height:100px;
   background-color: transparent;
   position: absolute;

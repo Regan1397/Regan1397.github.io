@@ -1076,7 +1076,6 @@
     }, 0);
 
     $('body').append( $debugDiv );
-
   };
 
   // log()
@@ -1158,7 +1157,6 @@
   $.pep.toggleAll = function(on){
     $.each(this.peps, function(index, pepObj){
       pepObj.toggle(on);
-   
     });
   };
 

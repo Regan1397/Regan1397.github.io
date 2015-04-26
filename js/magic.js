@@ -2,15 +2,19 @@
 
 
 $(document).ready(function() {
- 
+
  document.body.addEventListener('touchmove', function(event) {
   event.preventDefault();
 }, false); 
 
-
+  
+var sphere = document.getElementById("sphere");
+var distAB;
 var maxRot = 20;
 var starDragable = 1;
- 	
+animStar ();
+positionCheck();
+ 	 
 	if (starDragable =1) {
 
         $('.pep').pep({
@@ -21,6 +25,7 @@ var starDragable = 1;
           shouldEase: false,
           start: function(ev, obj){
             obj.noCenter = false;
+
           },
           drag: function(ev, obj){
             var vel = obj.velocity();
@@ -29,7 +34,7 @@ var starDragable = 1;
             if (rot >maxRot) {rot =maxRot};
             if (rot <-maxRot) {rot =-maxRot};
             rotate(obj.$el, rot);
- positionCheck ();
+
 
           },
           stop: function(ev, obj){
@@ -38,6 +43,7 @@ var starDragable = 1;
           rest: handleCentering
 
         });
+  }
 
         function handleCentering(ev, obj){
           console.log(obj.activeDropRegions.length);
@@ -88,45 +94,45 @@ var starDragable = 1;
                       "transform": "rotate("+ deg +"deg)"
             });
         }
-    };
+
+
+
+
+function positionCheck(){
+
+setInterval(function(){
+
+distAB = (($('#marker_01').offset().left)-($('#starStar_01').offset().left));
+console.log (distAB);
+
+
+
+    if ( (distAB) <= 50)  {
+    console.log ("In");
+    // $('#in-zone').css("background-color", "yellow");
+    // $('#in-zone').css("display", "none");
+    // $('#troll').show('slow');
+     starDragable = 0;
+    $('.starStar_01').css("left", '656px');
+    $('.starText_01 > li:nth-child(2)').fadeTo(3000, 1);
+    $('.starText_01 > li:nth-child(1)').fadeTo(4000, 0.3);
+    }
+
+  }, 1000); 
+
+
+}
+
+    
 
 
 
 	
   // $('.pep.x').pep({ axis: 'x', debug: true,  useCSSTranslation: false });
 
-	
-var sphere = document.getElementById("sphere");
-var distAB =  0;
-
-
-function positionCheck(){
-
-distAB = (($('#in-zone').offset().left)-($('#starStar_01').offset().left));
-
-// console.log (($('#starStar_01').offset().left));
-// console.log (($('#in-zone').offset().left));
-// console.log (distAB);
 
 
 
-	if ( (distAB) <= 50)  {
-	console.log ("In");
-	// $('#in-zone').css("background-color", "yellow");
-	// $('#in-zone').css("display", "none");
-	// $('#troll').show('slow');
-	$('#starStar_01').css("left", '656px');
-	starDragable = 0;
-	$('#starText_01 > li:nth-child(2)').fadeTo(2000, 1);
-	$('#starText_01 > li:nth-child(1)').fadeTo(3000, 0.5);
-	} 
-	else {
-			// console.log ("Out");
-	// $('#in-zone').css("background-color", "black");
-		$('#troll').css("display", "none");
-	}
-
-}
 
 
 
