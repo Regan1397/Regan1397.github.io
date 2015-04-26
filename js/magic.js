@@ -12,9 +12,9 @@ var sphere = document.getElementById("sphere");
 var distAB;
 var maxRot = 20;
 var starDragable = 1;
-animStar ();
+
 positionCheck();
- 	 
+ 	animStar (); 
 	if (starDragable =1) {
 
         $('.pep').pep({
