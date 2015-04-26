@@ -14,9 +14,9 @@ var maxRot = 20;
 var starDragable = 1;
 
 positionCheck();
- 	animStar (); 
+ 
 	if (starDragable =1) {
-
+      animStar (); 
         $('.pep').pep({
         	axis: "x",
           droppable: '.droppable',
