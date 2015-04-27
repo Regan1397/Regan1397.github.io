@@ -72,7 +72,7 @@
 
     mc.on("hammer.input", function(ev) {
         if(ev.isFinal) {
-             alert ("Worked");
+    
         }
     });
 
@@ -126,12 +126,11 @@
     var initScale = 1;
     function onPinch(ev) {
         if(ev.type == 'pinchstart') {
-            initScale = transform.scale || 1;
-          
+             alert ("Worked");          
         }
 
         el.className = '';
-        transform.scale = initScale * ev.scale;
+       
 
         requestElementUpdate();
         logEvent(ev.type);
