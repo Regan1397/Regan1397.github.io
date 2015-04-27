@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+        <title>Jester</title>
+
+        <style type="text/css">
+            body {
+              background: black;
+            }
+            #wrapper {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background: #000;
+                color: #fff;
+                font-family: Georgia;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                padding: 10px;
+                -webkit-border-radius: 60px;
+                -webkit-transition-property: -webkit-transform, background-color, color;
+                -webkit-transition-duration: 0.5s;
+                -webkit-transform-origin: 50% 50%;
+            }
+            #bounds {
+              position: absolute;
+              background: white;
+              width: 400px;
+              height: 400px;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <div id="bounds"></div>
+
+        <div id="wrapper">
+        </div>
+
+        <script type="text/javascript" src="jester.js"></script>
+        <script type="text/javascript">
+            var element = document.getElementById("wrapper");
+
+            element.style.webkitTransform = "translate3d(150px, 150px, 0)";
+
+            var swipeHandler = function(touches, direction) {
+                var matrix = new WebKitCSSMatrix(this.style.webkitTransform);
+                if(direction === "right")
+                    matrix.e += 50;
+                else if(direction === "left")
+                    matrix.e -= 50;
+
+                if(direction === "up")
+                    matrix.f -= 50;
+                else if(direction === "down")
+                    matrix.f += 50;
+
+                if(matrix.e < 0 || matrix.e > 300)
+                    matrix.e = 150;
+
+                if(matrix.f < 0 || matrix.f > 300)
+                    matrix.f = 150;
+
+                this.style.webkitTransform = "translate3d(" + matrix.e + "px, " + matrix.f + "px, 0)";
+            };
+            var changeColor = function(touches) {
+                this.style.backgroundColor = "#" + (Math.round(0xffffff * Math.random()).toString(16));
+            };
+            var alertDoubleTapped = function() {
+                alert("Double tap detected!");
+            };
+            var sizeCircle = function(touches) {
+                this.style.webkitTransform = "scale(" + touches.current.scale() + ")";
+            };
+            var sizeRelease = function(touches) {
+                this.style.webkitTransform = "scale(" + 1 + ")";
+            };
+            var startTouch = function(touches, event) {
+                console.log(["touch started with id: ", event.touches[0].identifier].join(""))
+            };
+            var duringTouch = function(touches, event) {
+                console.log(["touch continued with id: ", event.touches[0].identifier].join(""));
+            };
+            var endTouch = function(touches, event) {
+                console.log(["touch ended with id: ", event.changedTouches[0].identifier].join(""));
+            };
+            jester(element, { swipeDistance: 10, preventDefault: true })
+                .pinchnarrow(sizeCircle)
+                .pinchwiden(sizeCircle)
+                .pinchend(sizeRelease)
+                .swipe(swipeHandler)
+                .tap(changeColor)
+                .doubletap(alertDoubleTapped)
+                .start(startTouch)
+                .during(duringTouch)
+                .end(endTouch);
+        </script>
+    </body>
+</html>
