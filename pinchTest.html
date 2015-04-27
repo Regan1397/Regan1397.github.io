@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/style.css">
     <title>PinchTest</title>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/jquery.hammer.js"></script>
     <style>
 
         html, body {
@@ -27,7 +28,7 @@
              position: relative;
              width: 100px; 
              height: 200px;
-             left: 150px;
+             left: 100px;
              top: 100px;
             -ms-transform: rotate(-12deg); /* IE 9 */
             -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
@@ -48,24 +49,51 @@
 <div id="hit"></div>
 <div>
 
-<script src="js/hammer.min.js"></script>
-<script src="js/jquery.hammer.js"></script>
+
 <script>
 
-
  
+
+    var log = document.getElementById("log");
+    var el = document.getElementById("hit");
+
+   
+    var mc = new Hammer.Manager(el);
+ 
+
+    mc.add(new Hammer.Pinch({ threshold: 0.2, pointers: 2 }));
+
     mc.on("pinchstart pinchmove", onPinch);
   
     mc.on("hammer.input", function(ev) {
+        if(ev.isFinal) {
+    
+        }
     });
 
+
+
+
+    
+
+
+    function logEvent(str) {
+        //log.insertBefore(document.createTextNode(str +"\n"), log.firstChild);
+    }
+
+
+
+    var initScale = 1;
     function onPinch(ev) {
         if(ev.type == 'pinchstart') {
                     
         }
+
+        // el.className = '';
          alert ("Worked"); 
          $("#hit").css('background-color', 'red');
 
+      
         logEvent(ev.type);
     }
 
