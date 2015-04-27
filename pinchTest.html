@@ -53,9 +53,7 @@
     var log = document.querySelector("#log");
     var el = document.querySelector("#hit");
 
-    var START_X = Math.round((window.innerWidth - el.offsetWidth) / 2);
-    var START_Y = Math.round((window.innerHeight - el.offsetHeight) / 2);
-
+   
     var ticking = false;
     var transform;
     var timer;
@@ -77,32 +75,9 @@
     });
 
 
-    function resetElement() {
-        el.className = 'animate';
-        transform = {
-         
-        };
 
-        requestElementUpdate();
 
-        if (log.textContent.length > 2000) {
-            log.textContent = log.textContent.substring(0, 2000) + "...";
-        }
-    }
-
-    function updateElementTransform() {
-        var value = [
-          
-        ];
-
-        value = value.join(" ");
-        el.textContent = value;
-        el.style.webkitTransform = value;
-        el.style.mozTransform = value;
-        el.style.transform = value;
-        ticking = false;
-    }
-
+    
 
 
     function logEvent(str) {
