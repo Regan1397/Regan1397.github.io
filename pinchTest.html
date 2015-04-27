@@ -88,11 +88,6 @@
             rz: 0
         };
 
-        requestElementUpdate();
-
-        if (log.textContent.length > 2000) {
-            log.textContent = log.textContent.substring(0, 2000) + "...";
-        }
     }
 
     function updateElementTransform() {
@@ -127,7 +122,7 @@
     function onPinch(ev) {
         if(ev.type == 'pinchstart') {
             initScale = transform.scale || 1;
-            alert ("Worked!")
+            alert ("Worked")
         }
 
         el.className = '';
