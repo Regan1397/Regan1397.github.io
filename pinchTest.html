@@ -79,9 +79,6 @@
 
 
 
-    function logEvent(str) {
-        //log.insertBefore(document.createTextNode(str +"\n"), log.firstChild);
-    }
 
 
 
@@ -92,10 +89,14 @@
             alert ("Worked")
         }
 
+        el.className = '';
+        transform.scale = initScale * ev.scale;
+
+        requestElementUpdate();
+        logEvent(ev.type);
     }
 
-    // resetElement();
-
+ 
 </script>
 </body>
 </html>
