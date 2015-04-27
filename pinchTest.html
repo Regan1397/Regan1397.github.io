@@ -51,23 +51,15 @@
 <script src="js/hammer.min.js"></script>
 <script>
 
- 
-
     var log = document.getElementById("log");
     var el = document.getElementById("hit");
-
    
     var mc = new Hammer.Manager(el);
- 
-
     mc.add(new Hammer.Pinch({ threshold: 0.2, pointers: 2 }));
-
+ 
     mc.on("pinchstart pinchmove", onPinch);
   
     mc.on("hammer.input", function(ev) {
-        if(ev.isFinal) {
-    
-        }
     });
 
     var initScale = 1;
