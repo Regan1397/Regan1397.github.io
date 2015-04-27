@@ -7,11 +7,20 @@ $(document).ready(function() {
   event.preventDefault();
 }, false); 
 
-  
+//Draggable.
 var sphere = document.getElementById("sphere");
 var distAB;
 var maxRot = 20;
 var starDragable = 1;
+
+//Pinch
+    var log = document.getElementById("log");
+    var el = document.getElementById("pinchArea");
+   
+    var mc = new Hammer.Manager(el);
+    mc.add(new Hammer.Pinch({ threshold: 0.2, pointers: 2 }));
+
+    //Draggable p1
 
 positionCheck();
  
@@ -124,20 +133,22 @@ console.log (distAB);
 
 }
 
-    
+//Pinch
 
+mc.on("pinchstart pinchmove", onPinch);
 
+mc.on("hammer.input", function(ev) {
+});
 
-	
-  // $('.pep.x').pep({ axis: 'x', debug: true,  useCSSTranslation: false });
+function onPinch(ev) {
+    if(ev.type == 'pinchstart') {
+                
+    }
+     alert ("Worked"); 
+     $("#pinchArea").css('background-color', 'red');
 
-
-
-
-
-
-
-
+    logEvent(ev.type);
+}
 
 
 
