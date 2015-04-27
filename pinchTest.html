@@ -103,12 +103,7 @@
         ticking = false;
     }
 
-    function requestElementUpdate() {
-        if(!ticking) {
-            reqAnimationFrame(updateElementTransform);
-            ticking = true;
-        }
-    }
+
 
     function logEvent(str) {
         //log.insertBefore(document.createTextNode(str +"\n"), log.firstChild);
@@ -129,7 +124,7 @@
         logEvent(ev.type);
     }
 
-    resetElement();
+    // resetElement();
 
 </script>
 </body>
