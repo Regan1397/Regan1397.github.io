@@ -53,7 +53,7 @@
     var mc = new Hammer.Manager(el);
  
 
-    mc.add(new Hammer.Pinch({ threshold: 1, pointers: 3 }));
+    mc.add(new Hammer.Pinch({ threshold: 0.5, pointers: 3 }));
 
     mc.on("pinchstart pinchmove", onPinch);
   
