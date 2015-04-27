@@ -44,30 +44,19 @@
 <script src="js/hammer.min.js"></script>
 <script>
 
-    var reqAnimationFrame = (function () {
-        return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-    })();
+ 
 
     var log = document.querySelector("#log");
     var el = document.querySelector("#hit");
 
    
-    var ticking = false;
-    var transform;
-    var timer;
-
     var mc = new Hammer.Manager(el);
-
-  
+ 
 
     mc.add(new Hammer.Pinch({ threshold: 0 }));
 
-
     mc.on("pinchstart pinchmove", onPinch);
   
-
     mc.on("hammer.input", function(ev) {
         if(ev.isFinal) {
     
