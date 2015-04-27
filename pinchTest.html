@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <title>Hammer.js</title>
+    <title>PinchTest</title>
 
     <style>
 
@@ -13,19 +13,26 @@
         }
 
         body {
-            -webkit-perspective: 500;
-            -moz-perspective: 500;
-            perspective: 500;
+    
+        }
+        #background {
+            width: 1020px;
+            height: 700px;
+            background-color: black;
         }
 
- /*       .animate {
-            -webkit-transition: all .3s;
-            -moz-transition: all .3s;
-            transition: all .3s;
-        }
-*/
         #hit {
             padding: 10px;
+            background: #42d692;
+             position: relative;
+             width: 200px; 
+             height: 400px;
+             left: 300px;
+             top: 100px;
+            -ms-transform: rotate(-12deg); /* IE 9 */
+            -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
+            transform: rotate(-12deg);
+
         }
 
         #log {
@@ -37,17 +44,17 @@
 </head>
 <body>
 
-<div id="log"></div>
-<div id="hit" style="background: #42d692; width: 300px; height: 300px;"></div>
-
+<div id="background">
+<div id="hit"></div>
+<div>
 
 <script src="js/hammer.min.js"></script>
 <script>
 
  
 
-    var log = document.querySelector("#log");
-    var el = document.querySelector("#hit");
+    var log = document.getElementById("log");
+    var el = document.getElementById("hit");
 
    
     var mc = new Hammer.Manager(el);
@@ -83,6 +90,7 @@
 
         // el.className = '';
          alert ("Worked"); 
+         $("#hit").css('background-color', 'red');
 
       
         logEvent(ev.type);
