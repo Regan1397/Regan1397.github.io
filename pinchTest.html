@@ -72,13 +72,54 @@
 
     mc.on("hammer.input", function(ev) {
         if(ev.isFinal) {
-            resetElement();
+             alert ("Worked");
         }
     });
 
 
+    function resetElement() {
+        el.className = 'animate';
+        transform = {
+            translate: { x: START_X, y: START_Y },
+            scale: 1,
+            angle: 0,
+            rx: 0,
+            ry: 0,
+            rz: 0
+        };
 
+        requestElementUpdate();
 
+        if (log.textContent.length > 2000) {
+            log.textContent = log.textContent.substring(0, 2000) + "...";
+        }
+    }
+
+    function updateElementTransform() {
+        var value = [
+                    'translate3d(' + transform.translate.x + 'px, ' + transform.translate.y + 'px, 0)',
+                    'scale(' + transform.scale + ', ' + transform.scale + ')',
+                    'rotate3d('+ transform.rx +','+ transform.ry +','+ transform.rz +','+  transform.angle + 'deg)'
+        ];
+
+        value = value.join(" ");
+        el.textContent = value;
+        el.style.webkitTransform = value;
+        el.style.mozTransform = value;
+        el.style.transform = value;
+        ticking = false;
+    }
+
+    function requestElementUpdate() {
+        if(!ticking) {
+            reqAnimationFrame(updateElementTransform);
+            ticking = true;
+        }
+    }
+
+    function logEvent(str) {
+        //log.insertBefore(document.createTextNode(str +"\n"), log.firstChild);
+    }
 
 
 
@@ -86,17 +127,18 @@
     function onPinch(ev) {
         if(ev.type == 'pinchstart') {
             initScale = transform.scale || 1;
-            alert ("Worked")
+          
         }
 
         el.className = '';
-        // transform.scale = initScale * ev.scale;
+        transform.scale = initScale * ev.scale;
 
-        // requestElementUpdate();
+        requestElementUpdate();
         logEvent(ev.type);
     }
 
- 
+    resetElement();
+
 </script>
 </body>
 </html>
