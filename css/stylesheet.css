@@ -136,7 +136,7 @@ li {
 
 /** king and the star **/
 #starSky_01 {
-  width: 1020px;
+  width: 1024px;
   height: 120px;
   position: absolute;
   display:  inline;
@@ -158,15 +158,15 @@ li {
 #starKing_01 {
 position: absolute;
 left: 793px;
-top:434;
+top:502px;
 }
 
 
 
 #starGround {
   position: absolute;
-  left: 152px;
-  top:638px;
+  left: 154px;
+  top:706px;
 }
 
 
