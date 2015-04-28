@@ -145,10 +145,10 @@ mc.on("hammer.input", function(ev) {
 
 function onPinch(ev) {
     if(ev.type == 'pinchstart') {
-                
+           var randomColor = Math.floor(Math.random()*16777215).toString(16)     
     }
      // alert ("Worked"); 
-     $("#pinchArea").css('background-color', 'red');
+     $("#pinchArea").css('background-color', randomColor);
 
     logEvent(ev.type);
 }
