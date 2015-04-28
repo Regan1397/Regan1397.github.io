@@ -14,7 +14,7 @@ var maxRot = 20;
 var starDragable = 1;
 
 
-    //Draggable p1
+    //Draggable Code
 
 positionCheck();
  
@@ -27,7 +27,6 @@ positionCheck();
           useCSSTranslation: false,
           shouldEase: false,
           start: function(ev, obj){
-            obj.noCenter = false;
 
           },
           drag: function(ev, obj){
@@ -43,50 +42,11 @@ positionCheck();
           stop: function(ev, obj){
             rotate(obj.$el, 0);
           },
-          rest: handleCentering
+     
 
         });
   }
 
-        function handleCentering(ev, obj){
-          console.log(obj.activeDropRegions.length);
-          if ( obj.activeDropRegions.length > 0 ) {
-            centerWithin(obj);
-          }
-        }
-
-        function centerWithin(obj){
-          var $parent = obj.activeDropRegions[0];
-          var pTop    = $parent.position().top;
-          var pLeft   = $parent.position().left;
-          var pHeight = $parent.outerHeight();
-          var pWidth  = $parent.outerWidth();
-
-          var oTop    = obj.$el.position().top;
-          var oLeft   = obj.$el.position().left;
-          var oHeight = obj.$el.outerHeight();
-          var oWidth  = obj.$el.outerWidth();
-
-          var cTop    = pTop + (pHeight/2);
-          var cLeft   = pLeft + (pWidth/2);
-
-          if ( !obj.noCenter ) {
-            if ( !obj.shouldUseCSSTranslation() ) {
-              var moveTop = cTop - (oHeight/2);
-              var moveLeft = cLeft - (oWidth/2);
-              obj.$el.animate({ top: moveTop, left: moveLeft }, 50);
-            } else{
-              var moveTop   = (cTop - oTop) - oHeight/2;
-              var moveLeft  = (cLeft - oLeft) - oWidth/2;
-              obj.moveToUsingTransforms( moveTop, moveLeft );
-            }
-
-            obj.noCenter = true;
-            return;
-          }
-
-          obj.noCenter = false;
-        }
 
         function rotate($obj, deg){
           $obj.css({
@@ -108,8 +68,9 @@ setInterval(function(){
 distAB = (($('#marker_01').offset().left)-($('#starStar_01').offset().left));
 console.log (distAB);
 
+//End of Draggable Code
 
-
+//Sentence 2 Initiation.
     if ( (distAB) <= 50)  {
     console.log ("In");
     // $('#in-zone').css("background-color", "yellow");
@@ -148,7 +109,9 @@ function onPinch(ev) {
            var randomColor = Math.floor(Math.random()*16777215).toString(16)     
     }
      // alert ("Worked"); 
-     $("#pinchArea").css('background-color', randomColor);
+       $('.starText_01 > li:nth-child(3)').fadeTo(3000, 1);
+    $('.starText_01 > li:nth-child(2)').fadeTo(4000, 0.3);
+     // $("#pinchArea").css('background-color', randomColor);
 
     logEvent(ev.type);
 }
