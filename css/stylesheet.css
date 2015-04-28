@@ -3,9 +3,9 @@
     background: #42d692;
     /*background-color: transparent;*/
      position: absolute;
-     width: 100px; 
-     height: 200px;
-     left: 100px;
+     width: 200px; 
+     height: 400px;
+     left: 50px;
      top: 100px;
     -ms-transform: rotate(-12deg); /* IE 9 */
     -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
