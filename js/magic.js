@@ -3,25 +3,35 @@
 
 $(document).ready(function() {
 
- document.body.addEventListener('touchmove', function(event) {
-  event.preventDefault();
-}, false); 
 
 //Draggable.
 var sphere = document.getElementById("sphere");
 var distAB;
 var maxRot = 20;
 var starDragable = 1;
+var firstScenePart = 1;
 
 
     //Draggable Code
+console.log(firstScenePart);
+  
 
-positionCheck();
- 
-	if (starDragable =1) {
-  animStar (); 
+
+if (firstScenePart == 1) 
+{
+moveStar();   
+}
+animStar (); 
+
+
+
+
+
+
+       function moveStar() {
+
         $('.pep').pep({
-        	axis: "x",
+          axis: "x",
           droppable: '.droppable',
           overlapFunction: false,
           useCSSTranslation: false,
@@ -36,57 +46,56 @@ positionCheck();
             if (rot >maxRot) {rot =maxRot};
             if (rot <-maxRot) {rot =-maxRot};
             rotate(obj.$el, rot);
+              positionCheck();
 
 
           },
           stop: function(ev, obj){
-            rotate(obj.$el, 0);
+            console.log("stoped");
+
+            if(firstScenePart==2){
+              pinchAnim();
+            }
+            
+            
           },
      
 
-        });
+        }); 
+      }
+
+  function rotate($obj, deg){
+    $obj.css({
+        "-webkit-transform": "rotate("+ deg +"deg)",
+           "-moz-transform": "rotate("+ deg +"deg)",
+            "-ms-transform": "rotate("+ deg +"deg)",
+             "-o-transform": "rotate("+ deg +"deg)",
+                "transform": "rotate("+ deg +"deg)"
+      });
   }
 
 
-        function rotate($obj, deg){
-          $obj.css({
-              "-webkit-transform": "rotate("+ deg +"deg)",
-                 "-moz-transform": "rotate("+ deg +"deg)",
-                  "-ms-transform": "rotate("+ deg +"deg)",
-                   "-o-transform": "rotate("+ deg +"deg)",
-                      "transform": "rotate("+ deg +"deg)"
-            });
-        }
+
+ function positionCheck(){
+    distAB = (($('#marker_01').offset().left)-($('#starStar_01').offset().left));
+    console.log (distAB);
+
+    //End of Draggable Code
+
+    //Sentence 2 Initiation.
+      if ( (distAB) <= 50)  {
+       firstScenePart = 2;
+      console.log (firstScenePart);
+        $('#starStar_01').css("left", '656px');
+        
+      }
+  }
 
 
 
 
-function positionCheck(){
-
-setInterval(function(){
-
-distAB = (($('#marker_01').offset().left)-($('#starStar_01').offset().left));
-console.log (distAB);
-
-//End of Draggable Code
-
-//Sentence 2 Initiation.
-    if ( (distAB) <= 50)  {
-    console.log ("In");
-    // $('#in-zone').css("background-color", "yellow");
-    // $('#in-zone').css("display", "none");
-    // $('#troll').show('slow');
-      $('.starStar_01').css("left", '656px');
-     starDragable = 0;
-     stopAnimStar();
-      $('.starText_01 > li:nth-child(2)').fadeTo(3000, 1);
-    $('.starText_01 > li:nth-child(1)').fadeTo(4000, 0.3);
-    }
-
-  }, 1000); 
 
 
-}
 
 //Pinch
     var log = document.getElementById("log");
@@ -97,31 +106,42 @@ console.log (distAB);
 
 
 
-//Pinch
+    //Pinch
 
-mc.on("pinchstart pinchmove", onPinch);
+    mc.on("pinchstart pinchmove", onPinch);
 
-mc.on("hammer.input", function(ev) {
-});
+    mc.on("hammer.input", function(ev) {
+    });
 
-function onPinch(ev) {
-    if(ev.type == 'pinchstart') {
-           var randomColor = Math.floor(Math.random()*16777215).toString(16)     
+    function onPinch(ev) {
+      if(ev.type == 'pinchstart') {
+             var randomColor = Math.floor(Math.random()*16777215).toString(16)     
+      }
+       // alert ("Worked"); 
+         $('.starText_01 > li:nth-child(2)').fadeTo(4000, 0.3);
+         $('.starText_01 > li:nth-child(3)').fadeTo(3000, 1);
+         stopAnimStar();
+
+       // $("#pinchArea").css('background-color', randomColor);
+
+      logEvent(ev.type);
     }
-     // alert ("Worked"); 
-       $('.starText_01 > li:nth-child(3)').fadeTo(3000, 1);
-    $('.starText_01 > li:nth-child(2)').fadeTo(4000, 0.3);
-     // $("#pinchArea").css('background-color', randomColor);
 
-    logEvent(ev.type);
-}
+    function pinchAnim() {
+  $('.starText_01 > li:nth-child(2)').fadeTo(3000, 1);
+      $('.starText_01 > li:nth-child(1)').fadeTo(4000, 0.3);
+       $('#pinchArea').show();
+ animKing();
+ animStar();
+console.log(firstScenePart +"hello")
+
+    }
 
 
 
 
 
-
-      });
+});
 
 
 
