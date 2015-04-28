@@ -147,7 +147,7 @@ function onPinch(ev) {
     if(ev.type == 'pinchstart') {
                 
     }
-     alert ("Worked"); 
+     // alert ("Worked"); 
      $("#pinchArea").css('background-color', 'red');
 
     logEvent(ev.type);
