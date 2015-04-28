@@ -26,22 +26,54 @@ animStar ();
 $(function () {
  $('#all').bind("tap", tapHandler);
 
-function tapHandler (event) 
+  function tapHandler (event) 
   {
-    if (firstScenePart == 3)
+    if (firstScenePart == 5)
     {
-            $('.starText_01 > li:nth-child(4)').fadeTo(textFade,backText);
-     
-               $('.starText_01 > li:nth-child(5)').css({
-              'color': 'white',
-                  });    
-            $('.starText_01 > li:nth-child(5)').fadeTo(textFade,1).delay(1500).fadeTo(textFade,backText, function () {
-               $('.starText_01 > li:nth-child(6)').css({
-              'color': 'white',
-                  });
-                 $('.starText_01 > li:nth-child(6)').fadeTo(textFade,1)
-            });  
+      $('#all').hide(); 
+        $('.starText_01 > li:nth-child(4)').fadeTo(1000,0);
+        $('.starText_01 > li:nth-child(5)').fadeTo(1000,0);
+        $('#all').delay(2000, function () { 
+            $('.starText_01 > li:nth-child(6)').fadeTo(textFade,0,function () {
+                  $('.starText_01 > li:nth-child(6)').css({'opacity': 'backText', 'color': 'black' });
+
+            $("#blackFade").delay(500).fadeOut(3000);
+            $('.starText_01 > li:nth-child(4)').css({'font-size': '18px'});
+
+            $('.starText_01 > li:nth-child(3)').fadeTo(0,backText);
+            $('.starText_01 > li:nth-child(4)').fadeTo(0,backText);
+            $('.starText_01 > li:nth-child(5)').fadeTo(0,backText);
+            $('.starText_01 > li:nth-child(6)').fadeTo(0,backText);
+            $('.starText_01 > li:nth-child(4)').css({ 'color': 'black' });  
+            $('.starText_01 > li:nth-child(5)').css({ 'color': 'black' });  
+            $('.starText_01 > li:nth-child(6)').css({ 'color': 'black' });
+            $("#starStar_01").fadeTo(1500, 1);
+            // animStar();
+            $('.starText_01 > li:nth-child(7)').fadeTo(5000,1);
+            // $('#blackFade').hide(); 
+            $('#starGround').fadeTo(1500, 1);
+            });
+
+
+             
+        });
     }
+
+    if(firstScenePart == 4) {
+          $('.starText_01 > li:nth-child(5)').fadeTo(textFade,backText, function () {
+                   $('.starText_01 > li:nth-child(6)').css({
+                  'color': 'white',
+                      });
+                     $('.starText_01 > li:nth-child(6)').fadeTo(textFade,1)
+                     $('#all').show(); 
+                     firstScenePart = 5;
+            });  
+
+    }
+
+
+
+  
   }
 });
 
@@ -51,6 +83,21 @@ $(function () {
 
 function tapHandler (event) 
   {
+
+
+  if (firstScenePart == 3)
+    {       animStar();
+            $('.starText_01 > li:nth-child(4)').fadeTo(textFade,backText);
+            $('#all').hide();
+               $('.starText_01 > li:nth-child(5)').css({
+                   'color': 'white',
+                });
+              $('.starText_01 > li:nth-child(5)').fadeTo(textFade,1)
+                $('#all').show();
+                firstScenePart = 4;       
+    }
+
+
     if (firstScenePart == 2)
     {
         stopAnimKing();
