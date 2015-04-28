@@ -53,6 +53,16 @@ li {
   position: absolute;
   z-index: 1;
 }
+#all {
+  width: 1024px;
+  height: 768px;
+  background-color: transparent;
+  /*pointer-events: none;*/
+  /*opacity: 0;*/
+  display: none;
+  position: absolute;
+  z-index: 6;
+}
 
 .starText_01 {
   position: absolute;
