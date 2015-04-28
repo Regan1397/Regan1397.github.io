@@ -23,6 +23,22 @@ if (firstScenePart == 1)
 moveStar(); 
 animStar ();   
 }
+$(function () {
+ $('#starKing_01').bind("tap", tapHandler);
+
+function tapHandler (event) 
+  {
+    if (firstScenePart == 3)
+    {
+            $('.starText_01 > li:nth-child(4)').fadeTo(textFade,0);
+               $('.starText_01 > li:nth-child(5)').css({
+              'color': 'white',
+          });    
+            // $('.starText_01 > li:nth-child(5)').fadeTo(textFade,1);      
+    }
+  }
+});
+
 
 $(function () {
  $('#starKing_01').bind("tap", tapHandler);
@@ -42,15 +58,20 @@ function tapHandler (event)
               'color': 'white',
               'font-size': '21px'
           });
-            $('.starText_01 > li:nth-child(4)').fadeTo(1500,0.9);      
+            $('.starText_01 > li:nth-child(4)').fadeTo(textFade,0.9);      
        
 
           });
             //fadeoutstar
         });
-    }
-  }
+
+      }
+      firstScenePart = 3;
+
+   }    
 });
+
+
 
 
 
