@@ -57,7 +57,7 @@ li {
   width: 1024px;
   height: 768px;
   background-color: transparent;
-  /*pointer-events: none;*/
+
   /*opacity: 0;*/
   display: none;
   position: absolute;

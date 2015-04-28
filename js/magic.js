@@ -60,6 +60,7 @@ $(function () {
     }
 
     if(firstScenePart == 4) {
+       $('#all').hide();
           $('.starText_01 > li:nth-child(5)').fadeTo(textFade,backText, function () {
                    $('.starText_01 > li:nth-child(6)').css({
                   'color': 'white',
@@ -73,7 +74,18 @@ $(function () {
 
 
 
-  
+    if (firstScenePart == 3)
+    {       
+            $('.starText_01 > li:nth-child(4)').fadeTo(textFade,backText);
+            $('#all').hide();
+               $('.starText_01 > li:nth-child(5)').css({
+                   'color': 'white',
+                });
+              $('.starText_01 > li:nth-child(5)').fadeTo(textFade,1)
+                $('#all').show();
+                firstScenePart = 4;   
+           
+    }
   }
 });
 
@@ -83,21 +95,6 @@ $(function () {
 
 function tapHandler (event) 
   {
-
-
-  if (firstScenePart == 3)
-    {       animStar();
-            $('.starText_01 > li:nth-child(4)').fadeTo(textFade,backText);
-            $('#all').hide();
-               $('.starText_01 > li:nth-child(5)').css({
-                   'color': 'white',
-                });
-              $('.starText_01 > li:nth-child(5)').fadeTo(textFade,1)
-                $('#all').show();
-                firstScenePart = 4;       
-    }
-
-
     if (firstScenePart == 2)
     {
         stopAnimKing();
@@ -113,8 +110,7 @@ function tapHandler (event)
           });
             $('.starText_01 > li:nth-child(4)').fadeTo(textFade,0.9);
             $('#all').show();      
-       
-
+            animKing();
           });
             //fadeoutstar
         });
