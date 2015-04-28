@@ -13,12 +13,6 @@ var distAB;
 var maxRot = 20;
 var starDragable = 1;
 
-//Pinch
-    var log = document.getElementById("log");
-    var el = document.getElementById("pinchArea");
-   
-    var mc = new Hammer.Manager(el);
-    mc.add(new Hammer.Pinch({ threshold: 0.2, pointers: 2 }));
 
     //Draggable p1
 
@@ -132,6 +126,15 @@ console.log (distAB);
 
 
 }
+
+//Pinch
+    var log = document.getElementById("log");
+    var el = document.getElementById("pinchArea");
+   
+    var mc = new Hammer.Manager(el);
+    mc.add(new Hammer.Pinch({ threshold: 0.2, pointers: 2 }));
+
+
 
 //Pinch
 
