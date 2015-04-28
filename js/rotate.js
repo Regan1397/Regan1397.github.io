@@ -20,8 +20,8 @@ function animKing () {
  t2 =setInterval(function(){
     (dir2 == false) ? document.getElementById('starKing_01').style.webkitTransform = "rotate(3deg)" : document.getElementById('starKing_01').style.webkitTransform = "rotate(-3deg)";
     dir2 = !dir2;
-}, 1000);
+}, 800);
 }
-function stopAnimStar () {
+function stopAnimKing () {
 clearInterval(t2);
 }

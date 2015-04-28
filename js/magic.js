@@ -10,7 +10,8 @@ var distAB;
 var maxRot = 20;
 var starDragable = 1;
 var firstScenePart = 1;
-
+var backText = 0.3;
+var textFade = 2000;
 
     //Draggable Code
 console.log(firstScenePart);
@@ -19,10 +20,31 @@ console.log(firstScenePart);
 
 if (firstScenePart == 1) 
 {
-moveStar();   
+moveStar(); 
+animStar ();   
 }
-animStar (); 
 
+$(function () {
+ $('#starKing_01').bind("tap", tapHandler);
+
+function tapHandler (event) {
+    if (firstScenePart == 2)
+    {
+    $('.starText_01 > li:nth-child(3)').fadeTo(textFade, 1);
+      $('.starText_01 > li:nth-child(2)').fadeTo(textFade, backText).delay(2000, function () {
+        $("#starStar_01").fadeTo(1500, 0, function() {
+          $("#blackFade").fadeIn(1500);
+          $('#starGround').fadeTo(1500, 0.5);
+          $('.starText_01 > li:nth-child(4)').css('color', 'white');
+          $('.starText_01 > li:nth-child(4)').fadeTo(1500,0.9);      
+     
+
+        });
+          //fadeoutstar
+      });
+    }
+  }
+});
 
 
 
@@ -47,17 +69,22 @@ animStar ();
             if (rot <-maxRot) {rot =-maxRot};
             rotate(obj.$el, rot);
               positionCheck();
-
-
           },
           stop: function(ev, obj){
+             rotate(obj.$el, 0);
+             animStar ();  
             console.log("stoped");
+            
+  if (firstScenePart == 2)
+{
+animKing();
+stopAnimStar();
+ rotate(obj.$el, 0);
+  $('.starText_01 > li:nth-child(2)').fadeTo(textFade, 1);
+      $('.starText_01 > li:nth-child(1)').fadeTo(textFade, backText);
+}
 
-            if(firstScenePart==2){
-              pinchAnim();
-            }
-            
-            
+
           },
      
 
@@ -88,56 +115,10 @@ animStar ();
       console.log (firstScenePart);
         $('#starStar_01').css("left", '656px');
         
+
+
       }
   }
-
-
-
-
-
-
-
-//Pinch
-    var log = document.getElementById("log");
-    var el = document.getElementById("pinchArea");
-   
-    var mc = new Hammer.Manager(el);
-    mc.add(new Hammer.Pinch({ threshold: 0.2, pointers: 2 }));
-
-
-
-    //Pinch
-
-    mc.on("pinchstart pinchmove", onPinch);
-
-    mc.on("hammer.input", function(ev) {
-    });
-
-    function onPinch(ev) {
-      if(ev.type == 'pinchstart') {
-             var randomColor = Math.floor(Math.random()*16777215).toString(16)     
-      }
-       // alert ("Worked"); 
-         $('.starText_01 > li:nth-child(2)').fadeTo(4000, 0.3);
-         $('.starText_01 > li:nth-child(3)').fadeTo(3000, 1);
-         stopAnimStar();
-
-       // $("#pinchArea").css('background-color', randomColor);
-
-      logEvent(ev.type);
-    }
-
-    function pinchAnim() {
-  $('.starText_01 > li:nth-child(2)').fadeTo(3000, 1);
-      $('.starText_01 > li:nth-child(1)').fadeTo(4000, 0.3);
-       $('#pinchArea').show();
- animKing();
- animStar();
-console.log(firstScenePart +"hello")
-
-    }
-
-
 
 
 
