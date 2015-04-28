@@ -83,6 +83,7 @@ $(function () {
                 });
               $('.starText_01 > li:nth-child(5)').fadeTo(textFade,1)
                 $('#all').show();
+                  stopAnimKing2();
                 firstScenePart = 4;   
            
     }
@@ -110,7 +111,7 @@ function tapHandler (event)
           });
             $('.starText_01 > li:nth-child(4)').fadeTo(textFade,0.9);
             $('#all').show();      
-            animKing();
+            animKing2();
           });
             //fadeoutstar
         });
