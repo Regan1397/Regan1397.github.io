@@ -2,25 +2,17 @@
     padding: 10px;
     background: #42d692;
     /*background-color: transparent;*/
+    /*opacity: .4;*/
      position: absolute;
      width: 200px; 
-     height: 400px;
-     left: 50px;
-     top: 100px;
+     height: 600px;
+     left: 750px;
+     top: -20px;
     -ms-transform: rotate(-12deg); /* IE 9 */
     -webkit-transform: rotate(-12deg); /* Chrome, Safari, Opera */
     transform: rotate(-12deg);
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
