@@ -125,6 +125,20 @@ function tapHandler (event)
 
 
 
+$(function(){
+
+
+  $( ".pep" ).bind( "taphold", tapholdHandler );
+ 
+  function tapholdHandler( event ){
+
+  console.log("hello");
+  }
+});
+
+
+
+
 
 
 
@@ -137,7 +151,8 @@ function tapHandler (event)
           useCSSTranslation: false,
           shouldEase: false,
           start: function(ev, obj){
-
+            console.log("started")
+                blurredStar ();
           },
           drag: function(ev, obj){
             var vel = obj.velocity();
@@ -147,6 +162,7 @@ function tapHandler (event)
             if (rot <-maxRot) {rot =-maxRot};
             rotate(obj.$el, rot);
               positionCheck();
+              
           },
           stop: function(ev, obj){
              rotate(obj.$el, 0);
@@ -197,6 +213,22 @@ stopAnimStar();
 
       }
   }
+
+var t4;
+ 
+ // $.event.special.tap = {
+ //    tapholdThreshold: 300,
+ //  }
+
+  function blurredStar () {
+    tapholdThreshold: 50,
+
+
+ t4 =setInterval(function(){
+$('#starStarBlur').fadeTo(1000,0.4);
+$('#starStarBlur').fadeTo(1000,0);
+}, 2100);
+}
 
 
 
