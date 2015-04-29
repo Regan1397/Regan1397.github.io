@@ -21,7 +21,7 @@ clearInterval(t1);
 function animKing () {
 
  t2 =setInterval(function(){
-    (dir2 == false) ? document.getElementById('starKing_01').style.webkitTransform = "rotate(3deg)" : document.getElementById('starKing_01').style.webkitTransform = "rotate(-3deg)";
+    (dir2 == false) ? document.getElementById('starKing_01').style.webkitTransform = "rotate(2deg)" : document.getElementById('starKing_01').style.webkitTransform = "rotate(-2deg)";
     dir2 = !dir2;
 }, 800);
 }
@@ -40,3 +40,4 @@ function animKing2 () {
 function stopAnimKing2 () {
 clearInterval(t3);
 }
+

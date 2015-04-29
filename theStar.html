@@ -1,5 +1,5 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<title>The King</title>
+<html><head>
+<title>The King and the Star</title>
 <meta name="viewport" intial-scale=1.0, content="width=device-width">
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 
@@ -15,8 +15,8 @@
 
 <!-- local lib and tests -->
 <script src="js/jquery.pep.js"></script>
-<script  src="js/magic.js"></script>
-<script src="js/rotate.js"></script>
+<script  src="js/jquery_page_01.js"></script>
+<!-- <script src="js/rotate.js"></script> -->
 
 
 </head>
@@ -24,15 +24,18 @@
 <body>
 	
 <div id="content">
-
+	<div id="kingShader"></div>
 	<div id="blackFade"> </div>
 	<div id="all"> </div>
 	<!-- <div id="background"> -->
 	<img id="starGround" src="imgs/Star_Ground_01.png">
-	<img id="starSky_01" src="imgs/Star_Sky_01.png">
+	<img id="starSky_01" src="imgs/Star_Sky_02.png">
 	<!-- <img id="starSky_02 " src="imgs/Star_Sky_02.png"> -->
 	<img id="starKing_01" src="imgs/Star_King_01.png">
-	<img id="starStar_01" class="pep" src="imgs/Star_Star.png">
+	<img id="starStar_01" class="pep " src="imgs/Star_Star.png">
+	<img id="starStarBlur" src="imgs/Star_Star_Blur.png">
+	<img id="starStarBlink" src="imgs/Star_Star_Blink.png">
+	<div id="dot"> </div>
 	<div id="marker_01"> </div>
 	<h1 class="starText_01" id="starTitle"> The King and the Star</h1>
 	<ul class="starText_01">
@@ -47,6 +50,7 @@
 
 
 
+
 	<!-- </div> -->
 </div>
 
@@ -54,5 +58,3 @@
 </body>
 
 </html>
-
-<!-- Code obtained from http://www.albertosarullo.com/demos/accelerometer/ -->

@@ -1,4 +1,6 @@
 
+
+
 body {
   /*font-family: helvetica, arial, sans serif;*/
   font-family: "Times New Roman", Times, serif;
@@ -17,42 +19,13 @@ ul {
   padding-top: 10px;
   list-style-type:  none;
   padding-left: 0px;
-  left: 40px;
+
 }
 
 li {
-  opacity: 0;
+  opacity: 1;
 }
 
-#content {
-  /*padding:5px;*/
-  /*background-color: black;*/
-  overflow: hidden;
-  height: 100px;
-  width: 700;
-}
-
-/*#background {
-  background-color: white;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}*/
-
-#starTitle {
-  top: 240px;
-  left: 40px;
-}
-#blackFade {
-  width: 1024px;
-  height: 768px;
-  background-color: black;
-  pointer-events: none;
-  /*opacity: 0;*/
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
 #all {
   width: 1024px;
   height: 768px;
@@ -64,10 +37,90 @@ li {
   z-index: 6;
 }
 
+#blackFade {
+  width: 1024px;
+  height: 768px;
+  background-color: black;
+  pointer-events: none;
+  /*opacity: 0;*/
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+#beeKing01 {
+  position: absolute;
+  left:793px;
+  top:437px;
+}
+
+#beeRose01 {
+  position: absolute;
+  left:475px;
+  top:343px;
+}
+#beeTitle {
+  top: 310px;
+  left: 30px;
+}
+
+.beeText_01 {
+  position: absolute;
+  top: 340px;
+  z-index: 2;
+    left: 30px;
+}
+
+#content {
+
+  overflow: hidden;
+  height: 100px;
+  width: 700;
+}
+
+#kingShader {
+  left: 100px;
+  top: 504px;
+  width: 924px;
+  height: 263px;
+  position: absolute;
+  background-color: black;
+    pointer-events: none;
+    opacity: 0;
+  z-index: 5;
+}
+
+#marker_01 {
+  width: 200px;
+  height:100px;
+  background-color: transparent;
+  position: absolute;
+  display: inline;
+  top: 0px;
+  
+  left: 654px;
+}
+
+  body{ padding: 0; margin: 0; }
+
+      .pep      { 
+        /*width: 100px; */
+        /*height: 100px; */
+        /*background: rgb(243, 200, 200); */
+        /*color: white; */
+        /*opacity: 0.8;*/
+      }
+
+#starTitle {
+  top: 240px;
+  left: 40px;
+}
+
 .starText_01 {
   position: absolute;
   top: 270px;
   z-index: 2;
+    left: 40px;
 }
 
 .starText_01 > li:nth-child(1) {
@@ -88,17 +141,6 @@ li {
   background-color: red;
 }
 
-
-#marker_01 {
-  width: 200px;
-  height:100px;
-  background-color: transparent;
-  position: absolute;
-  display: inline;
-  top: 0px;
-  
-  left: 654px;
-}
 #troll {
   width: 250px;
   display: none;
@@ -111,24 +153,13 @@ li {
 }
 
 
-      body{ padding: 0; margin: 0; }
-
-      .pep      { 
-        /*width: 100px; */
-        /*height: 100px; */
-        /*background: rgb(243, 200, 200); */
-        /*color: white; */
-        /*opacity: 0.8;*/
-      }
-
-      .x        { 
-        position: absolute; 
-        top: 40px; 
-        left: 10px; 
-        background: rgb(120, 200, 200); 
-        opacity: 0.8;
-                }
-
+.x        { 
+  position: absolute; 
+  top: 40px; 
+  left: 10px; 
+  background: rgb(120, 200, 200); 
+  opacity: 0.8;
+          }
 
 
 /** king and the star **/
@@ -149,7 +180,38 @@ li {
   position: absolute;
   display:  inline;
   left: 20px;
-  top:20px;
+  top:10px;
+}
+
+#starStarBlur {
+  position: absolute;
+  display: inline;
+  opacity: 0;
+  left: 658px;
+  top: 20px;
+}
+
+
+#starStarBlink {
+  position: absolute;
+  display: none;
+  /*opacity: 0;*/
+  left: 658px;
+  top: 20px;
+}
+
+#dot {
+  width:9px;
+  height:9px;
+  background-color: black;
+  position: absolute;
+  top: 303px;
+  left: 20px;
+  display: none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
+
 }
 
 #starKing_01 {
@@ -168,29 +230,6 @@ z-index: 4;
   z-index: 4;
 }
 
-
-
-
-/*#content { display:block; }
-@media only screen and (orientation:portrait){
-  #content {  
-    height: 100vw;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-}
-@media only screen and (orientation:landscape){
-  #content {  
-     -webkit-transform: rotate(0deg);
-     -moz-transform: rotate(0deg);
-     -o-transform: rotate(0deg);
-     -ms-transform: rotate(0deg);
-     transform: rotate(0deg);
-  }
-}*/
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {  /* min-width 641px and max-width 1024px, ^^ IPad ^^ */
 
