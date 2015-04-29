@@ -7,7 +7,7 @@ var beeScene = 1;
     //create a new instance of shake.js.
     var myShakeEvent = new Shake({
         threshold: 10
-        
+
     });
 
       // start listening to device motion
@@ -15,13 +15,7 @@ var beeScene = 1;
 
     // register a shake event
     window.addEventListener('shake', shakeEventDidOccur, false);
-if (beeScene == 1) {
- 
-    // dotMove ();
-    // $('body').click (function (){
-    //    disturbBee();
-    // });
-}
+
 
 var t1;
 var dir1 = false;
@@ -52,6 +46,14 @@ clearInterval(t1);
         $('#beeBee01').delay(textFade).animate({top: '215px'},2000).delay(200).animate({top: '506px', left: '813px'},2000);
     }
 
+
+
+    //shake event callback
+    function shakeEventDidOccur () {
+
+disturbBee();
+    }
+
 });
 
     function dotMove () {
@@ -64,12 +66,6 @@ clearInterval(t1);
 
 
 
-
-    //shake event callback
-    function shakeEventDidOccur () {
-
-disturbBee();
-    }
 
 
 
