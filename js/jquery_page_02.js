@@ -17,9 +17,9 @@ if (beeScene == 1) {
     window.addEventListener('shake', shakeEventDidOccur, false);
 
     // dotMove ();
-    $('body').click (function (){
-       disturbBee();
-    });
+    // $('body').click (function (){
+    //    disturbBee();
+    // });
 }
 
 var t1;
