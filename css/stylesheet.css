@@ -214,6 +214,14 @@ li {
 
 }
 
+#starStarBlur {
+  position: absolute;
+  display: inline;
+  opacity: 0;
+  left: 680px;
+  top: 20px;
+}
+
 #starKing_01 {
 position: absolute;
 left: 793px;
