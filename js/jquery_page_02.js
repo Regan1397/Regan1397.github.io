@@ -24,10 +24,16 @@ if (beeScene == 1) {
 
 var t1;
 var dir1 = false;
+var roseTimer = 1;
 
 function animRose () {
 
+
  t1 =setInterval(function(){
+        roseTimer +=1;
+    if (roseTimer ==10) {
+                clearInterval(t1);
+            }
     (dir1 == false) ? document.getElementById('beeRose01').style.webkitTransform = "rotate(1.5deg)" : document.getElementById('beeRose01').style.webkitTransform = "rotate(-1.5deg)";
     dir1 = !dir1;
 }, 100);
@@ -41,8 +47,8 @@ clearInterval(t1);
         dotMove();
         $('.beeText_01 > li:nth-child(2)').fadeTo(textFade, 1);
         $('.beeText_01 > li:nth-child(1)').fadeTo(textFade, backText);
-
-        $('#beeBee01').delay(textFade).animate({top: '215px'},2000).delay(200).animate({top: '504px', left: '813px'},2000);
+        animRose();
+        $('#beeBee01').delay(textFade).animate({top: '215px'},2000).delay(200).animate({top: '506px', left: '813px'},2000);
     }
 
 });
