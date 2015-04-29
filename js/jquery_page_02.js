@@ -7,15 +7,16 @@ var beeScene = 1;
     //create a new instance of shake.js.
     var myShakeEvent = new Shake({
         threshold: 10
+        
     });
-if (beeScene == 1) {
- 
+
       // start listening to device motion
     myShakeEvent.start();
 
     // register a shake event
     window.addEventListener('shake', shakeEventDidOccur, false);
-
+if (beeScene == 1) {
+ 
     // dotMove ();
     // $('body').click (function (){
     //    disturbBee();
