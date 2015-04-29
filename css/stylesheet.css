@@ -78,6 +78,36 @@ li {
   width: 700;
 }
 
+
+#dot {
+  width:9px;
+  height:9px;
+  background-color: black;
+  position: absolute;
+  top: 303px;
+  left: 20px;
+  display: none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
+
+}
+
+#dot_bee {
+  width:8px;
+  height:8px;
+  background-color: black;
+  position: absolute;
+  top: 375px;
+  left: 17px;
+  display: none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
+
+}
+
+
 #kingShader {
   left: 100px;
   top: 504px;
