@@ -69,7 +69,7 @@ $(document).ready(function() {
                     dotMove();
                   });
             $('#RainText > li:nth-child(7)').delay(3000).fadeTo(textFade, 1);
-            $("#RainText > li").delay(7000).fadeTo(textFade,1);
+            $("#RainText > li").delay(9000).fadeTo(textFade,1);
 
 
         
