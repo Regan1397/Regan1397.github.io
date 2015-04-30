@@ -12,6 +12,7 @@ var starDragable = 1;
 var firstScenePart = 1;
 var backText = 0.3;
 var textFade = 2000;
+var headRot;
 
     //Draggable Code
 console.log(firstScenePart);
@@ -174,6 +175,10 @@ $(document).delay(3000, function (){
             
   if (firstScenePart == 2)
 {
+$('#starKing_Head').css({'opacity': '0'});
+$('#starKing_Head').hide();
+$('#starKing_01').attr('src', 'imgs/Star_King_01.png');
+
 animKing();
 stopAnimStar();
  rotate(obj.$el, 0);
@@ -202,13 +207,16 @@ dotMove ();
 
 
  function positionCheck(){
+    headRot = ($('#starStar_01').offset().left)/15;
     distAB = (($('#marker_01').offset().left)-($('#starStar_01').offset().left));
-    console.log (distAB);
-
+    // console.log (($('#starStar_01').offset().left));
+    console.log(distAB)
+// console.log(headRot);
+    DoRotate(headRot);
     //End of Draggable Code
 
     //Sentence 2 Initiation.
-      if ( (distAB) <= 50)  {
+      if ( (distAB) <= 0)  {
         stopBlurredStar();
        firstScenePart = 2;
       console.log (firstScenePart);
@@ -265,6 +273,14 @@ function blinkStar () {
 }
 
 });
+
+function DoRotate(d) {
+    $("#starKing_Head").css({
+        transform: 'rotate(' + d + 'deg)'
+    });
+}
+
+
 
  
 

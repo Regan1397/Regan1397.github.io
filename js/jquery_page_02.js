@@ -34,14 +34,19 @@ $(function () {
 });
 
 
-
+//used on a pc
+ $('body').bind('keypress', function(e) {
+            if (e.which == 32){//space bar
+            if (beeScene == 1) {
+        disturbBee ();
+       }
+            }
+        });
 
       
-        $('body').click (function (){
-    if (beeScene == 1) {
-        // disturbBee ();
-       }
-        });
+        // $('body').click (function (){
+    
+        // });
 
 
     $(function () {
@@ -72,6 +77,15 @@ $(function () {
             }
         }    
     });
+
+$(function () {
+    $('#beeBee01').bind("tap", tapHandler);
+        function tapHandler (event) 
+        {
+            $('#help01').fadeTo(1000,0.8).fadeTo(1000,0);
+        }
+    });
+
 
 
     var t1;

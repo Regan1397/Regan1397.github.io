@@ -71,6 +71,16 @@ li {
   top: 370px;
 }
 
+#help01 {
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+pointer-events: none;
+  position: absolute;
+  left: 600px;
+  top: 250;
+}
+
 #beeWhiteFade {
 display: none;
 background-color: white;
@@ -159,6 +169,8 @@ z-index: 5;
       }
 
 
+
+
 #starTitle {
   top: 240px;
   left: 40px;
@@ -236,7 +248,7 @@ z-index: 5;
   display: inline;
   opacity: 0;
   left: 658px;
-  top: 20px;
+  top: 0px;
 }
 
 
@@ -262,18 +274,26 @@ z-index: 5;
 
 }
 
-#starStarBlur {
-  position: absolute;
-  display: inline;
-  opacity: 0;
-  left: 680px;
-  top: 20px;
-}
+
 
 #starKing_01 {
 position: absolute;
 left: 793px;
 top:502px;
+z-index: 4;
+}
+
+#starKing_02 {
+position: absolute;
+left: 650px;
+top:502px;
+z-index: 4;
+}
+
+#starKing_Head {
+position: absolute;
+left: 757px;
+top:470px;
 z-index: 4;
 }
 
