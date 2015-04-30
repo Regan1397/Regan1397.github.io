@@ -29,8 +29,6 @@
 
 <script type="text/javascript">
 	//work on shaking of rose
-
-
 		    
 		var x =0, y = 0, z = 0,
 		    vx = 0, vy = 0,
@@ -38,59 +36,54 @@
 		    
 		var sphere = document.getElementById("RainCloud");
 
-		if (window.DeviceMotionEvent != undefined) {
-		    window.ondevicemotion = function(e) {
-		        ax = event.accelerationIncludingGravity.x * 5;
-	  
-		        /*document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
-		        document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
-		        document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
+		
+if (window.DeviceMotionEvent != undefined) {
+	window.ondevicemotion = function(e) {
+		ax = event.accelerationIncludingGravity.x * 5;
+		ay = event.accelerationIncludingGravity.y * 5;
+		az = event.accelerationIncludingGravity.z * 0.5;
+	
+	}
 
-		        if ( e.rotationRate ) {
-		            document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
-		            document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
-		            document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
-		        }*/
-		    }
-
-		    setInterval( function() {
-		        var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
-		       if ( landscapeOrientation) {
+	setInterval( function() {
+		var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
+		if ( landscapeOrientation) {
 			vx = vx + ay;
 			vy = vy + ax;
-
+			vz = vz + az;
 		} else {
 			vy = vy - ay;
 			vx = vx + ax;
-
+			vz = vz + az;
 		}
-		        vx = vx * 0.98;
+		vx = vx * 0.98;
 		vy = vy * 0.98;
-
-
-		        x = parseInt(x + vx / 50);
-		        
-		        // boundingBoxCheck();
-		        
-		        sphere.style.top = y + "px";
-		        sphere.style.left = x + "px";
-		        // sphere.style.width = 50 + z + "px";
-		        // sphere.style.height = 50 + z + "px";
-		        
-		    }, 25);
+		vz = vz * 0.98;
+		y = parseInt(y + vy / 50);
+		x = parseInt(x + vx / 50);
+		z = parseInt(z + vz / 50);
+		
+		boundingBoxCheck();
+		
+		sphere.style.top = y + "px";
+		sphere.style.left = x + "px";
+		sphere.style.width = 50 + z + "px";
+		sphere.style.height = 50 + z + "px";
+		
+	}, 25);
+} 
 		} 
 
 
-
-		// function boundingBoxCheck(){
-
-		//     if (x<0) { x = 0; vx = -vx; }
-		//     if (y<0) { y = 0; vy = -vy; }
-		//     if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
-		//     if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
-
-		    
-		// }
+function boundingBoxCheck(){
+	if (x<0) { x = 0; vx = -vx; }
+	if (y<0) { y = 0; vy = -vy; }
+	if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
+	if (y>document.documentElement.clientHeight-20) { y = document.documentElement.clientHeight-20; vy = -vy; }
+	if (z > 40) {z = 40;}
+	if (z < -40) {z = -40;}
+	
+}
 
 
 
