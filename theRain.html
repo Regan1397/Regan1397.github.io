@@ -56,7 +56,7 @@ if (window.DeviceMotionEvent != undefined) {
 	setInterval( function() {
 		var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
 		if ( landscapeOrientation) {
-			vx = vx + ay;
+			vx = vx - ay;
 			vy = vy + ax;
 			vz = vz + az;
 		} else {
@@ -73,7 +73,7 @@ if (window.DeviceMotionEvent != undefined) {
 		
 		boundingBoxCheck();
 		
-		sphere.style.top = y + "px";
+		// sphere.style.top = y + "px";
 		sphere.style.left = x + "px";
 		// sphere.style.width = 50 + z + "px";
 		// sphere.style.height = 50 + z + "px";
