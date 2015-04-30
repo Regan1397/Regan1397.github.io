@@ -24,11 +24,18 @@ distAB = (($('#RainKing').offset().left)-($('#RainCloud').offset().left));
 if ((distAB-180) <= 0) {
   RainChange = 1;
   console.log("worked")
-  if(RainChange == 1) { $("#RainRain").fadeIn(1500); }
+if(RainChange == 1) { 
+    
+    $("#RainRain").fadeIn(1500,function(){
+      $('#RainKing').attr('src', 'imgs/Rain_King_01.png');
+    }); 
+  }
 }
 if ((distAB-180) > 20) {
 
-$("#RainRain").fadeOut(1500);  
+$("#RainRain").fadeOut(1500,function(){
+      $('#RainKing').attr('src', 'imgs/Rain_King_02.png');
+    }); 
 }
 // console.log (distAB-180);
 
