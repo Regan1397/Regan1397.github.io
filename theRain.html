@@ -52,10 +52,18 @@
 
 		    setInterval( function() {
 		        var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
-		       
-		            vx = vx + ax;
-
-		  	        vx = vx * 0.98;
+		       if ( landscapeOrientation) {
+			vx = vx + ay;
+			vy = vy + ax;
+			vz = vz + az;
+		} else {
+			vy = vy - ay;
+			vx = vx + ax;
+			vz = vz + az;
+		}
+		        vx = vx * 0.98;
+		vy = vy * 0.98;
+		vz = vz * 0.98;
 
 		        x = parseInt(x + vx / 50);
 		        
