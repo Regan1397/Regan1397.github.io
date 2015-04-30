@@ -168,7 +168,22 @@ z-index: 5;
         /*opacity: 0.8;*/
       }
 
+#RainKing {
+  position: absolute;
+  left: 703px;
+  top: 372px;
+}
 
+
+#RainGround {
+  position: absolute;
+  left: 657px;
+  top: 684px;
+}
+
+#RainCloud {
+  position: absolute;
+}
 
 
 #starTitle {
