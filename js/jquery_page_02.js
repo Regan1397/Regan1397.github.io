@@ -17,12 +17,29 @@ $(document).ready(function() {
         window.addEventListener('shake', shakeEventDidOccur, false);
 
 
+        //plays effect when page starts.
+             $('.beeText_01 > li:nth-child(1)').delay(1500).fadeTo(textFade, 1,function (){
+                if (beeScene ==1) {
+                animRose2();
+                }
 
-     
+             });
+
+$(function () {
+ $('#beeWhiteFade').bind("tap", tapHandler);
+      function tapHandler (event) 
+      {
+        if (beeScene ==3) { $('#beeWhiteFade').fadeTo(1500,1) }
+      }
+});
+
+
+
+
       
         $('body').click (function (){
     if (beeScene == 1) {
-           disturbBee();
+        // disturbBee ();
        }
         });
 
@@ -42,9 +59,15 @@ $(document).ready(function() {
                       $('#beeBee01').delay(3000, function () {
                         $('.beeText_01 > li:nth-child(3)').fadeTo(textFade, 1);
                         dotMove();
-                        $('.beeText_01 > li:nth-child(2)').fadeTo(textFade, backText).delay(1500);
-                        });
+                        $('.beeText_01 > li:nth-child(2)').fadeTo(textFade, backText);
 
+                        $('#beeRose01').delay(3000,function() {
+                        $('.beeText_01 > li:nth-child(2)').fadeTo(textFade, 1);
+                         $('.beeText_01 > li:nth-child(1)').delay(1500).fadeTo(textFade, 1);
+                        $('#beeWhiteFade').show();
+                        beeScene =3;
+                        });
+                    });
 
             }
         }    
@@ -53,8 +76,10 @@ $(document).ready(function() {
 
     var t1;
     var t2;
+    var t3;
     var dir1 = false;
     var dir2 = false;
+    var dir3 = false;
     var roseTimer = 1;
 
     function animRose () {
@@ -70,6 +95,8 @@ $(document).ready(function() {
     }, 100);
     }
 
+   
+
     function animBee () {
 
 
@@ -84,10 +111,23 @@ $(document).ready(function() {
         clearInterval(t2);
     }
 
+      function animRose2 () {
+
+        t3 =setInterval(function(){
+        (dir3 == false) ? document.getElementById('beeRose01').style.webkitTransform = "rotate(1deg)" : document.getElementById('beeRose01').style.webkitTransform = "rotate(-1deg)";
+        dir3= !dir3;
+    }, 1000);
+    }
+
+     function stopAnimRose2 () {
+        clearInterval(t3);
+    }
+
 
            
         function disturbBee () {
             dotMove();
+            stopAnimRose2 ();
             beeScene = 0;
              
             $('.beeText_01 > li:nth-child(2)').fadeTo(textFade, 1);

@@ -64,15 +64,21 @@ li {
   left: 30px;
 }
 
-.beeText_01 > li:nth-child(1) {
-  /*color: red;*/
-  opacity: 1;
-}
 
 #beeBee01 {
   position: absolute;
   left: 525px;
   top: 370px;
+}
+
+#beeWhiteFade {
+display: none;
+background-color: white;
+position: absolute;
+width: 1024px;
+opacity: 0;
+height: 768px;
+z-index: 5;
 }
 
 .beeText_01 {
