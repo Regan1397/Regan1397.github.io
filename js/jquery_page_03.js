@@ -22,7 +22,7 @@ function makeItRain () {
   var RainChange;
 distAB = (($('#RainKing').offset().left)-($('#RainCloud').offset().left));
 if ((distAB-180) <= 0) {
-  // RainChange = 1;
+  RainChange = 1;
   console.log("worked")
   if(RainChange == 1) { $("#RainRain").fadeIn(1500); }
 }
