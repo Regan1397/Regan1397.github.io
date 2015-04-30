@@ -159,6 +159,14 @@ z-index: 5;
   z-index: 5;
 }
 
+#kingBook01 {
+position: absolute;
+}
+
+#kingBook02 {
+  position: absolute;
+}
+
 #marker_01 {
   width: 200px;
   height:100px;

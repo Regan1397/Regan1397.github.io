@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>The King and the Rain</title>
+<meta name="viewport" intial-scale='1.0', content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+
+<!-- local Jquery -->
+
+<script  src="js/jquery.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.hammer.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+
+<!-- local lib and tests -->
+<script  src="js/jquery_page_04.js"></script>
+
+
+</head>
+
+<body>
+<img id="kingBook02" src="imgs/King_Book_02.png">
+<img id="kingBook01" src="imgs/King_Book_01.png">
+
+
+
+<script type="text/javascript">
+  var log = document.getElementById("log");
+    var el = document.getElementById("kingBook01");
+
+   
+    var mc = new Hammer.Manager(el);
+ 
+
+    mc.add(new Hammer.Pinch({ threshold: 0.2, pointers: 2 }));
+
+    mc.on("pinchstart pinchmove", onPinch);
+  
+    mc.on("hammer.input", function(ev) {
+        if(ev.isFinal) {
+    
+        }
+
+    });
+
+
+
+
+    
+
+
+    function logEvent(str) {
+        //log.insertBefore(document.createTextNode(str +"\n"), log.firstChild);
+    }
+
+
+
+    var initScale = 1;
+    function onPinch(ev) {
+        if(ev.type == 'pinchstart') {
+                    
+        }
+
+        // el.className = '';
+         alert ("Worked"); 
+              
+        logEvent(ev.type);
+    }
+
+    // resetElement();
+</script>
+
+</body>
+
+</html>
