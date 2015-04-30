@@ -3,13 +3,13 @@
 $(document).ready(function() {
     var DistAB;
     var dir = false;
-     // $('body').bind('keypress', function(e) {
-     //        if (e.which == 32){//space bar
+     $('body').bind('keypress', function(e) {
+            if (e.which == 32){//space bar
                         
-     //             (dir == false) ? ($('#RainCloud').animate({left: '550'},1500)): ($('#RainCloud').animate({left: '0'},1500));
-     //                                dir = !dir; 
-     //            }
-     //      });
+                 (dir == false) ? ($('#RainCloud').animate({left: '530'},1500)): ($('#RainCloud').animate({left: '0'},1500));
+                                    dir = !dir; 
+                }
+          });
 
 
   setInterval( function() {
@@ -26,7 +26,7 @@ if ((distAB-180) <= 0) {
   console.log("worked")
   if(RainChange == 1) { $("#RainRain").fadeIn(1500); }
 }
-if ((distAB-180) > 10) {
+if ((distAB-180) > 20) {
 
 $("#RainRain").fadeOut(1500);  
 }
