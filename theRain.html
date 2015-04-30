@@ -30,18 +30,27 @@
 	//work on shaking of rose
 		    
 		var x =0, y = 0, z = 0,
-		    vx = 0, vy = 0,
-		    ax = 0, ay = 0;
+		  vx = 0, vy = 0, vz = 0,
+	ax = 0, ay = 0, az = 0;
 		    
 		var sphere = document.getElementById("RainCloud");
 
-		
+
+
 if (window.DeviceMotionEvent != undefined) {
 	window.ondevicemotion = function(e) {
 		ax = event.accelerationIncludingGravity.x * 5;
 		ay = event.accelerationIncludingGravity.y * 5;
 		az = event.accelerationIncludingGravity.z * 0.5;
-	
+		/*document.getElementById("accelerationX").innerHTML = e.accelerationIncludingGravity.x;
+		document.getElementById("accelerationY").innerHTML = e.accelerationIncludingGravity.y;
+		document.getElementById("accelerationZ").innerHTML = e.accelerationIncludingGravity.z;
+
+		if ( e.rotationRate ) {
+			document.getElementById("rotationAlpha").innerHTML = e.rotationRate.alpha;
+			document.getElementById("rotationBeta").innerHTML = e.rotationRate.beta;
+			document.getElementById("rotationGamma").innerHTML = e.rotationRate.gamma;
+		}*/
 	}
 
 	setInterval( function() {
@@ -66,12 +75,11 @@ if (window.DeviceMotionEvent != undefined) {
 		
 		sphere.style.top = y + "px";
 		sphere.style.left = x + "px";
-		sphere.style.width = 50 + z + "px";
-		sphere.style.height = 50 + z + "px";
+		// sphere.style.width = 50 + z + "px";
+		// sphere.style.height = 50 + z + "px";
 		
 	}, 25);
 } 
-		} 
 
 
 function boundingBoxCheck(){
@@ -83,9 +91,6 @@ function boundingBoxCheck(){
 	if (z < -40) {z = -40;}
 	
 }
-
-
-
 	
 </script>
 </body>
