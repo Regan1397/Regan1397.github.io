@@ -3,13 +3,13 @@
 $(document).ready(function() {
     var DistAB;
     var dir = false;
-     $('body').bind('keypress', function(e) {
-            if (e.which == 32){//space bar
+     // $('body').bind('keypress', function(e) {
+     //        if (e.which == 32){//space bar
                         
-                 (dir == false) ? ($('#RainCloud').animate({left: '550'},1500)): ($('#RainCloud').animate({left: '0'},1500));
-                                    dir = !dir; 
-                }
-          });
+     //             (dir == false) ? ($('#RainCloud').animate({left: '550'},1500)): ($('#RainCloud').animate({left: '0'},1500));
+     //                                dir = !dir; 
+     //            }
+     //      });
 
 
   setInterval( function() {
