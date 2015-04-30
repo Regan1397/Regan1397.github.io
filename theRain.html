@@ -29,7 +29,7 @@
 
 
 		    
-		var x = 0, y = 0, z = 0,
+		var x, y, z,
 		    vx = 0, vy = 0,
 		    ax = 0, ay = 0;
 		    
@@ -55,15 +55,15 @@
 		       if ( landscapeOrientation) {
 			vx = vx + ay;
 			vy = vy + ax;
-			vz = vz + az;
+
 		} else {
 			vy = vy - ay;
 			vx = vx + ax;
-			vz = vz + az;
+
 		}
 		        vx = vx * 0.98;
 		vy = vy * 0.98;
-		vz = vz * 0.98;
+
 
 		        x = parseInt(x + vx / 50);
 		        
@@ -80,6 +80,7 @@
 
 
 		function boundingBoxCheck(){
+
 		    if (x<0) { x = 0; vx = -vx; }
 		    if (y<0) { y = 0; vy = -vy; }
 		    if (x>document.documentElement.clientWidth-20) { x = document.documentElement.clientWidth-20; vx = -vx; }
