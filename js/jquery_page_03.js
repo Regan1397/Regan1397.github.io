@@ -92,7 +92,7 @@ $(document).ready(function() {
 function makeItRain () {
   var RainChange;
 distAB = (($('#RainKing').offset().left)-($('#RainCloud').offset().left));
-if ((distAB-180) <= 0) {
+if ((distAB-180) <= 50) {
 
   if (Scene ==1) {Scene =2;}
   if (Scene ==5) {Scene = 6;}
@@ -109,7 +109,7 @@ if ((distAB-180) <= 0) {
   }
 
 
-if ((distAB-180) > 20) {  
+if ((distAB-180) > 50) {  
   if (Scene ==3) {Scene =4;}
         $("#RainRain").fadeOut(1500,  function(){
 
