@@ -15,7 +15,13 @@ $(document).ready(function() {
 
 
 
-  
+  $(function () {
+ $('#rainWhiteFade').bind("tap", tapHandler);
+      function tapHandler (event) 
+      {
+        if (Scene ==7) { $('#rainWhiteFade').fadeTo(1500,1) }
+      }
+});
     
 
 
@@ -94,6 +100,7 @@ if ((distAB-180) <= 0) {
   // console.log("worked");
   if(RainChange == 1) { 
     $("#RainRain").fadeIn(1500, function(){
+
       $('#RainKing').attr('src', 'imgs/Rain_King_01.png');
     
       });
@@ -104,7 +111,9 @@ if ((distAB-180) <= 0) {
 if ((distAB-180) > 20) {  
   if (Scene ==3) {Scene =4;}
         $("#RainRain").fadeOut(1500,  function(){
+
               $('#RainKing').attr('src', 'imgs/Rain_King_02.png');
+
              });    
       
 }
