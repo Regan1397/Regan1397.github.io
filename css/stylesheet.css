@@ -103,6 +103,7 @@ z-index: 5;
 #bookTitle {
   font-size: 22px;
   top: 50px;
+  opacity: 0;
   left: 310px;
   position: absolute;
 }
