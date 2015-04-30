@@ -31,7 +31,7 @@ $(function () {
       //Goes to next scene
     if (firstScenePart ==6) {
         $("#blackFade").css({'background-color': 'white', 'z-index': '10'})
-        $('#blackFade').fadeTo(1500,1);
+        $('#blackFade').fadeTo(1500,1); //end
     }
 
     //switch back to last text

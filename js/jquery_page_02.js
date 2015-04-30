@@ -29,7 +29,7 @@ $(function () {
  $('#beeWhiteFade').bind("tap", tapHandler);
       function tapHandler (event) 
       {
-        if (beeScene ==3) { $('#beeWhiteFade').fadeTo(1500,1) }
+        if (beeScene ==3) { $('#beeWhiteFade').fadeTo(1500,1) }     //end
       }
 });
 

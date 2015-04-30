@@ -98,6 +98,56 @@ z-index: 5;
     left: 30px;
 }
 
+
+
+#bookTitle {
+  font-size: 22px;
+  top: 50px;
+  left: 310px;
+  position: absolute;
+}
+
+#bookHands {
+  position: absolute;
+  left: 472px;
+  top: 352px;
+  z-index: 3;
+}
+
+#theBook {
+position: absolute;
+/*display: none;*/
+left: 470px;
+top: 320px;
+z-index: 3;
+
+}
+
+#bookText {
+  font-size: 16px;
+  position: absolute;
+  top: 80px;
+  /*opacity: 1;*/
+  z-index: 3;
+  
+    left: 310px;
+}
+
+#bookDot {
+  width:5px;
+  height:5px;
+  background-color: black;
+  position: absolute;
+  top: 112px;
+  left: 300px;
+  display: none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
+
+}
+
+
 #content {
 
   overflow: hidden;
@@ -146,6 +196,16 @@ z-index: 5;
     border-radius: 25px; 
 }
 
+#whiteFader {
+display: none;
+background-color: white;
+position: absolute;
+width: 1024px;
+opacity: 0;
+height: 768px;
+z-index: 5;
+}
+
 
 #kingShader {
   left: 100px;
@@ -161,9 +221,11 @@ z-index: 5;
 
 #kingBook01 {
 position: absolute;
+z-index: 5;
 }
 
 #kingBook02 {
+  /*opacity: .6;*/
   position: absolute;
 }
 
