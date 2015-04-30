@@ -9,7 +9,6 @@
 <script  src="js/jquery.js"></script>
 <script src="js/modernizr.js"></script>
 <script src="js/hammer.min.js"></script>
-<script src="js/jquery.hammer.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
 
 <!-- local lib and tests -->
@@ -19,9 +18,21 @@
 </head>
 
 <body>
-<img id="kingBook02" src="imgs/King_Book_02.png">
+<div id="whiteFader"> </div>
+<img id='theBook' src="imgs/book_01.png">
+<img id="bookHands" src='imgs/book_hands.png'>
+<img id="kingBook02" src="imgs/King_Book_03.png">
 <img id="kingBook01" src="imgs/King_Book_01.png">
 
+<div id='bookWords'>
+	<h1 id="bookTitle"> The King and the Book</h1>
+	<ul id="bookText">
+		<li>"How are you" enquired the king. </li>
+		<li>"That's what I've been asking you all along," said the book.</li>
+		
+	</ul>
+</div>
+	<div id="bookDot"></div>
 
 
 <script type="text/javascript">
@@ -62,8 +73,16 @@
         }
 
         // el.className = '';
-         $("#kingBook01").fadeOut(1500);
-              
+
+        $("#kingBook01").fadeOut(1500);
+		$('#bookText > li:nth-child(1)').delay(1000).fadeTo(textFade, 1, function (){
+			animBook();
+			Scene = 2;
+		});
+         dotMove ();
+
+
+
         logEvent(ev.type);
     }
 
