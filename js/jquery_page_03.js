@@ -5,9 +5,10 @@ $(document).ready(function() {
     var dir = false;
      $('body').bind('keypress', function(e) {
             if (e.which == 32){//space bar
-                if (dir == false) ($('#RainCloud').animate({left: '700'},1500)) 
-
-                  };
+                        
+                 (dir == false) ? ($('#RainCloud').animate({left: '550'},1500)): ($('#RainCloud').animate({left: '0'},1500));
+                                    dir = !dir; 
+                }
           });
 
 
@@ -18,7 +19,18 @@ $(document).ready(function() {
 
 
 function makeItRain () {
+  var RainChange;
 distAB = (($('#RainKing').offset().left)-($('#RainCloud').offset().left));
-console.log (distAB);
+if ((distAB-180) <= 0) {
+  RainChange = 1;
+  console.log("worked")
+  if(RainChange == 1) { $("#RainRain").fadeIn(1500); }
+}
+if ((distAB-180) > 10) {
+
+$("#RainRain").fadeOut(1500);  
+}
+// console.log (distAB-180);
+
 }
 

@@ -158,6 +158,21 @@ z-index: 5;
   left: 654px;
 }
 
+#canvas {position: absolute;
+  width: 1024px;
+  height: 768px;
+}
+
+.punct
+{
+background-color:blue;
+position:absolute;
+width:2px;
+height:6px;
+    
+    z-index: 5;
+}
+
   body{ padding: 0; margin: 0; }
 
       .pep      { 
@@ -183,7 +198,18 @@ z-index: 5;
 
 #RainCloud {
   position: absolute;
+
+  z-index: 3;
 }
+
+#RainRain {
+  position: absolute;
+  display: none;
+  /*opacity: 0;*/
+  left: 650px;
+  z-index: 2;
+}
+
 
 
 #starTitle {
