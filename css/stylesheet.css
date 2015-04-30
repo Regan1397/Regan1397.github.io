@@ -131,7 +131,19 @@ z-index: 5;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px; 
+}
 
+#dot_rain {
+  width:8px;
+  height:8px;
+  background-color: black;
+  position: absolute;
+  top: 308px;
+  left: 17px;
+  display: none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px; 
 }
 
 
@@ -210,7 +222,29 @@ height:6px;
   z-index: 2;
 }
 
+#RainTitle {
+  position: absolute;
+  top: 240px;
+  left: 40px;
+}
 
+#RainText {
+
+  opacity: 1;
+  position: absolute;
+  top: 270px;
+  z-index: 2;
+    left: 40px;
+}
+
+#RainText > li {
+   padding-top: 3px;
+  /*opacity: 1;*/
+}
+
+#RainText > #gap {
+  padding-top: 14px;
+}
 
 #starTitle {
   top: 240px;
