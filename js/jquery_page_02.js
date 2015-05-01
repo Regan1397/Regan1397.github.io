@@ -29,7 +29,11 @@ $(function () {
  $('#beeWhiteFade').bind("tap", tapHandler);
       function tapHandler (event) 
       {
-        if (beeScene ==3) { $('#beeWhiteFade').fadeTo(1500,1) }     //end
+        if (beeScene ==3) { $('#beeWhiteFade').fadeTo(1500,1, function () {
+               window.location.href = 'directory.html';
+        });
+
+         }     //end
       }
 });
 
@@ -81,8 +85,9 @@ $(function () {
 $(function () {
     $('#beeBee01').bind("tap", tapHandler);
         function tapHandler (event) 
-        {
+        { if (beeScene == 1) {
             $('#help01').fadeTo(1000,0.8).fadeTo(1000,0);
+        }
         }
     });
 

@@ -19,7 +19,9 @@ $(document).ready(function() {
  $('#rainWhiteFade').bind("tap", tapHandler);
       function tapHandler (event) 
       {
-        if (Scene ==7) { $('#rainWhiteFade').fadeTo(1500,1) }   //end
+        if (Scene ==7) { $('#rainWhiteFade').fadeTo(1500,1, function () {    window.location.href = 'directory.html';});
+
+         }   //end
       }
 });
     

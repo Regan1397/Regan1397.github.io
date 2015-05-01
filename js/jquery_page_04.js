@@ -27,7 +27,9 @@ $(function () {
     $('#whiteFader').bind("tap", tapHandler);
         function tapHandler (event) 
         {
-          $('#whiteFader').fadeTo(textFade,1);      //end 
+          $('#whiteFader').fadeTo(textFade,1, function () {
+               window.location.href = 'directory.html';
+          });      //end 
         }
     });
 
