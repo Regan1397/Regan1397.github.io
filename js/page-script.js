@@ -6,8 +6,8 @@ $(document).ready (function() {
 
 		function tapHandler (event) 
 		  {
-		  	$('#img-01 > div').fadeTo(1000,1);
-		  	$('#img-01 > img').fadeTo(1000,0.7);
+		  	$('#home-info-01').fadeTo(3000,0.9);
+		  	$('#img-01').fadeTo(3000,0.7);
 		  	console.log("worked");
 		   }
 		});
