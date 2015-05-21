@@ -1,14 +1,21 @@
+html, body {
+	overflow-x: hidden;
+}
+
 body {
 	margin: 0;
-	font-family: Garamond; 
+	font-family: Arial; 
+	width: 768px;
+	height: 1024px;
 	max-width: 768px;
 	max-height: 1024px;
+	position: relative;
 }
  p {
 
 display: inline-block;
 position: absolute;
-color: red;
+color: black;
 /*margin:20px;*/
 font-size: 20px;
 overflow: hidden;
@@ -22,6 +29,42 @@ overflow: hidden;
 	margin: 0px;
 
 }
+
+.create-image-box {
+	margin: 10px;
+	display: inline-block;
+	position: absolute;
+	overflow:  hidden;
+	padding: 0px;
+	margin: 0;	
+	border:  2px solid black;
+	background-color: black;
+}
+
+
+ #create-memoryinfo-box {			
+	display: inline-block;
+	position: absolute;
+	
+	width: 400px;
+	height: 400px;
+	background-color: white;
+
+	opacity: 1;
+	z-index: 2;
+	}
+
+	 #create-selfie-box {			
+		display: inline-block;
+	position: absolute;
+	left:410px;
+	width: 350px;
+	background-color: white;
+	height: 250px;
+	opacity: 1;
+	z-index: 2;
+	}
+
 
 .home-image-box {
 	margin: 10px;
@@ -68,12 +111,7 @@ top: 440;
 
 }
 
-.navbar {
-width: 768px;
-height: 60px;
-display: inline-block;
-background-color: #8ba8e5;
-}
+
 
 #img-01 {
 top: 60px;
@@ -104,8 +142,6 @@ height: 350px;
 	background-color: white;
 	opacity: 0;
 	z-index: 2;
-
-
 	}
 
 	.home-smiley {
@@ -172,6 +208,50 @@ width: 768px;
 height: 350px;
 }
 
+.navbar {
+width: 768px;
+height: 60px;
+display: inline-block;
+background-color: #8ba8e5;
+border: 1px solid black;
+z-index: 6;
+}
+
+.nav-logo {
+	position: absolute;
+	left: 300px;
+	padding: 4 0 0 4;
+	height: 50px;
+}
+
+.bottom-navbar {
+width: 768px;
+height: 60px;
+top: 840px;
+position: fixed;
+border: 1px solid black;
+background-color: #8ba8e5;
+z-index: 6;
+}
+
+.bottom-navbar> img:nth-child(1) {
+	padding-right: 270px;
+}
+
+
+.nav-icon {
+	padding: 10 40 10 40;
+	float: right;
+	height: 40px;
+}
+
+.nav-icon-settings {
+	padding: 10 10 10 10;
+	float: right;
+	opacity: 0.8;
+	height: 40px;
+}
+
 
 
 #recording01 {
@@ -196,11 +276,92 @@ width: 200px;
 height: 200px;
 background-color: black;
 top: 220px;
+}
 
+.white-fader {
+	background-color: white;
+	position: fixed;
+	width: 768px;
+	height: 780px;
+	opacity: 1;
+	z-index: 5;
+	pointer-events: none;
 
 }
 
 
 
 
+
+
+
+
+/*********************************/
+
+
+
+
+body {
+width: 768px;
+height: 1024px;
+}
+/*.top {
+    margin: 0px;
+    padding: 0px;
+    height: 500px;
+    width: 500px;
+}*/
+
+.smileyFace {
+    /*position: absolute;*/
+
+/*    left: 100px;
+    top: 100px;*/
+    padding: 0px;
+
+    width: 350px;
+    /*background: green;*/
+    /*border: 1px solid #000;*/
+}
+
+.smiley-area {
+  
+}
+
+#a_slider {
+
+    left: 100px;
+    top: 10px;
+    /*position: absolute;*/
+
+
+}
+
+
+
+/*
+ui-slider: The track of the slider control. This element will additionally have a class name of ui-slider-horizontal or ui-slider-vertical depending on the orientation of the slider.
+ui-slider-handle: The slider handles.
+ui-slider-range: The selected range used when the range option is set. This element can additionally have a class of ui-slider-range-min or ui-slider-range-max if the range option is set to "min" or "max" respectively.
+Dependencies
+*/
+
+
+:focus {
+outline: none;
+}
+
+
+.ui-slider {
+      background-color: #8aceff;
+    width: 180px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #3a3c87;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: #7072c4;
+}
 
