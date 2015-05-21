@@ -1,0 +1,81 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.ui.defaultlayouts.css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<link rel="stylesheet" href="css/face.slider.stylesheet.css">
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="smiley-area">
+  <img class="smileyFace" src="img/smileys/thumbs.png"></img>
+
+
+<!-- <p>a: <span id="a">0</span></p> -->
+
+  <div id="a_slider"></div>
+</div>
+</body>
+
+<script>
+  //Reference to source // http://stackoverflow.com/questions/21467239/jquery-slider-not-working
+    $("#a_slider").slider({
+        orientation: "horizontal",
+        range: false,
+        min: 0,
+        max: 100,
+        value: 50,
+        step: .01,
+        animate: true,
+        slide: function (event, ui) {
+            $("#a_field").val(ui.value);
+            $("#a").text(ui.value);
+
+            //Regans added javascript.
+            //created a variable for slider value
+            var hapValue = ui.value;
+              console.log (hapValue);
+
+              //
+              if (hapValue > 85) $('.smileyFace').attr('src','img/smileys/happy.png');
+
+              if (hapValue > 70 && hapValue < 80)
+              $('.smileyFace').attr('src','img/smileys/clapping.png');
+
+              if (hapValue > 60 && hapValue < 70)
+              $('.smileyFace').attr('src','img/smileys/double_thumbs.png');
+
+              if (hapValue > 50 && hapValue <60 )
+              $('.smileyFace').attr('src','img/smileys/double_thumbs.png');;
+
+              if (hapValue > 40 && hapValue <60 )
+              $('.smileyFace').attr('src','img/smileys/thumbs.png');
+
+              if (hapValue > 30 && hapValue <40 )
+              $('.smileyFace').attr('src','img/smileys/gloomy.png');;
+
+              if (hapValue > 20 && hapValue <30 )
+              $('.smileyFace').attr('src','img/smileys/tearful.png');
+
+             if (hapValue > 10 && hapValue <20) 
+              $('.smileyFace').attr('src','img/smileys/angry.png');
+
+             if (hapValue < 10) $('.smileyFace').attr('src','img/smileys/crying.png');
+
+        }
+    });
+
+
+
+
+</script>
+
+</html>
