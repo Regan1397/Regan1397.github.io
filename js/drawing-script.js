@@ -55,16 +55,16 @@ $.fn.drawTouch = function() {
 		ctx.beginPath();
 
 				// add position offset from 0,0 change below
-		x = e.changedTouches[0].pageX;
-		y = e.changedTouches[0].pageY;
+		x = e.changedTouches[0].pageX-110;
+		y = e.changedTouches[0].pageY-70;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
         e = e.originalEvent;
         		// add position offset from 0,0 change below
-		x = e.changedTouches[0].pageX;
-		y = e.changedTouches[0].pageY;
+		x = e.changedTouches[0].pageX-110;
+		y = e.changedTouches[0].pageY-70;
 		ctx.lineTo(x,y);
 		ctx.stroke();
 	};

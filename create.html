@@ -8,6 +8,7 @@
 
 <!-- local Jquery -->
 
+
 <script  src="js/jquery/jquery.js"></script>
 <!-- <script src="js/modernizr.js"></script> -->
 <script src="js/hammer.min.js"></script>
@@ -19,7 +20,7 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 <!-- local lib and tests -->
 <script  src="js/page-script.js"></script>
-
+<script src="js/drawing-script.js"></script>
 
 </head>
 
@@ -51,74 +52,40 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 			</ul>
 		</div>	
-<div class="white-fader"></div>
+	<div class="white-fader"></div>
+
 	<div class="content-wrapper">
 
+
+			<div id="drawing-box" >
 		
 
-		<div class='home-image-box' id='home-image-box-01' >	
+		    <div id="content"><img id='loading' src="img/icons/loading.gif"></div>
 
-		<!-- 	<div class='home-info-box' id='home-info-01' >
-				<h5> The Zoo!!! </h5>
-				<h6> 12.04.2015 </h6>
-					<p> I had such a awesome day! </p>
-				<img class='home-smiley' src="img/Happy.png">
-			</div> -->
-			<img id='img-01' src="img/stock/stock01.jpg">
+		    	    
+				<ul class="palette-case">
 
-			<div class='home-date-half'>
-				<p> nov </p>
-				<p> 24 </p>
-			</div>
-
+					<li class="palette-box">
+						<div class="palette yellow"></div>
+					</li>	
+					<li class="palette-box">
+						<div class="palette red"></div>
+					</li>
+					<li class="palette-box">
+						<div class="palette blue"></div>
+					</li>
+					<li class="palette-box">
+						<div class="palette green"></div>
+					</li>
+					<li class="palette-box">
+						<div class="palette black"></div>
+					</li>
+					<li class="palette-box">
+						<img id="new" src="img/icons/trash.png" >
+					</li>		
+					<div style="clear:both"></div>
+				</ul>
 		</div>
-
-
-			<div class='home-image-box' id='home-image-box-01' >	
-
-			<img id='img-01' src="img/stock/stock02.jpg">
-
-			<div class='home-date-half'>
-				<p> feb </p>
-				<p> 11 </p>
-			</div>
-
-			</div>
-
-			<div class='home-image-box' id='home-image-box-03' >	
-
-				<img id='img-03' src="img/stock/stock06.jpg">
-
-				<div class='home-date-third'>
-					<p> aug </p>
-					<p> 31 </p>
-				</div>
-
-			</div>
-
-			<div class='home-image-box' id='home-image-box-03' >	
-
-				<img id='img-03' src="img/stock/stock04.jpg">
-
-				<div class='home-date-third'>
-					<p> oct </p>
-					<p> 15 </p>
-				</div>
-
-			</div>
-
-			<div class='home-image-box' id='home-image-box-03' >	
-
-				<img id='img-03' src="img/stock/stock05.jpg">
-
-				<div class='home-date-third'>
-					<p> jan </p>
-					<p> 26 </p>
-				</div>
-
-			</div>
-
-
 
 
 
