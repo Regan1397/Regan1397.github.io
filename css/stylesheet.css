@@ -2,6 +2,7 @@ html, body {
 	overflow-x: hidden;
 }
 
+
 body {
 	margin: 0;
 	font-family: Arial; 
@@ -27,6 +28,15 @@ overflow: hidden;
 	height: 1024px;
 	background-color:  #e3e3e3;
 	margin: 0px;
+
+}
+
+#canvas {
+/*position: absolute;*/
+/*margin-left: 70px;*/
+/*width: 250px;*/
+/*height: 250px;*/
+background-color: yellow;
 
 }
 
