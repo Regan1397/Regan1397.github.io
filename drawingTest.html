@@ -3,9 +3,9 @@
 <head>
     <title>Sketch Pad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
-	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-	<script src="js/jquery-1.8.2.min.js"></script>
-	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+	<!-- <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" /> -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
     <style type="text/css">
 	  body {
 		margin:0px;
@@ -101,7 +101,7 @@ $(document).ready(function () {
     }, 1000);
 	
 	// prevent footer to toggle on touch
-	$("[data-role=footer]").fixedtoolbar({ tapToggle: false });
+
 	
 	// reset palette selection (css) and select the clicked color for canvas strokeStyle
 	$(".palette").click(function(){
@@ -124,7 +124,7 @@ $(document).ready(function () {
 function newCanvas(){
 	//define and resize canvas
     // $("#content").height($('#content').css('height', '20%'));
-    var canvas = '<canvas id="canvas" width="'+$(window).width()+'" height="'+($(window).height()+90)+'"></canvas>';
+    var canvas = '<canvas id="canvas" width="'+($('#content').width())+'" height="'+($('#content').height())+'"></canvas>';
 	$("#content").html(canvas);
     
 	console.log (  )
@@ -146,7 +146,7 @@ $.fn.drawTouch = function() {
         e = e.originalEvent;
 		ctx.beginPath();
 
-		// add position change below
+				// add position offset from 0,0 change below
 		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY;
 		ctx.moveTo(x,y);
@@ -154,7 +154,7 @@ $.fn.drawTouch = function() {
 	var move = function(e) {
 		e.preventDefault();
         e = e.originalEvent;
-        		// add position change below
+        		// add position offset from 0,0 change below
 		x = e.changedTouches[0].pageX;
 		y = e.changedTouches[0].pageY;
 		ctx.lineTo(x,y);
@@ -169,7 +169,7 @@ $.fn.drawPointer = function() {
 	var start = function(e) {
         e = e.originalEvent;
 		ctx.beginPath();
-				// add position change below
+				// add position offset from 0,0 change below
 		x = e.pageX;
 		y = e.pageY;
 		ctx.moveTo(x,y);
@@ -177,7 +177,7 @@ $.fn.drawPointer = function() {
 	var move = function(e) {
 		e.preventDefault();
         e = e.originalEvent;
-        		// add position change below
+        		// add position offset from 0,0 change below
 		x = e.pageX;
 		y = e.pageY;
 		ctx.lineTo(x,y);
@@ -193,14 +193,14 @@ $.fn.drawMouse = function() {
 	var start = function(e) {
 		clicked = 1;
 		ctx.beginPath();
-				// add position change below
+				// add position offset from 0,0 change below
 		x = e.pageX;
 		y = e.pageY;
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		if(clicked){
-					// add position change below
+					// add position offset from 0,0 change below
 			x = e.pageX;
 			y = e.pageY;
 			ctx.lineTo(x,y);
