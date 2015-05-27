@@ -17,7 +17,7 @@
 jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage = false;
 });</script>
 <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
-<script src="js/sketch.js"></script>
+
 
 <!-- local lib and tests -->
 <script  src="js/page-script.js"></script>
@@ -56,80 +56,45 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 	<div class="white-fader"></div>
 
 	<div class="content-wrapper">
+ 		
+ 		<div id="section-01">
+	 		<div id="create-box-01">
 
-	<div id="drawing-section">
-		<ul>
-			
-			<li>	
-				<a href="#colors_sketch" class="pallete-color-box"  data-color="#ffffff"  >
-					<div class="pallete-color-box" style="background-color: white; border: 1px solid black">	</div>
-				</a>
-			</li>
-			<li>	
-				<a href="#colors_sketch" class="pallete-color-box"  data-color="#7bf164"  >
-					<div class="pallete-color-box" style="background-color: #7bf164;">	</div>
-				</a>
-			</li>
-			<li>	
-				<a href="#colors_sketch" class="pallete-color-box"  data-color="#3920f7"  >
-					<div class="pallete-color-box" style="background-color: #3920f7;">	</div>
-				</a>
-			</li>
-			<li>	
-				<a href="#colors_sketch" class="pallete-color-box"  data-color="#cb2f2f"  >
-					<div class="pallete-color-box" style="background-color: #cb2f2f;">	</div>
-				</a>
-			</li>
-			<li>	
-				<a href="#colors_sketch" class="pallete-color-box"  data-color="#000000"  >
-					<div class="pallete-color-box" style="background-color: black; ">	</div>
-				</a>
-			</li>
-			
-		</ul>
-			<a> 
-				<img id ='reset-canvas' src="img/icons/trash.png">
-			</a>
-		<!-- canvas-background is used to move/scale canvas due to js attachment -->
-		<div id='canvas-background'>
-		<canvas id="colors_sketch" ></canvas>
-			
+	 		</div>
 
+
+				<div id="drawing-box" >
+				
+				    <div id="content"><img id='loading' src="img/icons/loading.gif">
+
+				    </div>
+				    
+
+					<ul class="palette-case">
+
+						<li class="palette-box">
+							<div class="palette yellow"></div>
+						</li>	
+						<li class="palette-box">
+							<div class="palette red"></div>
+						</li>
+						<li class="palette-box">
+							<div class="palette blue"></div>
+						</li>
+						<li class="palette-box">
+							<div class="palette green"></div>
+						</li>
+						<li class="palette-box">
+							<div class="palette black"></div>
+						</li>
+						<li class="palette-box">
+							<img id="new" src="img/icons/trash.png" >
+						</li>		
+						<div style="clear:both"></div>
+					</ul>
+				</div>
 		</div>
-	</div>
 
-
-<script type="text/javascript">
-
-/// get computed style for image
-var img = document.getElementById('canvas-background');
-var cs = getComputedStyle(img);
-
-/// these will return dimensions in *pixel* regardless of what
-/// you originally specified for image:
-var width = parseInt(cs.getPropertyValue('width'), 10);
-var height = parseInt(cs.getPropertyValue('height'), 10);
-console.log (width);
-
-/// now use this as width and height for your canvas element:
-var canvas = document.getElementById('colors_sketch');
-var context = canvas.getContext('2d');
-canvas.width = width;
-canvas.height = height;
-
-
-
-
-
-
-
-
-  $(function() {
-   
- 
-    $('#colors_sketch').sketch();
-  });
-</script>
 
 
 	</div>

@@ -32,12 +32,11 @@ var __slice = Array.prototype.slice;
       this.el = el;
       this.canvas = $(el);
       this.context = el.getContext('2d');
-
       this.options = $.extend({
         toolLinks: true,
         defaultTool: 'marker',
         defaultColor: '#000000',
-        defaultSize: 7
+        defaultSize: 5
       }, opts);
       this.painting = false;
       this.color = this.options.defaultColor;
@@ -81,7 +80,6 @@ var __slice = Array.prototype.slice;
     };
     Sketch.prototype.startPainting = function() {
       this.painting = true;
-
       return this.action = {
         tool: this.tool,
         color: this.color,
@@ -152,8 +150,6 @@ var __slice = Array.prototype.slice;
       var event, previous, _i, _len, _ref;
       this.context.lineJoin = "round";
       this.context.lineCap = "round";
-
-
       this.context.beginPath();
       this.context.moveTo(action.events[0].x, action.events[0].y);
       _ref = action.events;
