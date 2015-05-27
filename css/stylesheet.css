@@ -204,15 +204,25 @@ height: 40%;
 
 
 #input-nav {
-background-color: blue;
+background-color: #8194f7;
 width: 100%;
 height:50px;
 
 }
 
+
+#input-nav > ul > li {
+	width:  40px;
+	padding: 2 60 2 60;
+
+	display: inline-block;
+	list-style-type: none;
+}
+
 .title1 {
 	font-size:40px;
 }
+
 
 
 
