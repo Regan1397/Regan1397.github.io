@@ -43,6 +43,19 @@ $(document).ready (function() {
 
 $(function() {
 
+  $('.text-icon').bind("tap", tapHandler);
+
+		function tapHandler (event) 
+		  {
+		  	$("#input-nav-head").animate ({left: "8%", }, 500);
+
+		};
+	});
+
+
+
+$(function() {
+
   $('.create-button').bind("tap", tapHandler);
 
 		function tapHandler (event) 
@@ -55,13 +68,40 @@ $(function() {
 
 
 
+$(function() {
+
+  $('.camera-icon').bind("tap", tapHandler);
+
+		function tapHandler (event) 
+		  {
+		  	$("#input-nav-head").animate ({left: "31%", }, 500);
+
+		};
+	});
 
 
+$(function() {
+
+  $('.video-icon').bind("tap", tapHandler);
+
+		function tapHandler (event) 
+		  {
+		  	$("#input-nav-head").animate ({left: "53%", }, 500);
+
+		};
+	});
 
 
+$(function() {
 
+  $('.delete-icon').bind("tap", tapHandler);
 
+		function tapHandler (event) 
+		  {
+		  	$("#input-nav-head").animate ({left: "74.5%", }, 500);
 
+		};
+	});
 
 
 

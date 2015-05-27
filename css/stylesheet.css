@@ -39,36 +39,37 @@ overflow: hidden;
 }
 
   #canvas{
-	border-radius: 50%;
-	background-color:  #f9be02
-	 border:  1px solid black;
+	
 		cursor:crosshair ;
+		        z-index: 2;
+
+	  }
+
+ #content {
+         margin-left: 2%;
+          display: inline-block;
+		  /*background-color:#ddd;*/
+border-radius: 60%;
+opacity: .8;
+	background-color:  #f9be02;
+		  width: 80%;
+        height: 300px;
 
 	  }
 
 
-#canvas-background {
-	display: inline-block;
-	width: 60%;
-	height: 250px;
-	
-}
 
-#section-01 {
-	width: 100%;
-	height: 310px;
-padding: 5 20 0 20;
 
-}
 
 
 .content-wrapper {
 
 	
 	margin: auto;
-
+	margin-top: 10px;
 	max-width: 800px;
-	width: 100%;
+	width: 95%;
+
 }
 
 
@@ -76,7 +77,7 @@ padding: 5 20 0 20;
 	display: inline-block;
 width: 49%;
 height: 300px;
-background-color: yellow;
+background-color: #d7d7d7;
 }
 
 
@@ -204,10 +205,14 @@ height: 40%;
 
 
 #input-nav {
-background-color: #8194f7;
+
 width: 100%;
 height:50px;
 
+}
+
+.input-icon {
+	height:70%; 
 }
 
 
@@ -217,6 +222,25 @@ height:50px;
 
 	display: inline-block;
 	list-style-type: none;
+}
+
+#input-nav > ul > li:last-child {
+	/*effects delete icon*/
+}
+
+#input-nav > ul {
+background-color: #b2dce3;
+padding: 7 0 7 0;
+
+margin: 0;
+margin-top: 5px;
+}
+
+#input-nav-head {
+	position: relative;
+	top:-4px;
+	left: 60px;
+	width: 7%;
 }
 
 .title1 {
@@ -286,6 +310,22 @@ margin: 5 0 5 0;
 height: 90%;
 }
 
+#create-section-01 {
+	width: 100%;
+	height: 310px;
+padding: 5  0 0 0;
+
+}
+#create-section-02 {
+	width: 100%;
+	height: 410px;
+	box-sizing: border-box;
+	background-color: white;
+	border: 7px solid #ff954c;
+	margin-top: 10px;
+padding: 0 0 0 0;
+
+}
 
 
 
@@ -309,7 +349,7 @@ height: 90%;
 	  	position: relative;
 
 	  	display: inline-block;
-	  	height: 400px;
+	  	height: 300px;
 	  	width: 50%;
 	  }
 
@@ -332,22 +372,7 @@ display: block;
 	  }
 	 
 
-	  #content {
-          overflow:hidden;
-          display: inline-block;
-		  /*background-color:#ddd;*/
-
-		  width: 80%;
-        height: 300px;
-
-	  }
-	  #canvas{
-/*	border-radius: 80px;
-	 border:  1px solid black;
-		cursor:crosshair ;*/
-        background-color:#d7d7d7;
-        z-index: 2;
-	  }
+	 
 
 	  .palette-case {
 	  	/*float: right;*/
@@ -355,6 +380,7 @@ display: block;
 		width:20px;
 
 		padding: 0;
+		padding-left: 3%;
 		text-align:center;
 	  }
 	  .palette-box {
