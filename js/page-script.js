@@ -41,13 +41,17 @@ $(document).ready (function() {
 	});
 
 
+
+
+
+
 $(function() {
 
   $('.text-icon').bind("tap", tapHandler);
 
 		function tapHandler (event) 
 		  {
-		  	$("#input-nav-head").animate ({left: "8%", }, 500);
+		  	$(".input-nav-slider").animate ({left: "8%", }, 500);
 
 		};
 	});
@@ -74,7 +78,7 @@ $(function() {
 
 		function tapHandler (event) 
 		  {
-		  	$("#input-nav-head").animate ({left: "31%", }, 500);
+		  	$(".input-nav-slider").animate ({left: "31%", }, 500);
 
 		};
 	});
@@ -86,7 +90,7 @@ $(function() {
 
 		function tapHandler (event) 
 		  {
-		  	$("#input-nav-head").animate ({left: "53%", }, 500);
+		  	$(".input-nav-slider").animate ({left: "53%", }, 500);
 
 		};
 	});
@@ -98,7 +102,7 @@ $(function() {
 
 		function tapHandler (event) 
 		  {
-		  	$("#input-nav-head").animate ({left: "74.5%", }, 500);
+		  	$(".input-nav-slider").animate ({left: "74.5%", }, 500);
 
 		};
 	});

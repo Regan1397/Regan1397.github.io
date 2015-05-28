@@ -58,8 +58,8 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 	<div class="content-wrapper">
  		
  		<div id="create-section-01">
-	 		<div id="create-box-01">
-	 			<input class="input title1"type="text" name="Title01" value="Memory Title"><br>
+	 		<div id="create-box-01"> 
+	 			<input class="input" id="title1" type="text" name="Title01" maxlength="17" placeholder="Memory Title"><br>
 				<input class="input" type="text" name="LastName" value="Mouse">
 	 		</div>
 
@@ -115,15 +115,23 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 				</li>
 			</ul>
 			
-			<img id="input-nav-head" src="img/input_nav_head.png">
+			<img class="input-nav-slider" id="input-head" src="img/input_nav_head.png">
+			<!-- <div class='input-nav-slider' id="underline" > </div> -->
 		</div>
 
 		<div id="create-section-02">
+			<div id="create-area-01">
+				<textarea class="input " id="text-area-01"type="text" name="text01" rows="4" cols="50"  placeholder="How was your day?"></textarea>
+			</div>
+			<div id="create-area-01">
+				<div class="temp-">
+<input type="file" accept="image/*" capture="camera">
+				</div>
+
+			</div>
 
 
 		</div>
-
-	</div>
 
 
 
