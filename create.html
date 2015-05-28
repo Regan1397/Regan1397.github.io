@@ -124,9 +124,9 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 				<textarea class="input " id="text-area-01"type="text" name="text01" rows="4" cols="50"  placeholder="How was your day?"></textarea>
 			</div>
 			<div id="create-area-01">
-				<div class="temp-">
-<input type="file" accept="image/*" capture="camera">
-				</div>
+				
+				<img id="uploaded-img-01" src='#' alt="Your Image">
+				<input class=" input camera-upload" onchange="readURL(this);" type="file" accept="image/*" capture="camera">
 
 			</div>
 
@@ -136,6 +136,23 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 
 </div>
+
+<script type="text/javascript">
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#uploaded-img-01')
+                    .attr('src', e.target.result)
+                    
+            };
+            $('.camera-upload').css("display", "none")
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
 
 </body>
 
