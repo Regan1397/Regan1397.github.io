@@ -4,24 +4,45 @@ $(document).ready (function() {
 
 	$(".white-fader").fadeTo(1500, 0);
 	console.log("linked");
-			$(function () {
 
-		 $('#img-01').bind("tap", tapHandler);
 
+$(function () {
+		 $('#input-tag-cloud').bind("tap", tapHandler);
 		function tapHandler (event) 
 		  {
-		  	$('#home-info-01').fadeTo(3000,0.9);
-		  	$('#img-01').fadeTo(3000,0.7);
+
+		  	$('.black-fader').css("display","fixed").fadeTo(500,.97);
 		  	console.log("worked");
 		   }
+});
 
-
-
-
-
-
-
+$(function () {
+		 $('.black-fader > h2').bind("tap", tapHandler);
+		function tapHandler (event) 
+		  {	 $(this).css( 'color', "#FF0000");
+		  console.log ("hi");
+		   }
 		});
+
+
+$(function () {
+		 $('.close').bind("tap", tapHandler);
+		function tapHandler (event) 
+		  {	$('.black-fader').fadeTo(500,0).delay(500).css("display","none");
+		   }
+		});
+
+	// $(function () {
+	// 	 $('#img-01').bind("tap", tapHandler);
+	// 	function tapHandler (event) 
+	// 	  {
+	// 	  	$('#home-info-01').fadeTo(3000,0.9);
+	// 	  	$('#img-01').fadeTo(3000,0.7);
+	// 	  	console.log("worked");
+	// 	   }
+	// });
+
+
 
 
 			$(function() {
@@ -35,26 +56,38 @@ $(document).ready (function() {
 		  		window.location.href = 'index.html';
 		  	});
 		};
-
-
-		
 	});
-
-
-
-
 
 
 $(function() {
 
-  $('.text-icon').bind("tap", tapHandler);
+  $('.history-button').bind("tap", tapHandler);
 
 		function tapHandler (event) 
 		  {
-		  	$(".input-nav-slider").animate ({left: "8%", }, 500);
-
+		  	$(".white-fader").fadeTo(1500, 1, function () {
+		  		window.location.href = 'load.html';
+		  	});
 		};
 	});
+
+$(function() {
+
+  $('.graph-button').bind("tap", tapHandler);
+
+		function tapHandler (event) 
+		  {
+		  	$(".white-fader").fadeTo(1500, 1, function () {
+		  		window.location.href = 'graph.html';
+		  	});
+		};
+	});
+
+
+
+
+
+
 
 
 
@@ -70,6 +103,17 @@ $(function() {
 		};
 	});
 
+$(function() {
+
+  $('.text-icon').bind("tap", tapHandler);
+
+		function tapHandler (event) 
+		  {
+		  	$(".input-nav-slider").animate ({left: "11.5%", }, 500);
+		   	$(".input-selector-right").css("background-image",  "url(img/icons/text_icon.png)");
+
+		};
+	});
 
 
 $(function() {
@@ -78,7 +122,9 @@ $(function() {
 
 		function tapHandler (event) 
 		  {
-		  	$(".input-nav-slider").animate ({left: "31%", }, 500);
+		  	$(".input-nav-slider").animate ({left: "33%", }, 500);
+		  	$(".input-selector-right").css("background-image",  "url(img/icons/camera_icon.png)");
+
 
 		};
 	});
@@ -90,7 +136,10 @@ $(function() {
 
 		function tapHandler (event) 
 		  {
-		  	$(".input-nav-slider").animate ({left: "53%", }, 500);
+
+		  	$(".input-nav-slider").animate ({left: "54.6%", }, 500);
+		  	$(".input-selector-right").css("background-image",  "url(img/icons/video_icon.png)");  
+		  		console.log("it worked");
 
 		};
 	});
@@ -102,13 +151,19 @@ $(function() {
 
 		function tapHandler (event) 
 		  {
-		  	$(".input-nav-slider").animate ({left: "74.5%", }, 500);
+		  	$(".input-nav-slider").animate ({left: "76%", }, 500);
+
 
 		};
 	});
 
 
 
+	//this is for the inputs it removes the class that makes the input active. When jquery selects the nav-bar option the display of the specific input is changed
+function removeInputActive () {
+	$('#iS-video ').removeClass('input-active');
+	$('#iS-camera ').removeClass('input-active');
+};
 
 
 });

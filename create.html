@@ -27,6 +27,16 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 <body>
 <div id="wrapper">
+	<div class='black-fader'>
+		<img class="close" src="img/icons/delete_icon_white.png">
+		<h2> Work </h2>
+		<h2> Sport </h2>
+		<h2> Family </h2>
+		<h2> Friends </h2>
+		<h2> School </h2>
+		<h2> University </h2>
+
+	</div>
 		<div class='navbar'>
 			<img class='nav-logo' src="img/Logo_Final_Small.png">
 			<img class="nav-icon-settings" src="img/icons/settings_icon.png">
@@ -60,14 +70,13 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
  		<div id="create-section-01">
 	 		<div id="create-box-01"> 
 	 			<input class="input" id="title1" type="text" name="Title01" maxlength="17" placeholder="Memory Title"><br>
-				<input class="input" type="text" name="LastName" value="Mouse">
+				<img id="input-tag-cloud" src="img/icons/hash_cloud.png">
 	 		</div>
 
 
 				<div id="drawing-box" >
 				
 				    <div id="content">
-
 				    </div>
 				    
 
@@ -114,26 +123,28 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 					<img class="input-icon delete-icon" src="img/icons/delete_icon.png">
 				</li>
 			</ul>
-			
-			<img class="input-nav-slider" id="input-head" src="img/input_nav_head.png">
-			<!-- <div class='input-nav-slider' id="underline" > </div> -->
+				<div class='input-nav-slider' id="underline" > </div>
+			<img  id="input-head" src="img/input_nav_head.png">
 		</div>
 
 		<div id="create-section-02">
-			<div id="create-area-01">
+			<div class="create-area-01">
 				<textarea class="input " id="text-area-01"type="text" name="text01" rows="4" cols="50"  placeholder="How was your day?"></textarea>
 			</div>
-			<div id="create-area-01">
+			<div class="create-area-01" id='image-border-01'>
 				
-				<img id="uploaded-img-01" src='#' alt="Your Image">
-				<input class=" input camera-upload" onchange="readURL(this);" type="file" accept="image/*" capture="camera">
+				<img id="uploaded-img-01" src='#' src="Error.src" onerror="this.src='img/icons/white_space.jpg'" >
 
+				<div class="input-selector-right" >
+													<!--  input active goes on first input once page is loaded -->
+					<span><input class=" input create-upload input-active"  id="iS-camera" onchange="readURL(this);" type="file" accept="image/*" capture="camera" ></span>
+					<span id="iS-video"><input class=" input create-upload" onchange="readURL(this);" type="file" accept="image/*" capture="camera" ></span>
+				</div>
 			</div>
-
-
 		</div>
+	</div>
 
-
+		<input class="submitButton" type="submit" value="Submit">
 
 </div>
 
@@ -147,7 +158,7 @@ function readURL(input) {
                     .attr('src', e.target.result)
                     
             };
-            $('.camera-upload').css("display", "none")
+            $('.input-selector-right').css("display", "none")
             reader.readAsDataURL(input.files[0]);
         }
     }

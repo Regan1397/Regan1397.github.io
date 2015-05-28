@@ -49,8 +49,39 @@ input {
 }
 
 
+.black-fader > .close {
+		position: absolute;
+	left: 45%;
+	top: 45%;
+	width: 40px;
+	height: 40px;
 
-	 
+
+	/*right: 0;*/
+	/*float: right;*/
+	z-index: 31;
+}
+
+.black-fader > h2 {
+	color: white;
+	position: relative;
+	font-size: 30px;	
+}
+
+
+
+.black-fader > h2:nth-child(2) {
+	top: 30%; left: 25%; }
+.black-fader > h2:nth-child(3) {
+	top: 50%; left: 60%; }	 
+.black-fader > h2:nth-child(4) {
+	top: 20%; left: 60%; }
+.black-fader > h2:nth-child(5) {
+	top: 35%; left: 27%; }	
+.black-fader > h2:nth-child(6) {
+	top: 17%; left: 25%; }	 
+.black-fader > h2:nth-child(7) {
+	top: 15%; left: 63%; }	 
 
 
 #bottom-navbar {
@@ -64,7 +95,7 @@ bottom: 0px;
 position: fixed;
 border: 1px solid black;
 background-color: #E7853C;
-z-index: 1000;
+z-index: 20;
 }
 
 #bottom-navbar > ul {
@@ -81,14 +112,55 @@ z-index: 1000;
 	list-style-type: none;
 }
 
-
-.camera-upload {
-	position: relative;
-	left:40%;
-	top: -40%;
+.black-fader  {
+	background-color: black;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+	opacity: 0;
+	display: none;
+	position: fixed;
 }
 
+
+.create-upload {
+	display: none;
+	padding-top: 15px;
+	position: relative;
+	
+}
+/*iS = input-selector*/
+#iS-camera {
+
+}
+/*iS = input-selector*/
+#iS-video  {
+
+}
+
+.input-active {
+	opacity: 0;
+	display: block;
+}
+
+.input-selector-right {
+left:40%;
+	top: -60%;
+	display: inline-block;
+	background-image:  url(../img/icons/text_icon.png);
+	opacity: 0.3;
+	background-size: cover;
+	position: relative;
+	width: 70px;
+	height: 50px;
+
+}
+
+
+
 #create-section-01 {
+	margin-top: 70px;
 	width: 100%;
 	height: 310px;
 padding: 5  0 0 0;
@@ -134,9 +206,10 @@ opacity: .8;
 
 	
 	margin: auto;
-	margin-top: 10px;
+/*	margin-top: 60px;*/
+	padding-top: 1.5%;
 	max-width: 800px;
-	width: 95%;
+	width: 97.6%;
 
 }
 
@@ -145,17 +218,25 @@ opacity: .8;
 	display: inline-block;
 width: 49%;
 height: 300px;
-background-color: #d7d7d7;
+/*background-color: #d7d7d7;*/
 }
 
 
-#create-area-01 {
-
-	 	overflow: hidden;
+.create-area-01 {
+/*padding: 0 10 0 10 ;*/
+overflow: hidden;
 display: inline-block;
 background-color: #f5f8f8;
 width: 49.5%;
 height: 100%;
+}
+
+#image-border-01 {
+	box-sizing: border-box;
+border: 5px solid white;
+border-left: 3px;
+border-right: 3px;
+
 }
 
 
@@ -263,20 +344,60 @@ opacity: .7;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.home-image-full {
+width: 100%;
+height: 100%;
+}
+
+.home-image-half {
+width: 49.3%;
+height: 100%
+}
+
+.home-image-third {
+width: 32.6%;
+height: 100%;
+}
+
 
 #home-image-box-01 {
-width: 49.5%;
-height: 40%;
+	float: left;
+}
+#home-image-box-02 {
+	float: right;
+
 }
 
 #home-image-box-03 {
-width: 32.8%;
-height: 40%;
+
+	float: left;
+
+}
+
+#home-image-box-04 {
+margin-left: 1%;
+}
+
+#home-image-box-05 {
+	float: right;
+
+}
+
+.home-section-01 {
+	margin-top: 60px;
+	width: 100%;
+	height: 42%
+}
+
+.home-section-02 {
+	padding-top: 1%;
+	height: 43%;
 }
 
 .input {
 	background-color: transparent;
 	border: none;
+
 
 }
 
@@ -301,30 +422,59 @@ height:50px;
 	list-style-type: none;
 }
 
-#input-nav > ul > li:last-child {
-	/*effects delete icon*/
-}
+
+
 
 #input-nav > ul {
 background-color: #b2dce3;
 padding: 7 0 7 0;
-
+padding-left: 20px;	
 margin: 0;
 margin-top: 5px;
 }
+
+#input-nav > ul > li:first-child {
+	padding-left: 70px; 
+	/*Change later*/
+	}
+
+
+	#input-nav > ul > li:last-child {
+
+	/*effects delete icon*/
+}
+
 
 .input-nav-slider {
 	position: relative;
 	top:-4px;
 	left: 60px;
 	width: 7%;
+	z-index: 1;
 }
 
+#input-head {
+	position: relative;
+	top:-6px;
+	left: 280px;
+	width: 7%;
+}
+
+#input-tag-cloud {
+	width: 30%;
+
+	position: relative;
+	left: 30%;
+	top: 15%;
+	opacity: .6;
+}
 
 
 #underline {
 	background-color: #13878f;
-	left: 55px;
+	display: inline-block;
+	left:11.5%;
+	top: -6px;
 	height: 6px; 
 	width: 8%;
 }
@@ -337,7 +487,7 @@ margin-top: 5px;
 
 #text-area-01 {
 padding: 20 20 20 20;
-font-size: 20px;
+font-size: 30px;
 width: 100%;
 height: 100%;
 
@@ -348,9 +498,11 @@ height: 100%;
 
 
 .navbar {
+	position: relative;
+	top: 0;
 width: 100%;
 height: 60px;
-display: fixed;
+position: fixed;
 
 background-color: #E7853C;
 border: 1px solid black;
@@ -364,7 +516,8 @@ z-index: 6;
 }
 
   #uploaded-img-01 {
-  	margin: auto;
+  		 background-image:url('../img/icons/white_space.jpg');
+    	box-sizing: border-box;
 	  	min-width: 100%;
 	  	height: 100%;
 	  }
@@ -383,6 +536,14 @@ margin: 5 0 5 0;
 height: 90%;
 }
 
+
+.submitButton {
+	padding: 5;
+	width: 10%;
+	position: relative;
+	left: 45%;
+	top:20px;
+}
 
 
 
@@ -474,8 +635,146 @@ display: block;
 
 /*************** Aprils CSS******************/
 
+#load-content-wrapper {
+
+}
 
 
+#load-image-box-01 {
+	top:0%;
+}
+
+#load-image-box-02 {
+	top:10%
+}
+
+.imgContainer { 
+
+  max-height: 150px;
+  overflow: hidden; 
+  position:relative
+
+}
+.imgContainer img { 
+  /* corrects inline gap in enclosing div */
+  display: block;
+  max-width: 100%;
+  /* just in case, to force correct aspect ratio */
+  height: auto !important;
+  width: auto\9; /* ie8+9 */
+  /* lt ie8 */
+  -ms-interpolation-mode: bicubic; 
+}
+
+.load-date{
+	color:white;
+	width: 60px;
+	height: 80px;
+	top:2px;
+	position:absolute;
+
+}
+
+/*.happy{
+	top:0px;
+	left:0px;
+	position:absolute;
+}
+
+#happy{
+	height:25px;
+	width:25px;
+}
+*/
+
+.load-image-box  p {
+	width: 90%;
+	padding: 0 10% 0 10%;
+	margin: 0;
+		text-align: center;
+		display: block;
+	font-size: 200%;
+	color: white;
+}
+
+#retr-memTitle{
+	font-size:250%;
+}
+
+#memQuote{
+	width:49%;
+	float:left;
+	font-size: 250%;
+
+
+}
+
+#face{
+	width:49%;
+	float: right;
+}
+
+
+#memText{
+	width:45%;
+	font-size: 250%;
+	float:left;
+
+}
+
+#topLayer{
+	width: 100%;
+	background-color:cyan;
+
+}
+
+
+#tags {
+	background-color: #b2dce3;
+	font-size:200%;
+    display: table;
+    height: 87px;
+    width: 100%;
+}
+
+#tags li {
+    display: table-cell;
+    width: 20%; 
+    line-height: 87px;
+    text-align: center;
+
+
+}​
+
+#login-container{
+	background-color:#E7853C;
+	height:1024px;
+	width:768px;
+	display: fixed;
+
+}
+
+#login-logo{
+	width:60%;
+
+}
+
+#retr-info{
+	
+	width:100%;
+	background-color: white;
+	border: 7px solid #ff954c;
+	box-sizing: content-box;
+
+}	
+	
+#retr-img-01{
+	width:54%;
+	height:30%;
+	float:left;
+}	
+	
+	
 
 
 /*************** Media Queries******************/
