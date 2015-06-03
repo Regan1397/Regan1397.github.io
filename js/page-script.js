@@ -159,6 +159,7 @@ $(function() {
 
 
 
+
 	//this is for the inputs it removes the class that makes the input active. When jquery selects the nav-bar option the display of the specific input is changed
 function removeInputActive () {
 	$('#iS-video ').removeClass('input-active');

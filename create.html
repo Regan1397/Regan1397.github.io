@@ -17,7 +17,8 @@
 jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage = false;
 });</script>
 <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
-
+<script src='js/jquery/jquery-ui.js'></script>
+<script src='js/jquery/jquery.ui.touch-punch.min.js'></script>
 
 <!-- local lib and tests -->
 <script  src="js/page-script.js"></script>
@@ -78,30 +79,15 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 				
 				    <div id="content">
 				    </div>
-				    
+							    
+				    	<ul id="paint-slider">
+				    		<li><img id="undo-icon" src="img/icons/trash.png"></li>
+				    		<li> <img id="pencil-icon" src="img/icons/pencil_icon.png"> </li>
+				    		<li> <div id="coloredSlider"></div></li>
 
-					<ul class="palette-case">
 
-						<li class="palette-box">
-							<div class="palette yellow"></div>
-						</li>	
-						<li class="palette-box">
-							<div class="palette red"></div>
-						</li>
-						<li class="palette-box">
-							<div class="palette blue"></div>
-						</li>
-						<li class="palette-box">
-							<div class="palette green"></div>
-						</li>
-						<li class="palette-box">
-							<div class="palette black"></div>
-						</li>
-						<li class="palette-box">
-							<img id="new" src="img/icons/trash.png" >
-						</li>		
-						<div style="clear:both"></div>
-					</ul>
+						</ul>
+
 				</div>
 		</div>
 
@@ -143,6 +129,7 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 			</div>
 		</div>
 	</div>
+
 
 		<input class="submitButton" type="submit" value="Submit">
 

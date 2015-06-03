@@ -1,5 +1,6 @@
 	
-var ctx, color = "#000";	
+var ctx, color = "#000";
+var colorPickerActive = 0;
 
 var mq1 = window.matchMedia ( "(max-width:500px)");
 
@@ -25,9 +26,27 @@ $(document).ready(function () {
 	});
     
 	// link the new button with newCanvas() function
-	$("#new").click(function() {
+	$("#undo-icon").click(function() {
 		newCanvas();
 	});
+
+
+		$(function() {
+
+  $('#pencil-icon').bind("tap", tapHandler);
+
+		function tapHandler (event) 
+		  {
+		  	$("#coloredSlider").toggle();
+		  	if (colorPickerActive ==0) colorPickerActive = 1;
+		  	else if (colorPickerActive ==1) colorPickerActive = 0;
+		  	refreshSwatch();
+
+
+		  };
+	});
+
+
 });
 
 // function to setup a new canvas for drawing
@@ -55,6 +74,7 @@ $.fn.drawTouch = function() {
 	var start = function(e) {
         e = e.originalEvent;
 		ctx.beginPath();
+				ctx.strokeStyle = color;
 
 				// add position offset from 0,0 change below
 		x = e.changedTouches[0].pageX -384;
@@ -124,3 +144,50 @@ $.fn.drawMouse = function() {
 	$(this).on("mousemove", move);
 	$(window).on("mouseup", stop);
 };
+
+function getTheColor(colorVal) {
+    myGreen = parseInt(((colorVal * 2) * 180) / 100);
+
+  // 360
+  theColor = "hsl("+myGreen+",100%,40%)";
+  console.log(myGreen);
+  return (theColor);
+}
+
+function refreshSwatch() {
+  var coloredSlider = $("#coloredSlider").slider("value"),
+ 		   myColor = "#000000";
+ 	console.log(Boolean(colorPickerActive))
+
+  // $("#coloredSlider .ui-slider-range").css("background-color", myColor);
+
+ 
+ 
+
+	if (colorPickerActive == 1) {
+		   myColor = getTheColor(coloredSlider);
+  $("#pencil-icon").css("background-color", myColor);
+   $("#box").css("background-color", myColor);
+	} 
+	else {
+
+		 $("#pencil-icon").css("background-color", "transparent");
+	}
+	 $("#coloredSlider .ui-state-default, .ui-widget-content .ui-state-default").css("background-color", myColor);
+
+
+  color = myColor;
+
+}
+
+$(function() {
+  $("#coloredSlider").slider({
+    orientation: "vertical",
+    range: "min",
+    max: 100,
+    value: 100,
+    slide: refreshSwatch,
+    change: refreshSwatch,
+    create: refreshSwatch,
+  });
+});
