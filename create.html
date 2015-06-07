@@ -1,4 +1,4 @@
-<html><head>
+	<html><head>
 <title>Create</title>
 <meta name="viewport" intial-scale='1.0', content="user-scalable=no, width=device-width, initial-scale=1">
 <!-- <meta name="viewport" intial-scale='1.0', content=""> -->
@@ -22,6 +22,7 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 <!-- local lib and tests -->
 <script  src="js/page-script.js"></script>
+<script src="js/hashtag-cloud.js"></script>
 <script src="js/drawing-script.js"></script>
 
 </head>
@@ -29,14 +30,25 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 <body>
 <div id="wrapper">
 	<div class='black-fader'>
-		<img class="close" src="img/icons/delete_icon_white.png">
-		<h2> Work </h2>
-		<h2> Sport </h2>
-		<h2> Family </h2>
-		<h2> Friends </h2>
-		<h2> School </h2>
-		<h2> University </h2>
+	<section class="addHash-nav">
+		<img src="img/addtag2.png" id="showtag-btn" onclick="resetCustTag()">
+		<div id="custom-tag-section">
+		<img src="img/addtag_line2.png" id="addtag-line">
+		<input id="addtag-textarea" type="text" name="Title01" maxlength="17" placeholder="Custom Hashtag">
+		</div>
+	</section>
+		<div class="hashtag-box">
+			<img class="close" src="img/icons/delete_icon_white.png">
+			<h2>Friends</h2>
+			<h2>Work</h2>
+			<h2>Fun</h2>
+			<h2>School</h2>
+			<h2>Happy</h2>
+			<h2>Sport</h2>
+			<h2>Angry</h2>
+			<h2>Family</h2>			
 
+		</div>
 	</div>
 		<div class='navbar'>
 			<img class='nav-logo' src="img/Logo_Final_Small.png">
@@ -70,11 +82,23 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
  		
  		<div id="create-section-01">
 	 		<div id="create-box-01"> 
-	 			<input class="input" id="title1" type="text" name="Title01" maxlength="17" placeholder="Memory Title"><br>
-				<img id="input-tag-cloud" src="img/icons/hash_cloud.png">
+	 			<input class="input" id="title1" type="text" name="Title01" maxlength="17" placeholder="Memory Title">
+	 			<img id="input-tag-cloud" src="img/icons/hash_cloud.png">
+	 			<div id='choosen-cloud-text'>
+	 					<!-- Testing hashtags to see positioning -->
+	 			<!-- <p> Hashtag 1 </p>
+	 			<p> Hashtag 2 </p>
+	 			<p> Hashtag 3 </p>
+	 			<p> Hashtag 4 </p> -->
+	 			<!-- <p> Hashtag 5 </p>
+	 			<p> Hashtag 6 </p> -->
+	 			
+	 			</div>
 	 		</div>
 
-
+	 	<!-- 	<div class="focus-element">
+	 		</div>
+ -->
 				<div id="drawing-box" >
 				
 				    <div id="content">
@@ -85,9 +109,8 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 				    		<li> <img id="pencil-icon" src="img/icons/pencil_icon.png"> </li>
 				    		<li> <div id="coloredSlider"></div></li>
 
-
 						</ul>
-
+							<a id="downloadLnk" download="YourFileName.png">Download as image</a>
 				</div>
 		</div>
 
@@ -136,6 +159,12 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 </div>
 
 <script type="text/javascript">
+function download() {
+    var dt = canvas.toDataURL('image/png');
+    this.href = dt;
+};
+downloadLnk.addEventListener('click', download, false);
+
 function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -148,6 +177,10 @@ function readURL(input) {
             $('.input-selector-right').css("display", "none")
             reader.readAsDataURL(input.files[0]);
         }
+    }
+
+
+   function resetCustTag () {
     }
 </script>
 

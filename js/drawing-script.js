@@ -11,6 +11,9 @@ $(document).ready(function () {
 	   newCanvas();
     }, 1000);
 	
+
+
+
 	// prevent footer to toggle on touch
 
 	
@@ -166,12 +169,12 @@ function refreshSwatch() {
 
 	if (colorPickerActive == 1) {
 		   myColor = getTheColor(coloredSlider);
-  $("#pencil-icon").css("background-color", myColor);
-   $("#box").css("background-color", myColor);
+  $("#pencil-icon").css({"background-color": myColor, "border": "1px solid black"});
+  $("#box").css("background-color", myColor);
 	} 
 	else {
 
-		 $("#pencil-icon").css("background-color", "transparent");
+		  $("#pencil-icon").css({"background-color": "transparent", "border": "none"});
 	}
 	 $("#coloredSlider .ui-state-default, .ui-widget-content .ui-state-default").css("background-color", myColor);
 
@@ -191,3 +194,6 @@ $(function() {
     create: refreshSwatch,
   });
 });
+
+
+

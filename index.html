@@ -21,6 +21,7 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 <!-- local lib and tests -->
 <script  src="js/page-script.js"></script>
 <script  src="js/scaling-script.js"></script>
+<script  src="js/shake.js"></script>
 
 
 </head>
@@ -129,10 +130,18 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 
 	</div>
-
-
-
 </div>
+
+
+<script type="text/javascript">
+      function shakeEventDidOccur () {
+                // if user shakes do this
+                alert("You shaked device");
+            }
+
+
+</script>
+
 
 </body>
 

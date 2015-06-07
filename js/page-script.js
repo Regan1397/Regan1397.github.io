@@ -1,36 +1,6 @@
 $(document).ready (function() {
 
-
-
-	$(".white-fader").fadeTo(1500, 0);
-	console.log("linked");
-
-
-$(function () {
-		 $('#input-tag-cloud').bind("tap", tapHandler);
-		function tapHandler (event) 
-		  {
-
-		  	$('.black-fader').css("display","fixed").fadeTo(500,.97);
-		  	console.log("worked");
-		   }
-});
-
-$(function () {
-		 $('.black-fader > h2').bind("tap", tapHandler);
-		function tapHandler (event) 
-		  {	 $(this).css( 'color', "#FF0000");
-		  console.log ("hi");
-		   }
-		});
-
-
-$(function () {
-		 $('.close').bind("tap", tapHandler);
-		function tapHandler (event) 
-		  {	$('.black-fader').fadeTo(500,0).delay(500).css("display","none");
-		   }
-		});
+$(".white-fader").fadeTo(1500, 0);
 
 	// $(function () {
 	// 	 $('#img-01').bind("tap", tapHandler);
@@ -165,6 +135,7 @@ function removeInputActive () {
 	$('#iS-video ').removeClass('input-active');
 	$('#iS-camera ').removeClass('input-active');
 };
+
 
 
 });
