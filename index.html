@@ -134,13 +134,19 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 
 <script type="text/javascript">
-      function shakeEventDidOccur () {
-                // if user shakes do this
-                alert("You shaked device");
-            }
+        var myShakeEvent = new Shake({
+            threshold: 5
+
+        });
+
+          // start listening to device motion
+        myShakeEvent.start();
+
+        // register a shake event
+        window.addEventListener('shake', shakeEventDidOccur, false);
 
 
-</script>
+     </script>
 
 
 </body>
