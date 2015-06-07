@@ -74,6 +74,3 @@ $(function () {
 });
 
 
-function rotateBack (rot) {
-
-}

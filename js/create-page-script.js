@@ -1,3 +1,4 @@
+var createPageManager = 1;
 
 $(document).ready (function() {
 
