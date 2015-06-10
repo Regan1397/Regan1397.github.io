@@ -1,4 +1,6 @@
-	<html><head>
+	<!DOCTYPE html>
+	<html>
+	<head>
 <title>Create</title>
 <meta name="viewport" intial-scale='1.0', content="user-scalable=no, width=device-width, initial-scale=1">
 <!-- <meta name="viewport" intial-scale='1.0', content=""> -->
@@ -80,87 +82,111 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 	<div class="white-fader"></div>
 
 	<div class="content-wrapper">
- 		
- 		<div class="create-section-01">
-	 		<div id="create-box-01"> 
-	 			<input class="input" id="title1" type="text" name="Title01" maxlength="17" placeholder="Memory Title">
-	 			<img id="input-tag-cloud" src="img/icons/hash_cloud.png">
-	 			<div id='choosen-cloud-text'>
-	 					<!-- Testing hashtags to see positioning -->
-	 			<!-- <p> Hashtag 1 </p>
-	 			<p> Hashtag 2 </p>
-	 			<p> Hashtag 3 </p>
-	 			<p> Hashtag 4 </p> -->
-	 			<!-- <p> Hashtag 5 </p>
-	 			<p> Hashtag 6 </p> -->
-	 			
-	 			</div>
-	 		</div>
+		 
 
-	 	<!-- 	<div class="focus-element">
-	 		</div>
- -->
-				<div id="drawing-box" >
-				
-				    <div id="content">
-				    </div>
-							    
-				    	<ul id="paint-slider">
-				    		<li><img id="undo-icon" src="img/icons/trash.png"></li>
-				    		<li> <img src=""> </li>
-				    		   		<li> <img id="smiley-icon" src="img/icons/happy_icon.png"> </li>
-				    		<li> <img id="pencil-icon" src="img/icons/pencil_icon.png"> </li>
-				    		<li> <div id="coloredSlider"></div></li>
+		 <!-- MAIN CONTENT WRAPPER -->
+		 <div id="content-main-wrapper">
+		 	<div class="create-section-01">
 
-						</ul>
-							<a id="downloadLnk" download="YourFileName.png">Download as image</a>
-				</div>
-			</div>
-		<div class="create-section-02">
-			<div id="input-nav">
-				<ul>
-					<li>
-						<img class="input-icon text-icon" src="img/icons/text_icon.png">
-					</li>	
-					
-					<li>
-						<img class="input-icon camera-icon" src="img/icons/camera_icon.png">
-					</li>	
+			 		<div id="create-box-01">
+			 				<div class="title-section">
+			 					<div class="title-help-wrapper">
+				 					<h1 class="centre help-title-default"> Lets Get Started </h1>
+				 					<h2> Add a memory title </h2>
 
-					<li>
-						<img class="input-icon video-icon" src="img/icons/video_icon.png">
-					</li>
+				 					<p id="title-text-help">This is the first part of your memory creation. <br>
+				 						Add a title for your memory!</p>
+				 					<button class='btn-shape continue-btn' onclick="createPageChange(2)"> Continue </button>
+			 					</div>
 
-					<li>
-						<img class="input-icon delete-icon" src="img/icons/delete_icon.png">
-					</li>
-				</ul>
-					<div class='input-nav-slider' id="underline" > </div>
-				<img  id="input-head" src="img/input_nav_head.png">
-			</div>
+				 				<input class="input" id="title1" type="text" name="Title01" maxlength="17" placeholder="Memory Title">
+				 			</div>
 
-			<div id="book-section">
-				<div class="create-area-01">
-					<textarea class="input " id="text-area-01"type="text" name="text01" rows="4" cols="50"  placeholder="How was your day?"></textarea>
-				</div>
-				<div class="create-area-01" id='image-border-01'>
-					
-					<img id="uploaded-img-01" src='#' src="Error.src" onerror="this.src='img/icons/white_space.jpg'" >
+				 			<div class="tag-cloud-wrapper">
+					 				<div class="tag-cloud-help">
+					 					<h1 class="centre help-title-default">Memory Cloud</h1>
+					 					<h2 class="centre "> 
+						 			</div>
+					 			<img id="input-tag-cloud" src="img/icons/hash_cloud.png">
+					 			<div id='choosen-cloud-text'>
+				 					<!-- Testing hashtags to see positioning -->
+				 			<!-- <p> Hashtag 1 </p>
+				 			<p> Hashtag 2 </p>
+				 			<p> Hashtag 3 </p>
+				 			<p> Hashtag 4 </p> -->
+				 			<!-- <p> Hashtag 5 </p>
+				 			<p> Hashtag 6 </p> -->
+				 			</div>
+				 		</div>
 
-					<div class="input-selector-right" >
-														<!--  input active goes on first input once page is loaded -->
-						<span><input class=" input create-upload input-active"  id="iS-camera" onchange="readURL(this);" type="file" accept="image/*" capture="camera" ></span>
-						<span id="iS-video"><input class=" input create-upload" onchange="readURL(this);" type="file" accept="image/*" capture="camera" ></span>
+			 		</div>
+
+			 	<!-- 	<div class="focus-element">
+			 		</div>
+		 -->
+						<div id="drawing-box" >
+						
+						    <div id="content">
+						    </div>
+									    
+						    	<ul id="paint-slider">
+						    		<li><img id="undo-icon" src="img/icons/trash.png"></li>
+						    		<li> <img src=""> </li>
+						    		   		<li> <img id="smiley-icon" src="img/icons/happy_icon.png"> </li>
+						    		<li> <img id="pencil-icon" src="img/icons/pencil_icon.png"> </li>
+						    		<li> <div id="coloredSlider"></div></li>
+
+								</ul>
+									<a id="downloadLnk" download="YourFileName.png">Download as image</a>
+						</div>
 					</div>
-				</div>
-			</div>
+				<div class="create-section-02">
+					<div id="input-nav">
+						<ul>
+							<li>
+								<img class="input-icon text-icon" src="img/icons/text_icon.png">
+							</li>	
+							
+							<li>
+								<img class="input-icon camera-icon" src="img/icons/camera_icon.png">
+							</li>	
 
-				<input class="submitButton" type="submit" value="Submit">
+							<li>
+								<img class="input-icon video-icon" src="img/icons/video_icon.png">
+							</li>
+
+							<li>
+								<img class="input-icon delete-icon" src="img/icons/delete_icon.png">
+							</li>
+						</ul>
+							<div class='input-nav-slider' id="underline" > </div>
+						<img  id="input-head" src="img/input_nav_head.png">
+					</div>
+
+					<div id="book-section">
+						<div class="create-area-01">
+							<textarea class="input " id="text-area-01"type="text" name="text01" rows="4" cols="50"  placeholder="How was your day?"></textarea>
+						</div>
+						<div class="create-area-01" id='image-border-01'>
+							
+							<img id="uploaded-img-01" src='#' src="Error.src" onerror="this.src='img/icons/white_space.jpg'" >
+
+							<div class="input-selector-right" >
+																<!--  input active goes on first input once page is loaded -->
+								<span><input class=" input create-upload input-active"  id="iS-camera" onchange="readURL(this);" type="file" accept="image/*" capture="camera" ></span>
+								<span id="iS-video"><input class=" input create-upload" onchange="readURL(this);" type="file" accept="image/*" capture="camera" ></span>
+							</div>
+						</div>
+					</div>
+
+						<input class="submitButton" type="submit" value="Submit">
+
+				</div>  <!-- END MAIN CONTENT -->
+
+
+
 
 		</div>
-
-
-
 	</div>
 
 </div>
