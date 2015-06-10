@@ -2,8 +2,12 @@
 var ctx, color = "#000";
 var colorPickerActive = 0;
 
-var faceColor = 0;
+
 var x = 1;
+var paintingPosX = 384;
+var paintingPosY = 74;
+
+
 
 var mq1 = window.matchMedia ( "(max-width:500px)");
 
@@ -20,14 +24,15 @@ $(document).ready(function () {
 		   $('#smiley-icon').bind("tap", tapHandler);
 		function tapHandler (event) 
 		  {
-		  	if (faceColor == 0) {		  	
+		  	if (userHappy == 1) {		  	
 		  	$("#canvas").css("background-image",  "url(img/smiley/drawing-sad.png)");
 		   	$("#smiley-icon").attr("src",  "img/icons/sad_icon.png");
-		  	faceColor = 1;
+		   	userHappy = 0;
+		  
 		  	} else {
 		  		$("#canvas").css("background-image",  "url(img/smiley/drawing-happy.png)");
 		  		$("#smiley-icon").attr("src",  "img/icons/happy_icon.png");
-		  		faceColor = 0;
+		  		userHappy = 1;
 		  	}
 
 		  }});
@@ -39,7 +44,7 @@ $(document).ready(function () {
 	$("#undo-icon").click(function() {
 
 		newCanvas();
-		if (faceColor == 1) {
+		if (userHappy == 0) {
 		  	$("#canvas").css("background-image",  "url(img/smiley/drawing-sad.png)");
 		}
 	});
@@ -67,10 +72,16 @@ $(document).ready(function () {
 function newCanvas(){
 	//define and resize canvas
     // $("#content").height($('#content').css('height', '20%'));
-    var canvas = '<canvas id="canvas" width="'+($('#content').width())+'" height="'+($('#content').height())+'"></canvas>';
-	$("#content").html(canvas);
+   
+   //function ref
+   resetCanvasPos ();
     
-	console.log (  )
+   console.log("User Happy?  " + userHappy);
+
+
+   if (userHappy == 0) {
+	  	$("#canvas").css("background-image",  "url(img/smiley/drawing-sad.png)");
+   }
 
     // setup canvas
 	ctx=document.getElementById("canvas").getContext("2d");
@@ -90,16 +101,19 @@ $.fn.drawTouch = function() {
 				ctx.strokeStyle = color;
 
 				// add position offset from 0,0 change below
-		x = e.changedTouches[0].pageX -384;
-		y = e.changedTouches[0].pageY-74;
+		x = e.changedTouches[0].pageX-paintingPosX;
+		y = e.changedTouches[0].pageY-paintingPosY;
+
 		ctx.moveTo(x,y);
 	};
 	var move = function(e) {
 		e.preventDefault();
         e = e.originalEvent;
         		// add position offset from 0,0 change below
-		x = e.changedTouches[0].pageX-384;
-		y = e.changedTouches[0].pageY-74;
+		x = e.changedTouches[0].pageX-paintingPosX;
+		y = e.changedTouches[0].pageY-paintingPosY;
+
+
 		ctx.lineTo(x,y);
 		ctx.stroke();
 	};
@@ -157,6 +171,14 @@ $(function() {
     create: refreshSwatch,
   });
 });
+
+
+function resetCanvasPos () {
+
+	 var canvas = '<canvas id="canvas" width="'+($('#content').width())+'" height="'+($('#content').height())+'"></canvas>';
+	$("#content").html(canvas);
+	console.log ("canvas reset!");
+}
 
 
 

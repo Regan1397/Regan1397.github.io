@@ -26,7 +26,7 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 <script  src="js/page-script.js"></script>
 <script src="js/hashtag-cloud.js"></script>
 <script src="js/drawing-script.js"></script>
-<script src="js/create-script.js"></script>
+<script src="js/create-page-manager.js"></script>
 
 </head>
 
@@ -96,7 +96,7 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 
 				 					<p id="title-text-help">This is the first part of your memory creation. <br>
 				 						Add a title for your memory!</p>
-				 					<button class='btn-shape continue-btn' onclick="createPageChange(2)"> Continue </button>
+				 					<button class='btn-shape getStarted-btn' onclick="createPageChange(2)"> Continue </button>
 			 					</div>
 
 				 				<input class="input" id="title1" type="text" name="Title01" maxlength="17" placeholder="Memory Title">
@@ -105,7 +105,9 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 				 			<div class="tag-cloud-wrapper">
 					 				<div class="tag-cloud-help">
 					 					<h1 class="centre help-title-default">Memory Cloud</h1>
-					 					<h2 class="centre "> 
+					 					<h2 class="centre ">Give your memories some #hastags!</h2>
+					 					<h3 class="centre"> Hashtags are used to track your memories</h3>
+					 					<button class='btn-shape cloud-continue-btn' onclick="createPageChange(3)"> Continue </button>
 						 			</div>
 					 			<img id="input-tag-cloud" src="img/icons/hash_cloud.png">
 					 			<div id='choosen-cloud-text'>
@@ -125,7 +127,13 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 			 		</div>
 		 -->
 						<div id="drawing-box" >
-						
+							<div class="drawing-help">
+								<h1 class="centre"> Mood Drawing </h1>
+								<h2 class="centre"> Have some fun, draw your mood! </h2>
+								<h3 class="centre"> Drawing is great way of expressing and <br> understanding your emotions. <br> Go nuts! </h3>
+				 				<button class='btn-shape drawing-help-btn' onclick="createPageChange(4)"> Ready to Continue? </button>
+							</div>
+
 						    <div id="content">
 						    </div>
 									    
@@ -141,6 +149,13 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 						</div>
 					</div>
 				<div class="create-section-02">
+					<div class="book-help">
+						<h1 class="centre">Add some flavour! </h1>
+						<h2 class="centre">Leave a short story and add a pic! </h2>
+						<h3 class="centre"> </h3>
+				 		<button class='btn-shape book-help-btn' onclick="createPageChange(0)"> Ready to Continue? </button>
+					</div>
+
 					<div id="input-nav">
 						<ul>
 							<li>
@@ -166,6 +181,7 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 					<div id="book-section">
 						<div class="create-area-01">
 							<textarea class="input " id="text-area-01"type="text" name="text01" rows="4" cols="50"  placeholder="How was your day?"></textarea>
+							<!-- <textarea class="input " id="text-area-02"type="text" name="text01" rows="4" cols="50"  placeholder="What would make you feel better?"></textarea> -->
 						</div>
 						<div class="create-area-01" id='image-border-01'>
 							
@@ -215,6 +231,8 @@ function readURL(input) {
 
    function resetCustTag () {
     }
+
+
 </script>
 
 

@@ -178,6 +178,13 @@ padding: 5px  0px 0px 0px;
 }
 
 
+.book-help {
+	padding-top: 70px;
+	height: 230px;
+	width: 100%;
+}
+
+
 
 /*iS = input-selector*/
 #iS-camera {
@@ -236,7 +243,7 @@ padding: 0px;
 		  /*background-color:white;*/
 
 /*	background-color:  #f9be02;*/
-		  width: 80%;
+		  width: 300px;
         height: 300px;
 
 	  }
@@ -587,7 +594,7 @@ margin-top: 5px;
 #input-head {
 	position: relative;
 	top:-6px;
-	left: 280px;
+	left: 600px;
 	width: 7%;
 }
 
@@ -677,9 +684,13 @@ color: white;
 		background-color: #6ca3b1;
 }
 
-.continue-btn {
+.getStarted-btn {
 	opacity: 0;
 	display: none;
+	
+}
+
+.cloud-continue-btn { opacity: 0; 	display: none; 
 }
 
 
@@ -988,6 +999,32 @@ top: 40px;
 	  	height: 300px;
 	  	width: 50%;
 	  }
+
+	  .drawing-help {
+	  	display: none;
+
+	  }
+
+	  .drawing-help-btn {
+	  	position: absolute;
+	  	/*goal:   	top: 550px;  */
+	  	top: 700px;
+
+	 	opacity: 0;
+	  	display: none;
+	  }
+
+	  .drawing-help > h2 {
+	  	margin-bottom: 100px;
+	  }
+
+	  .drawing-help > h3 {
+	  	position: absolute;
+	  	top: 500px;
+	  	width: 500px;
+	  	margin-left: 120px;
+	  }
+
 
 	  li {
 display: block;
