@@ -258,14 +258,21 @@ padding: 0px;
 
 
 .content-wrapper {
-
-	
 	margin: auto;
 /*	margin-top: 60px;*/
 	padding-top: 1.5%;
 	max-width: 800px;
 	width: 97.6%;
+}
 
+
+#content-wrapper-2 {
+	margin: auto;
+
+/*	margin-top: 60px;*/
+padding-top: 72px;
+	max-width: 800px;
+	width: 97.6%;
 }
 
 
@@ -936,7 +943,7 @@ top: 40px;
 
 
 
-/**** Regan Drawing CSS **** TEMP *******/
+/**** Regan Drawing CSS  *******/
 	#paint-slider {
 		position: relative;
 		top: -360px;
@@ -1074,39 +1081,72 @@ display: block;
 }
 
 
-#load-image-box-01 {
-	top:0%;
+.imgContainer:nth-child(1) { 
+	margin-top: 0px;
 }
 
-#load-image-box-02 {
-	top:10%
-}
 
-.imgContainer { 
-
-  max-height: 150px;
+.imgContainer {
+margin-top: 5px; 
+	width: 100%;
+	height:150px;
   overflow: hidden; 
-  position:relative
-
-}
-.imgContainer img { 
-  /* corrects inline gap in enclosing div */
-  display: block;
-  max-width: 100%;
-  /* just in case, to force correct aspect ratio */
-  height: auto !important;
-  width: auto\9; /* ie8+9 */
-  /* lt ie8 */
-  -ms-interpolation-mode: bicubic; 
 }
 
-.load-date{
+.load-date-box {
+	position: relative;
+	top: 0;
+	padding: 30px 50px 0px 10px;
+	display: inline-block;
 	color:white;
+	/*background-color: grey;*/
 	width: 60px;
-	height: 80px;
-	top:2px;
-	position:absolute;
+	height: 55%;
 
+
+}
+
+.load-info-box {
+
+	width: 730px;
+	margin:  10px;
+	height: 130px;
+	display: inline-block;
+	background-color: rgba(255,255,255, 0.7);
+
+
+}
+
+.load-description-box {
+	width: 65%;
+	height: 130px;
+	display: inline-block;
+}
+
+.load-description-box > h2 {
+color: black;
+font-size: 30px;
+margin-top: 30px;
+margin-bottom: 10px;
+font-weight: normal;
+}
+
+.load-description-box > h3 {
+color: black;
+margin-top: 5px;
+font-size: 25px;
+font-weight: normal;
+word-spacing: 30px;
+}
+
+
+.load-main-image {
+	min-width: 100%;
+}
+.load-smiley {
+	padding: 15px 10px 15px 10px;
+	width: 100px;
+	height: 100px;
 }
 
 /*.happy{
@@ -1121,14 +1161,15 @@ display: block;
 }
 */
 
-.load-image-box  p {
-	width: 90%;
-	padding: 0% 10% 0% 10%;
+.load-date-box p {
+
 	margin: 0;
+
 		text-align: center;
 		display: block;
 	font-size: 200%;
-	color: white;
+	color: black;
+
 }
 
 #retr-memTitle{

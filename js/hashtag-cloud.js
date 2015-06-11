@@ -1,3 +1,6 @@
+//Coded By Regan Petrie
+
+
 var tag_btnActive= 0;
 
 $(document).ready (function() {

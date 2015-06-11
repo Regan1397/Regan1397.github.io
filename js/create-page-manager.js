@@ -1,5 +1,5 @@
 var cloudFirstTime = 1;
-var userHappy = 0;
+var userHappy = 1;
 
 $(document).ready (function() {
 
