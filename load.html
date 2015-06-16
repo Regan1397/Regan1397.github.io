@@ -25,6 +25,36 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 <!-- local lib and tests -->
 <script  src="js/page-script.js"></script>
 
+<script>
+function loadMemoriesFromDB(){
+	userid=1;	//maybe get from cookie?
+	//make ajax request to get data ... generate a div like template below for each of them
+	var resultantHTML = "";	//store the HTML containing all the memories. 
+	$.ajax({
+			dataType: "json",
+			method: "GET",
+			url: 'https://team23-project.herokuapp.com/memory/get/timeline/' + userid    	
+	}).done(function(data){
+		data.forEach(function (memory, index){
+			resultantHTML += "<div class='imgContainer' style='background-image: url('img/stock/stock01.jpg'); background-size: 100%'>";
+			resultantHTML += "<div class='load-info-box'> <div class='load-date-box'>";
+			resultantHTML += "<p> Feb </p> <p> 11 </p> </div>";
+			resultantHTML += "<div class='load-description-box'><h2>"+ memory.title +" </h2> <h3>#Fun #Hashtag </h3></div>";
+			resultantHTML += "<img class='load-smiley' src='img/stock/drawn_01.png'>";
+			resultantHTML += "</div></div>";
+		});
+		//add the resultantHTML to the content-wrapper element.
+		alert(resultantHTML);
+		$("#content-wrapper-2").append(resultantHTML);
+	}).fail(function(jgXHR, textStatus, errorThrown){
+		alert("Server Connection Error");			//let user know something is wrong. 
+		console.log("ERROR: "+textStatus+ errorThrown);
+	});
+	
+}
+
+</script>
+
 
 </head>
 

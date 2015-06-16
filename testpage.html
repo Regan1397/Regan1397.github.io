@@ -52,7 +52,6 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 			<h2>Family</h2>	
 
 		</div>
-			<p class="black-fader-error">Max hashtag limit reached</p>
 	</div>
 		<div class='navbar'>
 			<img class='nav-logo' src="img/Logo_Final_Small.png">
@@ -151,10 +150,9 @@ jQuery(document).on("mobileinit", function() { jQuery.mobile.autoInitializePage 
 						    		<li> <div id="coloredSlider"></div></li>
 
 								</ul>
-
+									<a id="downloadLnk" download="YourFileName.png">Download as image</a>
 						</div>
 					</div>
-
 				<div class="create-section-02">
 					<div class="book-help">
 						<h1 class="centre">Add some flavour! </h1>
@@ -250,6 +248,11 @@ function submitMemory(){
 }
 
 
+function download() {
+    var dt = canvas.toDataURL('image/png');
+    this.href = dt;
+};
+downloadLnk.addEventListener('click', download, false);
 
 function readURL(input) {
         if (input.files && input.files[0]) {

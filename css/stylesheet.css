@@ -19,6 +19,7 @@ body {
 	margin: 0;
 	font-family: Arial; 
 	width: 100%;
+	background-color: #f1ede7;
 
 	/*width: 768px;*/
 	
@@ -111,6 +112,13 @@ border: none;
 }
 
 
+#load-screen-wrapper {
+	width: 100%;
+	height: 1024px;
+	margin: 0px;
+	background-color: #E7853C;
+}
+
 #bottom-navbar {
 display: -webkit-flex;
 -webkite-justify-content: center;
@@ -165,7 +173,6 @@ z-index: 20;
 .create-section-01 {
 	position: relative;
 	top: 0;
-	margin-top: 70px;
 	width: 100%;
 	height: 310px;
 padding: 5px  0px 0px 0px;
@@ -229,6 +236,15 @@ padding: 0px;
 
 }
 
+.black-fader-error {
+	opacity: 0;
+	color: #d76767;
+	text-align: center;
+	width: 100%;
+	position: relative;
+	top: -300px;
+}
+
 
   #canvas{
 		cursor:crosshair ;
@@ -259,7 +275,8 @@ padding: 0px;
 
 .content-wrapper {
 	margin: auto;
-/*	margin-top: 60px;*/
+	margin-top: 60px;
+	min-height: 890px;
 	padding-top: 1.5%;
 	max-width: 800px;
 	width: 97.6%;
@@ -627,10 +644,24 @@ margin-top: 5px;
 #login-logo {
 	position: relative;
 	width: 370px;
+	width:60%;
 		position: relative;
 	/*left: ;*/
 	padding: 210px 0px 50px 100px;
 }
+
+#load-screen-logo {
+	position: relative;
+	display: inline-block;
+	width: 370px;
+	
+		position: relative;
+	/*left: ;*/
+	left: 180px;
+	top: 400px;
+}
+
+
 
 #login-logoSection {
 
@@ -694,10 +725,14 @@ color: white;
 .getStarted-btn {
 	opacity: 0;
 	display: none;
+	position: relative;
+	top: 300px;
 	
 }
 
 .cloud-continue-btn { opacity: 0; 	display: none; 
+	position: relative;
+	top:400px;
 }
 
 
@@ -776,23 +811,54 @@ font-size: 30px;
 }
 
 #text-area-01 {
-padding: 20px 20px 20px 20px;
+padding: 20px 20px 0px 20px;
 font-size: 30px;
-width: 100%;
-height: 100%;
+width: 90%;
+height:350px;
+}
 
+#text-area-02 {
+padding: 0px 20px 0px 20px;
+font-size: 30px;
+width: 90%;
+height: 175px;
+display: none;
 }
 
 .title-help-wrapper {
 	display: none;
 	position: relative;
-	top:100px;
+	top:60px;
 
 }
 
 
 .help-title-default{
-	font-size: 40px;
+	font-size: 50px;
+
+}
+
+.process-heart {
+	margin-right: 60px;
+	width: 60px;
+	position: relative;
+
+	float: right;
+}
+
+.create-process-back {
+	margin-left: 60px;
+	width: 60px;
+	position: relative;
+	float: left;
+}
+
+.createpage-nav {
+	position: absolute;
+	width: 100%;
+	top: 110px;
+	left: 0px;
+	
 }
 
 
@@ -803,12 +869,15 @@ height: 100%;
 }
 
 
-.title-help-wrapper > p {
 
+
+
+#title-text-help {
 	text-align: center;
 	display: inline-block;
 	width: 70%;
-	padding-top: 100px;
+	position: relative;
+	top:200px;
 	padding-left: 15%;
 	padding-right: 15%;
 }
@@ -1229,10 +1298,7 @@ word-spacing: 30px;
 
 }
 
-#login-logo{
-	width:60%;
 
-}
 
 #retr-info{
 	

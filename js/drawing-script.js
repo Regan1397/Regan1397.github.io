@@ -9,7 +9,7 @@ var paintingPosY = 74;
 
 
 
-var mq1 = window.matchMedia ( "(max-width:500px)");
+// var mq1 = window.matchMedia ( "(max-width:500px)");
 
 $(document).ready(function () {
 
@@ -18,8 +18,9 @@ $(document).ready(function () {
 	   newCanvas();
     }, 1000);
 
-	// prevent footer to toggle on touch
 
+
+//control for smiley icon -- this determines users mood.
 	$(function() {
 		   $('#smiley-icon').bind("tap", tapHandler);
 		function tapHandler (event) 
@@ -28,11 +29,13 @@ $(document).ready(function () {
 		  	$("#canvas").css("background-image",  "url(img/smiley/drawing-sad.png)");
 		   	$("#smiley-icon").attr("src",  "img/icons/sad_icon.png");
 		   	userHappy = 0;
+		   	sadEmotionEntered ();
 		  
 		  	} else {
 		  		$("#canvas").css("background-image",  "url(img/smiley/drawing-happy.png)");
 		  		$("#smiley-icon").attr("src",  "img/icons/happy_icon.png");
 		  		userHappy = 1;
+		  		sadEmotionEntered ();
 		  	}
 
 		  }});
