@@ -1,3 +1,54 @@
+/***** testing css*/
+.main-content-wrapper h1 {
+	font-size: 60px;
+	text-align: center;
+}
+
+.page {
+	display: none;
+}
+
+#page-one {
+	position: absolute;
+background-color: #c76262;
+display: inline-block;
+width: 768px;
+height: 900px;
+}
+
+
+#page-two {
+	position: absolute;
+background-color: #6262c7;
+
+
+width: 768px;
+height: 900px;
+}
+
+
+#page-three {
+	position: absolute;
+background-color: #8dc762;
+
+
+width: 768px;
+height: 900px;
+}
+
+
+#page-four {
+	position: absolute;
+background-color: #c7b562;
+
+
+width: 768px;
+height: 900px;
+}
+
+
+
+
 /**************** Regan's CSS ***************/
 
 html, body {
@@ -122,8 +173,10 @@ border: none;
 #bottom-navbar {
 display: -webkit-flex;
 -webkite-justify-content: center;
-justify-content: center;
-padding-bottom: 5px;
+/*justify-content: center;*/
+/*padding-bottom: 5px;*/
+
+
 width: 100%;
 height: 60px;
 bottom: 0px;
@@ -134,17 +187,28 @@ z-index: 20;
 }
 
 #bottom-navbar > ul {
+	margin: 0px;
 	padding: 0px;
-	padding-bottom: 10px;
+	/*padding-bottom: 10px;*/
 
 }
 
 #bottom-navbar > ul > li {
 	width:  40px;
-	padding: 2px 60px 2px 60px;
+	/*margin:  0px 15px 0 15px;*/
+	padding: 10px 70px 10px 70px;
 
 	display: inline-block;
 	list-style-type: none;
+}
+
+#bottom-navbar > ul > li:first-child {
+	padding-left: 86px;
+}
+
+
+#bottom-navbar > ul > li:last-child {
+	padding-right: 87px;
 }
 
 
@@ -270,6 +334,15 @@ padding: 0px;
 
 
 
+.main-content-wrapper {
+	margin: auto;
+	margin-top: 60px;
+	min-height: 900px;
+/*	padding-top: 60px;*/
+	max-width: 800px;
+	width: 97.6%;
+	overflow: hidden;
+}
 
 
 
@@ -933,6 +1006,8 @@ margin: 5px 0px 5px 0px;
 	float: right;
 height: 90%;
 }
+
+
 
 
 #pin-01 {
