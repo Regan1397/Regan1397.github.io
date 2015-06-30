@@ -1,0 +1,46 @@
+html {
+	height: 100%;
+	width: 100%;
+
+}
+
+
+body {
+	height: 100%;
+	width: 100%;
+	background-color: #F8F8F8;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+.sidebar {
+	padding-top: 50px;
+	display: inline-block;
+	float: left;
+	background-color: green;
+	width: 19%;
+	max-width: 400px;
+	min-width: 200px;
+	height: 100%;
+	margin-right: 1%;
+}
+
+.content-wrapper {
+	display: inline-block;
+	background-color: white;
+	padding-top: 50px;
+	min-width: 600px;
+	width: 20%;
+	height: 100%;
+}
+
+.sidebar-logo {
+
+	width: 86%;
+	padding: 7%;
+	display: inline-block;
+
+}
