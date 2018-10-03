@@ -280,6 +280,8 @@ pre[class*="language-"] {
   text-align: center;
 }
 .background-image {
+  margin-top: 50px;
+  margin-left: 50px;
   width: 240px;
   height: 400px;
   background-image: url("../assets/Background-Image.png") !important;
