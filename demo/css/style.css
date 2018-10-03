@@ -39,13 +39,7 @@ code {
 .outer {
   width: 50%; }
 
-.wrap,
-.desc,
-.example {
-  max-width: 1200px;
-  width: calc(100% - 60px);
-  position: relative;
-  margin: 20px auto; }
+
 
 .description,
 .container {
@@ -60,7 +54,6 @@ header,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 400px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -76,10 +69,6 @@ header,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.wrap .container {
-  width: 50%;
-  height: 300px; }
 
 .content h3 {
   font-weight: 500;
@@ -120,8 +109,6 @@ a {
   font-size: 14px; }
 
 .tilt {
-  width: 320px;
-  height: 320px;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,9 +123,6 @@ a {
 .wrap .container .tilt h2 {
   font-size: 28px; }
 
-.wrap .container .tilt {
-  width: 200px;
-  height: 200px; }
 
 .wrap .tilt:first-child {
   -webkit-transform-style: preserve-3d;
@@ -174,171 +158,7 @@ a {
   height: 300px;
   overflow: scroll; }
 
-.example:first-child .tilt {
-  background: #a90329;
-  background: linear-gradient(135deg, #a90329 0%, #eb8415 100%); }
 
-.example:first-child .description h3 {
-  background: #a90329;
-  background: linear-gradient(135deg, #a90329 0%, #eb8415 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(2) .tilt {
-  background: #b7deed;
-  background: linear-gradient(135deg, #b7deed 0%, #6321de 100%); }
-
-.example:nth-child(2) .description h3 {
-  background: #b7deed;
-  background: linear-gradient(135deg, #b7deed 0%, #6321de 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(3) .tilt {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  background: #ebceb7;
-  background: linear-gradient(45deg, #ebceb7 0%, #de21de 100%); }
-
-.example:nth-child(3) .description h3 {
-  background: #ebceb7;
-  background: linear-gradient(45deg, #ebceb7 0%, #de21de 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(4) .tilt {
-  background: #1dde5d;
-  background: linear-gradient(45deg, #1dde5d 0%, #1f3b08 100%); }
-
-.example:nth-child(4) .description h3 {
-  background: #1dde5d;
-  background: linear-gradient(45deg, #1dde5d 0%, #1f3b08 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(5) .tilt {
-  background: #c5cf76;
-  background: linear-gradient(45deg, #c5cf76 0%, #49a5bf 100%); }
-
-.example:nth-child(5) .description h3 {
-  background: #c5cf76;
-  background: linear-gradient(45deg, #c5cf76 0%, #49a5bf 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(6) .tilt {
-  background: #ccc;
-  background: linear-gradient(45deg, #ccc 0%, #333 100%); }
-
-.example:nth-child(6) .description h3 {
-  background: #ccc;
-  background: linear-gradient(45deg, #ccc 0%, #333 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(7) .tilt {
-  background: #f3e2c7;
-  background: linear-gradient(45deg, #f3e2c7 0%, #b68d4c 100%); }
-
-.example:nth-child(7) .description h3 {
-  background: #f3e2c7;
-  background: linear-gradient(45deg, #f3e2c7 0%, #b68d4c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(8) .tilt {
-  background: #cb60b3;
-  background: linear-gradient(135deg, #cb60b3 0%, #a80077 100%); }
-
-.example:nth-child(8) .description h3 {
-  background: #cb60b3;
-  background: linear-gradient(135deg, #cb60b3 0%, #a80077 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(9) .tilt {
-  background: #f1e767;
-  background: linear-gradient(45deg, #f1e767 0%, #feb645 100%); }
-
-.example:nth-child(9) .description h3 {
-  background: #f1e767;
-  background: linear-gradient(45deg, #f1e767 0%, #feb645 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.example:nth-child(10) .tilt {
-  background: #696bff;
-  background: linear-gradient(338deg, #696bff 0%, #8cffe6 100%); }
-
-.example:nth-child(10) .description h3 {
-  background: #696bff;
-  background: linear-gradient(338deg, #696bff 0%, #8cffe6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-@media screen and (max-width: 1040px) {
-  .inner {
-    display: block; }
-  .wrap {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-  header {
-    width: 60%; }
-  .outer {
-    width: 40%; }
-  .outer h3 {
-    margin: 0 auto;
-    width: 230px; }
-  .outer .container {
-    width: 100%;
-    height: 280px; }
-  .example .container {
-    width: 60%; }
-  .example .description {
-    width: 40%; } }
-
-@media screen and (max-width: 840px) {
-  .example .container,
-  .example .description {
-    width: 100%; }
-  header .tilt:first-child {
-    width: 340px;
-    height: 340px; }
-  .tilt {
-    width: 240px;
-    height: 240px; }
-  .example {
-    display: block; } }
-
-@media screen and (max-width: 740px) {
-  .wrap {
-    display: block; }
-  header {
-    width: 100%; }
-  .outer {
-    width: 100%; }
-  .outer h3 {
-    text-align: center; }
-  .inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
-
-@media screen and (max-width: 560px) {
-  .inner {
-    display: block; } }
-
-@media screen and (max-width: 460px) {
-  header .tilt:first-child {
-    width: 240px;
-    height: 240px; }
-  h3 {
-    font-size: 26px !important; }
-  header {
-    height: 320px; }
-  header h1 {
-    font-size: 30px !important; } }
 
 /* PrismJS 1.13.0
 http://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript */
